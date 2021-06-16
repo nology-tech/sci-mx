@@ -3,7 +3,8 @@ import { Link as LinkRoute } from "react-router-dom";
 import styles from "./Navbar.module.scss";
 import { FaBars } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
-const Navbar = ({ handleSidebarToggle }) => {
+const Navbar = (props) => {
+  const { handleSidebarToggle } = props;
   return (
     <header className={styles.header}>
       <nav className={styles.nav}>
