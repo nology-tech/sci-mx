@@ -9,8 +9,11 @@
   height: calc(100vh - 70px);
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+
+  &__title {
+  }
 
   &__heading {
     font-family: $font-family;
@@ -22,7 +25,31 @@
     font-family: $font-family;
     font-weight: 700;
     font-size: 2.4rem;
+    color: $secondary-color-gray;
+    opacity: 0.7;
   }
-  &__image__container {
+
+  &__image_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__image {
+    max-width: 60%;
+    border-radius: 10px;
+
+    &_link {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $secondary-color-white;
+      background: $primary-color-orange;
+      padding: 5px;
+      border-radius: 10px;
+    }
   }
 }

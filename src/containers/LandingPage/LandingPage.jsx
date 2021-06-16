@@ -1,16 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./LandingPage.module.scss";
-
+import heroImage from "../../assets/images/workout/workout-2-image.jpg";
 const LandingPage = () => {
   return (
     <main className={styles.container}>
       <section className={styles.hero}>
-        <h1 className={styles.hero__heading}>Hello Will</h1>
-        <h4 className={styles.hero__subheading}>Welcome back!</h4>
+        <div className={styles.hero__title}>
+          <h1 className={styles.hero__heading}>Hello Will</h1>
+          <h4 className={styles.hero__subheading}>Welcome back!</h4>
+        </div>
         <div className={styles.hero__image_container}>
-          <img src="../../assets/images/workout/workout-2-image.jpg" alt="" />
-          <Link to="/workout">START WORKOUT</Link>
+          <img className={styles.hero__image} src={heroImage} alt="workout" />
+          <Link to="/workout" className={styles.hero__image_link}>
+            NO REST FOR THE WICKED
+          </Link>
         </div>
         <button>
           My Activity <span>logo</span>
