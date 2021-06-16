@@ -11,10 +11,22 @@
   border-radius: 20px;
   padding: 10px;
   background-color: gray;
-
   width: 33%;
 }
 
 ::placeholder {
   color: white;
+}
+.buttoncontainer {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.button {
+  background-color: orangered;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 10px;
+  width: 70px;
 }
