@@ -16,9 +16,10 @@ const LandingPage = () => {
             NO REST FOR THE WICKED
           </Link>
         </div>
-        <button>
-          My Activity <span>logo</span>
-        </button>
+        <Link to="/workout" className={styles.hero__activity_btn}>
+          My Activity
+          <span className={styles.hero__activity_btn_img}>logo</span>
+        </Link>
         <button>
           <span>ARROW</span>
         </button>
