@@ -1,0 +1,8 @@
+//? margin-top is for the fixed Navbar: 70px;
+.container {
+  margin-top: 70px;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

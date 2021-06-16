@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font: 400 62.5%/1.4 "sans-serif";
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.form {
+  max-width: 420px;
+  margin-top: 3em;
+  padding: 1em;
+  border: 2px solid black;
+
+  &__heading {
+    font-size: 3rem;
+  }
+  &__subheading {
+    font-weight: normal;
+    font-size: 1.8rem;
+    margin-bottom: 1.5em;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    display: block;
+    margin-bottom: 0.3em;
+  }
+
+  &__input {
+    display: flex;
+    margin-bottom: 1em;
+  }
+}
