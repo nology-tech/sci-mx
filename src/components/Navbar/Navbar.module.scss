@@ -1,19 +1,4 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: box-sizing;
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
+@import "../../assets/styles/base.scss";
 
 .header {
   height: 70px;
@@ -23,7 +8,7 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background: lightskyblue;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,9 +29,22 @@ a {
 
   &__icon {
     cursor: pointer;
+    font-size: 2.5rem;
+    color: $primary-color-orange;
   }
 
   &__profile {
     cursor: pointer;
+    font-size: 2.5rem;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_img {
+      max-width: 50%;
+    }
   }
 }
