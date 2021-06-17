@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Link as LinkScroll } from "react-scroll";
 import styles from "./LandingPage.module.scss";
 import heroImage from "../../assets/images/workout/workout-2-image.jpg";
 import { FaArrowAltCircleDown } from "react-icons/fa";
@@ -26,7 +27,7 @@ const LandingPage = () => {
         </Link>
 
         <FaArrowAltCircleDown className={styles.hero__arrow_btn}>
-          <button></button>
+          <LinkScroll to="#example"></LinkScroll>
         </FaArrowAltCircleDown>
       </section>
     </main>
