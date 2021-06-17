@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./LandingPage.module.scss";
 import heroImage from "../../assets/images/workout/workout-2-image.jpg";
+import { FaArrowAltCircleDown } from "react-icons/fa";
+import { BiRun } from "react-icons/bi";
+
 const LandingPage = () => {
   return (
     <main className={styles.container}>
@@ -16,13 +19,15 @@ const LandingPage = () => {
             NO REST FOR THE WICKED
           </Link>
         </div>
+
         <Link to="/workout" className={styles.hero__activity_btn}>
           My Activity
-          <span className={styles.hero__activity_btn_img}>logo</span>
+          <BiRun className={styles.hero__activity_img}></BiRun>
         </Link>
-        <button>
-          <span>ARROW</span>
-        </button>
+
+        <FaArrowAltCircleDown className={styles.hero__arrow_btn}>
+          <button></button>
+        </FaArrowAltCircleDown>
       </section>
     </main>
   );
