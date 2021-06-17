@@ -1,0 +1,94 @@
+@import "../../assets/styles/base.scss";
+
+.hero {
+  padding: 2em;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3em;
+
+  &__heading {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 3.6rem;
+  }
+
+  &__subheading {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: $secondary-color-gray;
+    opacity: 0.7;
+  }
+
+  &__image_container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      position: absolute;
+      z-index: -99;
+      transform: rotate(3.89deg);
+      content: "";
+      width: 80%;
+      height: 100%;
+      border-radius: 54px;
+      background-color: $primary-color-blue;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: -99;
+      transform: rotate(-12.34deg);
+      content: "";
+      width: 80%;
+      height: 100%;
+      border-radius: 54px;
+      background-color: $primary-color-orange;
+    }
+  }
+
+  &__image {
+    position: relative;
+    max-width: 70%;
+    //max-width: 440px;
+    border-radius: 48px;
+
+    &_link {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $secondary-color-white;
+      background: $primary-color-orange;
+      padding: 6px;
+      border-radius: 33px;
+    }
+  }
+
+  &__activity_btn {
+    font-size: 2rem;
+    padding: 5px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 54px;
+    background-color: $secondary-color-gray;
+  }
+
+  &__activity_img {
+    color: $primary-color-blue;
+    padding-left: 5px;
+    font-size: 3rem;
+  }
+
+  &__arrow_btn {
+    font-size: 4rem;
+  }
+}
