@@ -1,3 +1,5 @@
+@import "../../assets/styles/base.scss";
+
 //? margin-top is for the fixed Navbar: 70px;
 .container {
   margin-top: 70px;
@@ -9,13 +11,17 @@
   margin-right: auto;
   text-align: center;
   border-radius: 20px;
+  border: none;
   padding: 10px;
-  background-color: gray;
-  width: 33%;
+  font-size: 1.4rem;
+  font-family: $font-family;
+  background-color: $secondary-color-gray;
+  width: 50%;
 }
 
 ::placeholder {
-  color: white;
+  color: $secondary-color-white;
+  font-family: $font-family;
 }
 .buttoncontainer {
   // border: 1px solid red;
@@ -23,10 +29,16 @@
   justify-content: space-between;
   margin-top: 40px;
 }
-.button {
-  background-color: orangered;
+.buttoncontainer__button {
+  background-color: none;
+  font-family: $font-family;
   border-radius: 20px;
-  padding: 10px;
-  font-size: 10px;
-  width: 70px;
+  border: none;
+  // padding: 5px;
+  font-size: 1.8rem;
+  width: 20%;
+}
+
+.buttoncontainer__button:hover {
+  background-color: $primary-color-orange;
 }
