@@ -42,3 +42,34 @@
 .buttoncontainer__button:hover {
   background-color: $primary-color-orange;
 }
+
+// .workoutconatiner__image {
+//   position: relative;
+//   width: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   position: relative;
+
+//   &::after {
+//     position: absolute;
+//     z-index: -99;
+//     transform: rotate(3.89deg);
+//     content: "";
+//     width: 80%;
+//     height: 100%;
+//     border-radius: 54px;
+//     background-color: $primary-color-blue;
+//   }
+
+//   &::before {
+//     position: absolute;
+//     z-index: -99;
+//     transform: rotate(-12.34deg);
+//     content: "";
+//     width: 80%;
+//     height: 100%;
+//     border-radius: 54px;
+//     background-color: $primary-color-orange;
+//   }
+// }
