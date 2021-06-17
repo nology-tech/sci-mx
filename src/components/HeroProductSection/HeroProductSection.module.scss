@@ -1,3 +1,5 @@
+@import "../../assets/styles/base.scss";
+
 .products {
   padding-top: 70px;
   height: 100vh;
@@ -5,4 +7,21 @@
   flex-flow: column wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 2em;
+}
+
+.carousel {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__img {
+    width: 50%;
+  }
+
+  &__btn {
+    font-size: 3rem;
+    color: $secondary-color-white;
+  }
 }
