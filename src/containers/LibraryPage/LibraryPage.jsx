@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./LibraryPage.module.scss";
-import workoutimage from "../../assets/images/workout/workout-2-image.jpg";
+import workoutimage from "../../assets/images/workout/Group.png";
 
 const LibraryPage = () => {
   return (
@@ -15,22 +15,22 @@ const LibraryPage = () => {
       </div>
 
       <div className={styles.workoutcontainer}>
-        <div className={styles.workoutconatiner__image}>
+        <div className={styles.workoutcontainer__image}>
           <img src={workoutimage} alt="" />
         </div>
-        <div className={styles.workoutconatiner__image}>
+        <div className={styles.workoutcontainer__image}>
           <img src={workoutimage} alt="" />
         </div>
-        <div className={styles.workoutconatiner__image}>
+        <div className={styles.workoutcontainer__image}>
           <img src={workoutimage} alt="" />
         </div>
-        <div className={styles.workoutconatiner__image}>
+        <div className={styles.workoutcontainer__image}>
           <img src={workoutimage} alt="" />
         </div>
-        <div className={styles.workoutconatiner__image}>
+        <div className={styles.workoutcontainer__image}>
           <img src={workoutimage} alt="" />
         </div>
-        <div className={styles.workoutconatiner__image}>
+        <div className={styles.workoutcontainer__image}>
           <img src={workoutimage} alt="" />
         </div>
       </div>
