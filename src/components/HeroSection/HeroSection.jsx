@@ -25,9 +25,11 @@ const LandingPageSection = () => {
         <BiRun className={styles.hero__activity_img}></BiRun>
       </Link>
 
-      <FaArrowAltCircleDown className={styles.hero__arrow_btn}>
-        <LinkScroll to="#product"></LinkScroll>
-      </FaArrowAltCircleDown>
+      <LinkScroll to="#product">
+        <FaArrowAltCircleDown
+          className={styles.hero__arrow_btn}
+        ></FaArrowAltCircleDown>
+      </LinkScroll>
     </section>
   );
 };

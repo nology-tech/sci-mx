@@ -79,7 +79,8 @@
     justify-content: center;
     align-items: center;
     border-radius: 54px;
-    background-color: $secondary-color-gray;
+    background-color: $primary-color-orange;
+    color: $secondary-color-white;
   }
 
   &__activity_img {
@@ -90,5 +91,6 @@
 
   &__arrow_btn {
     font-size: 4rem;
+    color: $primary-color-orange;
   }
 }
