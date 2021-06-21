@@ -9,7 +9,15 @@ const ProfileStatusSec = () => {
       <h2>Will Irving</h2>
       <div>
         <h6>50</h6>
-        <p></p>
+        <p>Workout days</p>
+      </div>
+      <div>
+        <h6>2K</h6>
+        <p>Workout Minutes</p>
+      </div>
+      <div>
+        <h6>287</h6>
+        <p>Total sessions</p>
       </div>
     </>
   );

@@ -4,7 +4,7 @@ import WorkoutPage from "../WorkoutPage";
 import LibraryPage from "../LibraryPage";
 import NotFoundPage from "../NotFoundPage";
 import Tracker from "../Tracker";
-
+import ProfilePage from "../ProfilePage";
 //! localhost://3000/#... --> this route still works even though it should fail... probably because # is denoting id?
 const Routes = () => {
   return (
