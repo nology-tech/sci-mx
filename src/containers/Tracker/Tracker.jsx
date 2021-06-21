@@ -33,34 +33,29 @@ function Tracker() {
 
       {/* Lower Center */}
       <div className={styles.lower_center}>
-        <a href="#">
-          <img
-            className={styles.lower_center__icon}
-            src={timerIcon}
-            alt="smallIcon"
-          />
-        </a>
-        <a href="#">
-          <img
-            className={styles.lower_center__icon}
-            src={runnerIcon}
-            alt="smallIcon"
-          />
-        </a>
-        <a href="#">
-          <img
-            className={styles.lower_center__icon}
-            src={graphIcon}
-            alt="smallIcon"
-          />
-        </a>
-        <a href="#">
-          <img
-            className={styles.lower_center__icon}
-            src={healthIcon}
-            alt="smallIcon"
-          />
-        </a>
+        <img
+          className={styles.lower_center__icon}
+          src={timerIcon}
+          alt="smallIcon"
+        />
+
+        <img
+          className={styles.lower_center__icon}
+          src={runnerIcon}
+          alt="smallIcon"
+        />
+
+        <img
+          className={styles.lower_center__icon}
+          src={graphIcon}
+          alt="smallIcon"
+        />
+
+        <img
+          className={styles.lower_center__icon}
+          src={healthIcon}
+          alt="smallIcon"
+        />
       </div>
 
       {/* Footer */}
@@ -68,29 +63,23 @@ function Tracker() {
         <h4 className={styles.footer_title}>Suggested workouts</h4>
       </div>
       <div className={styles.footer_icons}>
-        <a href="#">
-          <img
-            className={styles.footerIcon_StartWorkout__1}
-            src={startWorkout2}
-            alt="smallIcon"
-          />
-        </a>
+        <img
+          className={styles.footerIcon_StartWorkout__1}
+          src={startWorkout2}
+          alt="smallIcon"
+        />
 
-        <a href="#">
-          <img
-            className={styles.footerIcon_StartWorkout__1}
-            src={startWorkout2}
-            alt="smallIcon"
-          />
-        </a>
+        <img
+          className={styles.footerIcon_StartWorkout__1}
+          src={startWorkout2}
+          alt="smallIcon"
+        />
 
-        <a href="#">
-          <img
-            className={styles.footerIcon_StartWorkout__1}
-            src={startWorkout2}
-            alt="smallIcon"
-          />
-        </a>
+        <img
+          className={styles.footerIcon_StartWorkout__1}
+          src={startWorkout2}
+          alt="smallIcon"
+        />
       </div>
     </div>
   );
