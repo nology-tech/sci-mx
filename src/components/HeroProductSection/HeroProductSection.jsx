@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HeroProductSection.module.scss";
-import { Link } from "react-router-dom";
+
 import { Link as LinkScroll } from "react-scroll";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { FaArrowAltCircleDown } from "react-icons/fa";
