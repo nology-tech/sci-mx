@@ -1,0 +1,35 @@
+@import "../../assets/styles/base.scss";
+.socials {
+  padding-top: 70px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__heading {
+    width: 70%;
+    font-size: 3.6rem;
+    text-align: center;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4em;
+  }
+  &__icon {
+    font-size: 3.8rem;
+
+    &:hover {
+      color: $primary-color-orange;
+    }
+
+    &_youtube {
+      padding: 6px;
+      border-radius: 50%;
+      background-color: $secondary-color-gray;
+    }
+  }
+}
