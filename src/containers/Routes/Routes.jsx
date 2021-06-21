@@ -3,7 +3,7 @@ import LandingPage from "../LandingPage";
 import WorkoutPage from "../WorkoutPage";
 import LibraryPage from "../LibraryPage";
 import NotFoundPage from "../NotFoundPage";
-
+import Tracker from "../Tracker";
 //! localhost://3000/#... --> this route still works even though it should fail... probably because # is denoting id?
 const Routes = () => {
   return (
@@ -16,6 +16,9 @@ const Routes = () => {
       </Route>
       <Route path="/workout">
         <WorkoutPage />
+      </Route>
+      <Route path="/tracker">
+        <Tracker />
       </Route>
       <Route path="/library">
         <LibraryPage />
