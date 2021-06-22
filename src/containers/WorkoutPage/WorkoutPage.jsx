@@ -19,7 +19,7 @@ const WorkoutPage = () => {
             <li>30 SITUPS</li>
           </ul>
         </div>
-        <div className={styles.workoutContainer__image}>
+        <div className={styles.workoutContainer__body__image}>
           <img src={workoutimage} alt="workout"></img>
         </div>
       </div>
