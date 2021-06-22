@@ -21,6 +21,24 @@ const ProfileStatusSec = () => {
           <p className={styles.profile__stat__desc}>Total sessions</p>
         </div>
       </div>
+
+      <div className={styles.preferences}>
+        <h3 className={styles.preferences__heading}>Product Prefrences</h3>
+
+        <div className={styles.preferences__products}>
+          <div className={styles.preferences__product}>
+            <h4 className={styles.preferences__item}>Nutrition</h4>
+            <button className={styles.preferences__button}>+</button>
+            <p className={styles.preferences__desc}>All products</p>
+            {
+              //------------------------------------------------------
+            }
+          </div>
+          <div className={styles.preferences__product}>
+            <h4 className={styles.preferences__item}>Health & Wellbeing</h4>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
