@@ -31,7 +31,7 @@ const ProfileStatusSec = () => {
             <button className={styles.preferences__button}>+</button>
             <p className={styles.preferences__desc}>All products</p>
             {
-              //------------------------------------------------------
+              //-----------------------------------------------------
             }
           </div>
           <div className={styles.preferences__product}>
