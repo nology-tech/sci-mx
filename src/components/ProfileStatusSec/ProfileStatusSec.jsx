@@ -1,25 +1,27 @@
 import React from "react";
 import styles from "./ProfileStatusSec.module.scss";
-import Avatar from "../../assets/images/logos/sci-mx-logo.jpg";
+import avatar from "../../assets/images/workout/workout-5-image.jpg";
 
 const ProfileStatusSec = () => {
   return (
-    <>
-      <img src={Avatar} alt="sci-mx-logo.jpg" />
-      <h2>Will Irving</h2>
-      <div>
-        <h6>50</h6>
-        <p>Workout days</p>
+    <div className={styles.profile}>
+      <img src={avatar} alt="sci-mx-logo.jpg" className={styles.profile__img} />
+      <h2 className={styles.profile__heading}>Will Irving</h2>
+      <div className={styles.profile__status}>
+        <div className={styles.profile__stat}>
+          <h6 className={styles.profile__stat__heading}>50</h6>
+          <p className={styles.profile__stat__desc}>Workout days</p>
+        </div>
+        <div className={styles.profile__stat}>
+          <h6 className={styles.profile__stat__heading}>2K</h6>
+          <p className={styles.profile__stat__desc}>Workout Minutes</p>
+        </div>
+        <div className={styles.profile__stat}>
+          <h6 className={styles.profile__stat__heading}>287</h6>
+          <p className={styles.profile__stat__desc}>Total sessions</p>
+        </div>
       </div>
-      <div>
-        <h6>2K</h6>
-        <p>Workout Minutes</p>
-      </div>
-      <div>
-        <h6>287</h6>
-        <p>Total sessions</p>
-      </div>
-    </>
+    </div>
   );
 };
 
