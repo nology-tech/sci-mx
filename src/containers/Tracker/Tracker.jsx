@@ -9,6 +9,7 @@ import graphIcon from "./image/graph_Icon.svg";
 import healthIcon from "./image/health_Icon.svg";
 import startWorkout2 from "./image/footerStartWorkout2.svg";
 import styles from "./Tracker.module.scss";
+import TrackerCarousel from "../../components/TrackerCarousel/TrackerCarousel";
 
 function Tracker() {
   return (
@@ -60,26 +61,7 @@ function Tracker() {
 
       {/* Footer */}
       <div>
-        <h4 className={styles.footer_title}>Suggested workouts</h4>
-      </div>
-      <div className={styles.footer_icons}>
-        <img
-          className={styles.footerIcon_StartWorkout__1}
-          src={startWorkout2}
-          alt="smallIcon"
-        />
-
-        <img
-          className={styles.footerIcon_StartWorkout__1}
-          src={startWorkout2}
-          alt="smallIcon"
-        />
-
-        <img
-          className={styles.footerIcon_StartWorkout__1}
-          src={startWorkout2}
-          alt="smallIcon"
-        />
+        <TrackerCarousel />
       </div>
     </div>
   );

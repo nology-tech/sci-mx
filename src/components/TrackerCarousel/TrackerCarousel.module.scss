@@ -1,0 +1,40 @@
+* {
+  font-size: 62.5%;
+}
+
+.Carousel {
+  &__carouselContainer {
+    display: flex;
+    width: 200%;
+    // display: flex;
+    // overflow-y: hidden;
+    // overflow-x: scroll;
+    // width: 200%;
+    // position: relative;
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+  }
+  &__container {
+    position: relative;
+  }
+  &__buttons {
+    position: absolute;
+    bottom: 0.8rem;
+    left: 0.8rem;
+    border: none;
+  }
+  &__button {
+    background-color: #f05224;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 5rem;
+    height: 2rem;
+    font-size: 0.5rem;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
