@@ -11,13 +11,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 65vh;
+  height: 70vh;
   &__title {
-    font-size: 2rem;
+    font-size: 2.2rem;
+    font-family: $font-family;
   }
 
   &__rounds {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-family: $font-family;
     color: white;
     background-color: $primary-color-orange;
     border-radius: 33px;
@@ -25,16 +27,21 @@
   }
 
   &__body {
-    display: grid;
-    grid-template-columns: 0.7fr 1fr;
-    grid-template-rows: 1fr;
+    display: flex;
+   flex-direction: row;
+   align-items:flex-start;
+   justify-content: flex-start;
+   width: 100%;
+   margin-left: 10%;
     &__exercises {
       & > ul > li {
-        font-size: 1.5rem;
-        line-height: 3.5;
+        font-size: 1.8rem;
+        font-family: $font-family;
+        line-height: 1.5;
+        margin: 15% 0;
         & > span {
           color: $secondary-color-gray;
-          font-size: 1.5rem;
+          font-size: 1.8rem;
         }
       }
     }
@@ -42,16 +49,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      position: absolute;
+      top: 25%;
+      z-index: -1;
       & > img {
         height: auto;
         width: 100%;
         border-radius: 0;
         max-width: 100%;
+        z-index: -1;
       }
     }
   }
   &__rests {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: white;
     background-color: $primary-color-orange;
     border-radius: 33px;

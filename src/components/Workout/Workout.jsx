@@ -29,10 +29,10 @@ const Workout = (props) => {
               {workout.exercises.map(getExerciseJSX)}
             </ul>
           </div>
-          <div className={styles.workoutContainer__body__image}>
+        </div>
+        <div className={styles.workoutContainer__body__image}>
             <img src={workout.img} alt="workout"></img>
           </div>
-        </div>
         <div className={styles.workoutContainer__rests}>
         {workout.rests}  
         </div>
