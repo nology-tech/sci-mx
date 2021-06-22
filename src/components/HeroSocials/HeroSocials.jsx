@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FaTwitter, FaFacebook, FaYoutube } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import styles from "./HeroSocials.module.scss";
