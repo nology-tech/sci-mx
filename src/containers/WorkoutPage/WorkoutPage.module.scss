@@ -1,40 +1,4 @@
-@import "../../assets/styles/base.scss";
-
-//? margin-top is for the fixed Navbar: 70px;
-
-* {
-  font-family: $font-family;
-}
 .container {
   margin-top: 70px;
 }
 
-
-.workoutContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 70vh;
-  &__title {
-    font-size: 2rem;
-  }
-
-  &__rounds {
-    font-size: 1.5rem;
-    color: color;
-    background-color: orange;
-  }
-
-  &__body {
-    &__exercises{
-
-    }
-    &__image{
-
-    }
-  }
-  &__rests {
-
-  }
-}
