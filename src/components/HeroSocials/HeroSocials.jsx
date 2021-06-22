@@ -11,6 +11,7 @@ const HeroSocials = () => {
         <li className={styles.socials__item}>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.instagram.com/scimx/"
             className={styles.socials__link}
           >
@@ -20,6 +21,7 @@ const HeroSocials = () => {
         <li className={styles.socials__item}>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://twitter.com/scimx/"
             className={styles.socials__link}
           >
@@ -29,6 +31,7 @@ const HeroSocials = () => {
         <li className={styles.socials__item}>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.facebook.com/officialscimx/"
             className={styles.socials__link}
           >
@@ -38,6 +41,7 @@ const HeroSocials = () => {
         <li className={styles.socials__item}>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.youtube.com/user/scimx/"
             className={styles.socials__link}
           >
