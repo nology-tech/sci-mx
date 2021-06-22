@@ -10,26 +10,42 @@ const HeroSocials = () => {
       <h1 className={styles.socials__heading}>Share your progress</h1>
       <ul className={styles.socials__list}>
         <li className={styles.socials__item}>
-          <AiFillInstagram className={styles.socials__icon}>
-            <Link to="/shop" className={styles.socials__link} />
-          </AiFillInstagram>
-        </li>
-        <li className={styles.socials__item}>
-          <FaTwitter className={styles.socials__icon}>
-            <Link to="/shop" className={styles.socials__link} />
-          </FaTwitter>
-        </li>
-        <li className={styles.socials__item}>
-          <FaFacebook className={styles.socials__icon}>
-            <Link to="/shop" className={styles.socials__link} />
-          </FaFacebook>
-        </li>
-        <li className={styles.socials__item}>
-          <FaYoutube
-            className={`${styles.socials__icon} ${styles.socials__icon_youtube}`}
+          <a
+            target="_blank"
+            href="https://www.instagram.com/scimx/"
+            className={styles.socials__link}
           >
-            <Link to="/shop" className={styles.socials__link} />
-          </FaYoutube>
+            <AiFillInstagram className={styles.socials__icon} />
+          </a>
+        </li>
+        <li className={styles.socials__item}>
+          <a
+            target="_blank"
+            href="https://twitter.com/scimx/"
+            className={styles.socials__link}
+          >
+            <FaTwitter className={styles.socials__icon} />
+          </a>
+        </li>
+        <li className={styles.socials__item}>
+          <a
+            target="_blank"
+            href="https://www.facebook.com/officialscimx/"
+            className={styles.socials__link}
+          >
+            <FaFacebook className={styles.socials__icon} />
+          </a>
+        </li>
+        <li className={styles.socials__item}>
+          <a
+            target="_blank"
+            href="https://www.youtube.com/user/scimx/"
+            className={styles.socials__link}
+          >
+            <FaYoutube
+              className={`${styles.socials__icon} ${styles.socials__icon_youtube}`}
+            />
+          </a>
         </li>
       </ul>
     </section>
