@@ -3,7 +3,7 @@ import styles from "./WorkoutPage.module.scss";
 import Workout from "../../components/Workout/Workout";
 import workoutimage1 from "../../assets/images/WorkoutCutouts/workout2.png";
 import workoutimage2 from "../../assets/images/WorkoutCutouts/workout3.png";
-import workoutimage3 from "../../assets/images/WorkoutCutouts/workout5.png";
+import workoutimage3 from "../../assets/images/WorkoutCutouts/workout6.png";
 
 const WorkoutPage = () => {
 
@@ -51,7 +51,7 @@ const WorkoutPage = () => {
 
   return (
     <div className={styles.container}>
-      <Workout workout={workoutArray[2]}/>
+      <Workout workout={workoutArray[0]}/>
     </div>
   );
 };

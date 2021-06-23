@@ -20,3 +20,15 @@ $secondary-color-white: #ffffff;
 }
 
 $font-family: "azo-sans-web", sans-serif;
+
+// breakpoints 
+
+//? margin-top is for the fixed Navbar: 70px;
+// small tablets/large smartphones (landscape)
+$screen-sm-min: 576px;
+// small tablets (portrait)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 882px;
+// large tablets/desktops
+$screen-xl-min: 1200px;
