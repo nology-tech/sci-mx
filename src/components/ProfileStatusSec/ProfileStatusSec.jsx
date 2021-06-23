@@ -27,8 +27,12 @@ const ProfileStatusSec = () => {
 
         <div className={styles.preferences__products}>
           <div className={styles.preferences__product}>
-            <h4 className={styles.preferences__item}>Nutrition</h4>
-            <button className={styles.preferences__button}>+</button>
+            <div className={styles.preferences__subheader}>
+              <h4 className={styles.preferences__item}>Nutrition</h4>
+
+              <button className={styles.preferences__button}>+</button>
+            </div>
+
             <p className={styles.preferences__desc}>All products</p>
             {
               //-----------------------------------------------------
@@ -36,6 +40,10 @@ const ProfileStatusSec = () => {
           </div>
           <div className={styles.preferences__product}>
             <h4 className={styles.preferences__item}>Health & Wellbeing</h4>
+          </div>
+          {/* ----------------------------- */}
+          <div>
+            <h4 className={styles.preferences__item}>Clothing & Accessories</h4>
           </div>
         </div>
       </div>
