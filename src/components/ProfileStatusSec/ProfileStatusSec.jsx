@@ -1,4 +1,5 @@
 import React from "react";
+import ProductPref from "../ProductPref";
 import styles from "./ProfileStatusSec.module.scss";
 import avatar from "../../assets/images/workout/workout-5-image.jpg";
 
@@ -22,30 +23,13 @@ const ProfileStatusSec = () => {
         </div>
       </div>
 
+      {/* ^^ TOP STATUS ^^ */}
+
       <div className={styles.preferences}>
-        <h3 className={styles.preferences__heading}>Product Prefrences</h3>
-
-        <div className={styles.preferences__products}>
-          <div className={styles.preferences__product}>
-            <div className={styles.preferences__subheader}>
-              <h4 className={styles.preferences__item}>Nutrition</h4>
-
-              <button className={styles.preferences__button}>+</button>
-            </div>
-
-            <p className={styles.preferences__desc}>All products</p>
-            {
-              //-----------------------------------------------------
-            }
-          </div>
-          <div className={styles.preferences__product}>
-            <h4 className={styles.preferences__item}>Health & Wellbeing</h4>
-          </div>
-          {/* ----------------------------- */}
-          <div>
-            <h4 className={styles.preferences__item}>Clothing & Accessories</h4>
-          </div>
-        </div>
+        <h3 className={styles.preferences__heading}>Product Preferences</h3>
+        <ProductPref />
+        <ProductPref />
+        <ProductPref />
       </div>
     </div>
   );
