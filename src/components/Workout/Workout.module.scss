@@ -30,12 +30,12 @@
 
   &__body {
     display: flex;
-   flex-direction: row;
-   align-items:space-around;
-   justify-content: flex-start;
-   overflow: hidden;
-   width: 100%;
-   border-radius: 60px;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: flex-start;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 60px;
 
     &__exercises {
       & > ul > li {
@@ -43,9 +43,14 @@
         font-family: $font-family;
         line-height: 2.5;
         margin: 15% 0;
+
         & > span {
           color: $secondary-color-gray;
           font-size: 1.5rem;
+          text-shadow: 1px 1px rgba(231, 229, 229, 0.521);
+          background-color: rgba(231, 229, 229, 0.3);
+          border-radius: 30px;
+          padding: 0% 3%;
         }
       }
     }
@@ -82,9 +87,7 @@
     }
   }
 
-
-  
- &__rests {
+  &__rests {
     font-size: 1.2rem;
     color: white;
     background-color: $primary-color-orange;
