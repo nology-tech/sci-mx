@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./Workout.module.scss";
+import fingersBlue from "../../assets/images/Fingers/fingers-blue.png";
+import fingersRed from "../../assets/images/Fingers/fingers-red.png";
 
 const Workout = (props) => {
 
@@ -21,6 +23,7 @@ const Workout = (props) => {
   return (
     <>
       <div className={styles.workoutContainer}>
+      <img src={fingersRed} alt="fingers2" className={styles.fingers2}></img>
         <div className={styles.workoutContainer__title}>{workout.title}</div>
         <div className={styles.workoutContainer__rounds}>{workout.rounds}</div>
         <div className={styles.workoutContainer__body}>
@@ -31,12 +34,14 @@ const Workout = (props) => {
           </div>
         </div>
         <div className={styles.workoutContainer__body__image}>
-            <img src={workout.img} alt="workout"></img>
+            <img src={workout.img} alt="workout" className={styles.workoutpic}></img>
+            <img src={fingersRed} alt="fingers" className={styles.fingers}></img>
           </div>
         <div className={styles.workoutContainer__rests}>
         {workout.rests}  
         </div>
       </div>
+    
     </>
   );
 };
