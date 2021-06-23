@@ -3,29 +3,10 @@ import styles from "./TrackerCarousel.module.scss";
 import workoutData from "../../containers/Tracker/workoutData";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-// const responsive = {
-//   // superLargeDesktop: {
-//   //   // the naming can be any, depends on you.
-//   //   breakpoint: { max: 4000, min: 3000 },
-//   //   items: 5,
-//   // },
-//   // desktop: {
-//   //   breakpoint: { max: 3000, min: 1024 },
-//   //   items: 3,
-//   // },
-//   // tablet: {
-//   //   breakpoint: { max: 1024, min: 464 },
-//   //   items: 2,
-//   // },
-//   // mobile: {
-//   //   breakpoint: { max: 464, min: 0 },
-//   //   items: 1,
-//   // },
-// };
+
 const TrackerCarousel = () => {
   return (
     <div>
-      <h1>Suggested Workout</h1>
       <Carousel
         additionalTransfrom={0}
         arrows
@@ -34,15 +15,15 @@ const TrackerCarousel = () => {
         className=""
         containerClass="container"
         // customDot={<CustomDot />}
-        dotListClass=""
+        // dotListClass=""
         draggable
         focusOnSelect={false}
-        infinite
+        // infinite
         itemClass=""
         keyBoardControl
         minimumTouchDrag={80}
-        renderButtonGroupOutside={false}
-        renderDotsOutside={false}
+        // renderButtonGroupOutside={false}
+        // renderDotsOutside={false}
         responsive={{
           desktop: {
             breakpoint: {
@@ -66,7 +47,6 @@ const TrackerCarousel = () => {
             items: 1,
           },
         }}
-        showDots
         sliderClass=""
         slidesToSlide={1}
         swipeable

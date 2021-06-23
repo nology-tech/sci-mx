@@ -5,12 +5,7 @@
 .Carousel {
   &__carouselContainer {
     display: flex;
-    // width: 200%;
-    // display: flex;
-    // overflow-y: hidden;
-    // overflow-x: scroll;
-    // width: 200%;
-    // position: relative;
+    width: 300%;
   }
   &__image {
     height: 100%;
@@ -22,7 +17,7 @@
   &__buttons {
     position: absolute;
     bottom: 0.8rem;
-    left: 0.8rem;
+    left: 1.8rem;
     border: none;
   }
   &__button {
@@ -30,25 +25,25 @@
     color: white;
     outline: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 5rem;
     height: 2rem;
     font-size: 0.5rem;
     word-wrap: break-word;
     white-space: normal;
   }
+  &__button:hover {
+    background-color: #f1430eb0;
+    color: rgba(255, 255, 255, 0.753);
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .Carousel {
-    &__carouselContainer {
-      display: flex;
-      // width: 400%;
-      // display: flex;
-      // overflow-y: hidden;
-      // overflow-x: scroll;
-      // width: 200%;
-      // position: relative;
+    &__buttons {
+      bottom: 0.8rem;
+      left: 2.3rem;
+      border: none;
     }
   }
 }

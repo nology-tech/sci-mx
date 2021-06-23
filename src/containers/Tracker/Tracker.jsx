@@ -60,6 +60,9 @@ function Tracker() {
       </div>
 
       {/* Footer */}
+
+      <h1 className={styles.headings__carousel}>SUGGESTED WORKOUT</h1>
+
       <div>
         <TrackerCarousel />
       </div>
