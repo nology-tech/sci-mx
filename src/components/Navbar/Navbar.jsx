@@ -16,9 +16,9 @@ const Navbar = (props) => {
         <LinkRoute className={styles.nav__logo} to="/home">
           <img className={styles.nav__logo_img} src={logo} alt="" />
         </LinkRoute>
-        <div className={styles.nav__profile}>
+        <LinkRoute to="/profile" className={styles.nav__profile}>
           <CgProfile />
-        </div>
+        </LinkRoute>
       </nav>
     </header>
   );

@@ -51,7 +51,7 @@ const WorkoutPage = () => {
 
   return (
     <div className={styles.container}>
-      <Workout workout={workoutArray[2]}/>
+      <Workout workout={workoutArray[0]}/>
       <div className={styles.trackerBlock}></div>
     </div>
   );
