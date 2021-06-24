@@ -1,4 +1,14 @@
 .container {
   margin-top: 70px;
-  padding: 2%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.trackerBlock {
+  height: 25vh;
+  width: 80vw;
+  background-color: orangered;
+  border-radius: 50px;
 }

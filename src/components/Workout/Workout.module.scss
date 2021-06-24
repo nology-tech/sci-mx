@@ -40,26 +40,31 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 70vh;
+  height: 60vh;
   width: 100vw;
   overflow: hidden;
+  margin-bottom: 5%;
   &__title {
-    font-size: 2.2rem;
+    font-size: 2.0rem;
+    text-align: center;
     font-family: $font-family;
-    margin-bottom: 5%;
+    margin-bottom: 2%;
   }
 
   &__rounds {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-family: $font-family;
+    font-weight: lighter;
     color: white;
     background-color: $primary-color-orange;
     border-radius: 33px;
-    padding: 2% 5%;
+    padding: 1% 3%;
   }
 
   &__body {
-    display: flex;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 1fr;
     flex-direction: row;
     align-items: space-around;
     justify-content: flex-start;
@@ -71,16 +76,17 @@
         margin-left: 5%;
       }
       & > ul > li {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-family: $font-family;
-        line-height: 2.5;
+        line-height: 50%;
         margin: 15% 0;
 
         & > span {
           color: $secondary-color-gray;
-          font-size: 1.5rem;
-          text-shadow: 1px 1px rgba(231, 229, 229, 0.521);
-          background-color: rgba(231, 229, 229, 0.3);
+          font-size: 1.6rem;
+          font-family: $font-family;
+          // text-shadow: 1px 1px rgba(231, 229, 229, 0.521);
+          // background-color: rgba(231, 229, 229, 0.3);
           border-radius: 30px;
           padding: 0% 3%;
         }
@@ -112,7 +118,7 @@
         height: auto;
         width: 180%;
         transform: rotate(240deg);
-        filter: blur(3px);
+        filter: blur(2px);
         left: 60%;
         overflow: hidden;
         top: 5%;
@@ -126,11 +132,13 @@
   }
 
   &__rests {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+    font-family: $font-family;
+    font-weight: lighter;
     color: white;
     background-color: $primary-color-orange;
     border-radius: 33px;
-    padding: 2% 5%;
+    padding: 1% 3%;
   }
 }
 
