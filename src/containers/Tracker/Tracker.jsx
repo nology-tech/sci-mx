@@ -25,11 +25,11 @@ function Tracker() {
       </div>
 
       {/* Upper Center */}
-      <div className={styles.center}>
+      {/* <div className={styles.center}>
         <img src={polygon1} className={styles.polygon} alt="" />
         <img src={centerRectangle} className={styles.centerRectangle} alt="" />
         <img src={polygon2} className={styles.polygon} alt="" />
-      </div>
+      </div> */}
 
       {/* Lower Center */}
       <div className={styles.lower_center}>
