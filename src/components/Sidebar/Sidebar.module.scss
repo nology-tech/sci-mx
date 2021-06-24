@@ -26,11 +26,11 @@ a {
   display: grid;
   align-items: center;
   transition: all 0.4s ease-out;
-  opacity: 0%;
+  opacity: 0;
 
   &_open {
     left: 0;
-    opacity: 100%;
+    opacity: 1;
     transition: all 0.3s ease-out;
   }
 
