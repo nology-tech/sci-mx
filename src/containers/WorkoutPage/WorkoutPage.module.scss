@@ -1,5 +1,7 @@
 .container {
   margin-top: 70px;
+  height: 85vh;
+  overflow: hidden;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -7,7 +9,7 @@
 }
 
 .trackerBlock {
-  height: 25vh;
+  height: 20vh;
   width: 80vw;
   background-color: orangered;
   border-radius: 50px;

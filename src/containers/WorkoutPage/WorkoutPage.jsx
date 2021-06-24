@@ -36,7 +36,7 @@ const WorkoutPage = () => {
   },
   {
     title: "CORE FINISHER",
-    rounds: "AS MANY ROUNDS AS POSSIBLE IN 5 MINS",
+    rounds: "AS MANY ROUNDS IN 5 MINS",
     exercises: [
       "10 RUSSIAN TWISTS",
       "10 BUTTERFLY SIT-UPS",
