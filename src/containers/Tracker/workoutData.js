@@ -1,9 +1,7 @@
-import Image1 from "../../assets/images/workout/workout-2-image.jpg";
-import Image2 from "../../assets/images/workout/workout-2-image.jpg";
-import Image3 from "../../assets/images/workout/workout-4-image.jpg";
-import Image4 from "../../assets/images/workout/workout-4-image.jpg";
-import Image5 from "../../assets/images/workout/workout-5-image.jpg";
-import Image6 from "../../assets/images/workout/workout-6-image.jpg";
+import Image1 from "../../assets/images/suggestedWorkout/suggestedWorkout1.png";
+import Image2 from "../../assets/images/suggestedWorkout/suggestedWorkout2.png";
+import Image3 from "../../assets/images/suggestedWorkout/suggestedWorkout3.png";
+
 const workoutData = [
   {
     id: "workout-1",
@@ -22,32 +20,32 @@ const workoutData = [
   },
   {
     id: "workout-4",
-    img_path: Image4,
+    img_path: Image2,
     name: "20:20 VISION",
   },
   {
     id: "workout-5",
-    img_path: Image5,
+    img_path: Image3,
     name: "CORE FINISHER",
   },
   {
     id: "workout-6",
-    img_path: Image6,
+    img_path: Image1,
     name: "WORKOUT TIME",
   },
   {
     id: "workout-7",
-    img_path: Image2,
+    img_path: Image3,
     name: "workout-name-7",
   },
   {
     id: "workout-8",
-    img_path: Image4,
+    img_path: Image1,
     name: "workout-name-8",
   },
   {
     id: "workout-9",
-    img_path: Image1,
+    img_path: Image2,
     name: "workout-name-9",
   },
   // {

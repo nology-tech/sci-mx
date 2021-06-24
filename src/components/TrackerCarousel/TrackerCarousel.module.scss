@@ -1,3 +1,5 @@
+@import "../../assets/styles/base.scss";
+
 * {
   font-size: 62.5%;
 }
@@ -5,23 +7,30 @@
 .Carousel {
   &__carouselContainer {
     display: flex;
+    justify-content: center;
     width: 300%;
   }
   &__image {
     height: 100%;
     width: 100%;
   }
-  &__container {
-    position: relative;
-  }
+  // &__container {
+  //   position: relative;
+  // }
   &__buttons {
-    position: absolute;
-    bottom: 0.8rem;
-    left: 1.8rem;
-    border: none;
+    // position: absolute;
+    // bottom: 0.8rem;
+    // left: 1.8rem;
+    // border: none;
+    // margin-left: auto;
+    // margin-right: auto;
+    border: 3px solid red;
+    text-align: center;
+    // bottom: 10%;
+    // left: 18%;
   }
   &__button {
-    background-color: #f05224;
+    background-color: $primary-color-orange;
     color: white;
     outline: none;
     border: none;
@@ -38,12 +47,30 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 576px) {
   .Carousel {
     &__buttons {
-      bottom: 0.8rem;
-      left: 2.3rem;
-      border: none;
+      position: absolute;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      text-align: center;
+      bottom: 10%;
+      left: 19%;
+    }
+    &__button {
+      height: 3rem;
+      width: 10rem;
+      font-size: 1rem;
     }
   }
 }
+
+// $screen-sm-min: 576px;
+// // small tablets (portrait)
+// $screen-md-min: 768px;
+// // Tablets and small desktops
+// $screen-lg-min: 882px;
+// // large tablets/desktops
+// $screen-xl-min: 1200px;
