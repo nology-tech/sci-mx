@@ -36,17 +36,62 @@ const workoutData = [
   {
     id: "workout-7",
     img_path: Image3,
-    name: "workout-name-7",
+    name: "CORE FINISHER",
   },
   {
     id: "workout-8",
     img_path: Image1,
-    name: "workout-name-8",
+    name: "COUNTDOWN CONUNDRUM",
   },
   {
     id: "workout-9",
     img_path: Image2,
-    name: "workout-name-9",
+    name: "TIME TO GET LEGLESS",
+  },
+  {
+    id: "workout-10",
+    img_path: Image1,
+    name: "NO REST FOR THE WICKED",
+  },
+  {
+    id: "workout-11",
+    img_path: Image2,
+    name: "TIME TO GET LEGLESS",
+  },
+  {
+    id: "workout-12",
+    img_path: Image3,
+    name: "COUNTDOWN CONUNDRUM",
+  },
+  {
+    id: "workout-13",
+    img_path: Image2,
+    name: "20:20 VISION",
+  },
+  {
+    id: "workout-14",
+    img_path: Image3,
+    name: "CORE FINISHER",
+  },
+  {
+    id: "workout-15",
+    img_path: Image1,
+    name: "WORKOUT TIME",
+  },
+  {
+    id: "workout-16",
+    img_path: Image3,
+    name: "CORE FINISHER",
+  },
+  {
+    id: "workout-17",
+    img_path: Image1,
+    name: "COUNTDOWN CONUNDRUM",
+  },
+  {
+    id: "workout-18",
+    img_path: Image2,
+    name: "TIME TO GET LEGLESS",
   },
   // {
   //   id: "workout-1",

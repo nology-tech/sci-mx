@@ -15,9 +15,9 @@ function Tracker() {
   return (
     // Navbar
     <div>
-      <nav>
+      {/* <nav>
         <img className={styles.navbar} src={navbar} alt="" />
-      </nav>
+      </nav> */}
 
       {/* Headings */}
       <div className={styles.headings}>
