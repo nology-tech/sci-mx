@@ -7,8 +7,6 @@ import { FaArrowAltCircleDown } from "react-icons/fa";
 import { BiRun } from "react-icons/bi";
 
 const HeroSection = () => {
-  const getRandWorkout = () => {};
-
   return (
     <section className={styles.hero}>
       <div className={styles.hero__title}>
