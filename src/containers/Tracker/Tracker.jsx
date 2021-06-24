@@ -9,6 +9,7 @@ import graphIcon from "./image/graph_Icon.svg";
 import healthIcon from "./image/health_Icon.svg";
 import startWorkout2 from "./image/footerStartWorkout2.svg";
 import styles from "./Tracker.module.scss";
+import Bar from "../../components/Graphs/Bar";
 
 function Tracker() {
   return (
@@ -25,11 +26,9 @@ function Tracker() {
       </div>
 
       {/* Upper Center */}
-      {/* <div className={styles.center}>
-        <img src={polygon1} className={styles.polygon} alt="" />
-        <img src={centerRectangle} className={styles.centerRectangle} alt="" />
-        <img src={polygon2} className={styles.polygon} alt="" />
-      </div> */}
+      <div className="bar-chart">
+        <Bar />
+      </div>
 
       {/* Lower Center */}
       <div className={styles.lower_center}>
