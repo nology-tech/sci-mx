@@ -18,7 +18,8 @@ button {
   margin: 0.3rem 0rem;
   padding: 2rem 2rem;
   width: 100%;
-  background-color: $primary-color-orange;
+  max-width: 400px;
+  background-color: $secondary-color-white;
   border-top-right-radius: 15px;
 
   &__header {
@@ -46,6 +47,8 @@ button {
     width: 100%;
     flex-direction: column;
     transform: 0.3s ease-in-out;
+    background-color: $primary-color-orange;
+    border-top-left-radius: 10px;
 
     &_active {
       height: 100%;
@@ -54,6 +57,7 @@ button {
   }
 
   &__subheading {
+    padding: 1rem;
     font-size: 1.3rem;
   }
 

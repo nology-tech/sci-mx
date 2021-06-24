@@ -3,9 +3,12 @@
 .profile {
   width: 100%;
   display: flex;
+  margin-top: 2rem;
   flex-direction: column;
   align-items: center;
   padding-top: 70px;
+  max-width: 768px;
+
   &__img {
     max-width: 100%;
     width: 162px;
@@ -54,4 +57,16 @@
     font-size: 1.8rem;
     margin-top: 4rem;
   }
+}
+.feedback {
+  text-align: center;
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+}
+.feedback__heading {
+  font-size: 1.8rem;
+}
+.feedback__desc {
+  margin-top: 1rem;
+  font-size: 1.3rem;
 }

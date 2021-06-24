@@ -31,6 +31,10 @@ const ProfileStatusSec = () => {
         <ProductPref />
         <ProductPref />
       </div>
+      <div className={styles.feedback}>
+        <h4 className={styles.feedback__heading}>Feedback</h4>
+        <p className={styles.feedback__desc}>Send us a message</p>
+      </div>
     </div>
   );
 };
