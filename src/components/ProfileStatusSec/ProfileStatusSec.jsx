@@ -27,9 +27,9 @@ const ProfileStatusSec = () => {
 
       <div className={styles.preferences}>
         <h3 className={styles.preferences__heading}>Product Preferences</h3>
-        <ProductPref />
-        <ProductPref />
-        <ProductPref />
+        <ProductPref heading="Nutrition" />
+        <ProductPref heading="Health & Wellbeing" />
+        <ProductPref heading="Clothing & Accessories" />
       </div>
       <div className={styles.feedback}>
         <h4 className={styles.feedback__heading}>Feedback</h4>
