@@ -42,12 +42,12 @@ const TrackerCarousel = () => {
       >
         {workoutData.map((workout) => (
           <div className={styles.Carousel__container} key={workout.id}>
+            <div className={styles.Carousel__overlay}></div>
             <img
               className={styles.Carousel__image}
               src={workout.img_path}
               alt={workout.id}
             />
-            <div className={styles.overlay}></div>
             <div className={styles.Carousel__buttons_container}>
               <button className={styles.Carousel__button}>
                 {workout.name}

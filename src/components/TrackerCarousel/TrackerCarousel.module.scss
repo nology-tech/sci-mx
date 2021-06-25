@@ -20,6 +20,7 @@
   &__image {
     height: 100%;
     width: 100%;
+    // display: block;
   }
 
   &__buttons_container {
@@ -45,15 +46,21 @@
     background-color: #f1430eb0;
     color: rgba(255, 255, 255, 0.753);
   }
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    background: $primary-color-blue;
+    width: 82%;
+    opacity: 0.7;
+    border-radius: 2.5rem;
+    opacity: 0.4;
+    height: 100%;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
 }
 
-.overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background-color: $primary-color-blue;
-}
 @media screen and (min-width: 768px) {
   .Carousel {
     &__button {
