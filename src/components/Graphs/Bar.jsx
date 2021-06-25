@@ -2,9 +2,7 @@ import { Bar } from "react-chartjs-2";
 import React from "react";
 import "../../assets/styles/base.scss";
 
-const BarChart = (props) => {
-  const { heartRateData } = props;
-
+const BarChart = () => {
   const data = {
     labels: [
       "Sunday",
