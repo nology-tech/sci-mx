@@ -1,5 +1,5 @@
 import React from "react";
-import navbar from "./image/navbar.svg";
+
 import centerRectangle from "./image/centerRectangle.svg";
 import polygon1 from "./image/polygon1.svg";
 import polygon2 from "./image/polygon2.svg";
@@ -7,7 +7,7 @@ import timerIcon from "./image/timer_Icon.svg";
 import runnerIcon from "./image/running_Icon.svg";
 import graphIcon from "./image/graph_Icon.svg";
 import healthIcon from "./image/health_Icon.svg";
-import startWorkout2 from "./image/footerStartWorkout2.svg";
+
 import styles from "./Tracker.module.scss";
 import TrackerCarousel from "../../components/TrackerCarousel/TrackerCarousel";
 
