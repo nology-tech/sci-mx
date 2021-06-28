@@ -46,7 +46,6 @@ const Workout = props => {
     const split = exercise.split(" ");
     const letter = split[0];
     split.shift();
-    // const workoutString = text.join(" ");
 
     return (
       <li>
@@ -58,17 +57,13 @@ const Workout = props => {
   return (
     <>
       <div className={styles.workoutContainer}>
-        <img src={fingers} alt="fingers2" className={styles.fingers2}></img>
         <div className={styles.workoutContainer__title}>{workout.title}</div>
         <div className={styles.workoutContainer__rounds}>{workout.rounds}</div>
         <div className={styles.workoutContainer__body}>
           <ul>{workout.exercises.map(getExerciseJSX)}</ul>
           <img src={workout.img} alt="workout" className={styles.workoutpic}></img>
           <img src={fingers} alt="fingers" className={styles.fingers}></img>
-          {/* <div className={styles.workoutContainer__body__image}>
-          </div> */}
         </div>
-
         <div className={styles.workoutContainer__rests}>{workout.rests}</div>
       </div>
     </>
