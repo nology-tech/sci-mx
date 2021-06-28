@@ -1,0 +1,72 @@
+@import "../../assets/styles/base.scss";
+
+* {
+  font-size: 62.5%;
+}
+
+.Carousel {
+  &__carouselContainer {
+    width: 300%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &__image {
+    height: 100%;
+    width: 100%;
+    // display: block;
+  }
+
+  &__buttons_container {
+    display: flex;
+
+    position: absolute;
+
+    bottom: 0.5rem;
+  }
+  &__button {
+    background-color: $primary-color-orange;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: 5rem;
+    height: 1.5rem;
+    font-size: 0.5rem;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  &__button:hover {
+    background-color: #f1430eb0;
+    color: rgba(255, 255, 255, 0.753);
+  }
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    background: $primary-color-blue;
+    width: 82%;
+    opacity: 0.7;
+    border-radius: 2.5rem;
+    opacity: 0.4;
+    height: 100%;
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .Carousel {
+    &__button {
+      width: 7rem;
+      height: 2.7rem;
+      font-size: 0.8rem;
+    }
+  }
+}

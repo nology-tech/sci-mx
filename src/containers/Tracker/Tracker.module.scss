@@ -16,10 +16,18 @@
 .headings {
   .headings__name {
     font-size: 2.4rem;
+    text-align: center;
+    padding-top: 0.9rem;
   }
   .workOutDays {
     font-size: 1.8rem;
     color: #a7a9ac;
+    text-align: center;
+  }
+  &__carousel {
+    font-size: 1.6rem !important;
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 }
 
