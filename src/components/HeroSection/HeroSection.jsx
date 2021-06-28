@@ -33,7 +33,7 @@ const HeroSection = () => {
         <BiRun className={styles.hero__activity_img}></BiRun>
       </Link>
 
-      <LinkScroll to="#product">
+      <LinkScroll to="product">
         <FaArrowAltCircleDown
           className={styles.hero__arrow_btn}
         ></FaArrowAltCircleDown>

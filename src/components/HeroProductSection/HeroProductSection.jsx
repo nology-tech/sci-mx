@@ -27,7 +27,7 @@ const HeroProductSection = () => {
           <p className={styles.carousel__price}>£24.99 RRP</p>
         </div>
       </div>
-      <LinkScroll className={styles.hero__arrow_btn} to="#">
+      <LinkScroll className={styles.hero__arrow_btn} to="socials">
         <FaArrowAltCircleDown
           className={styles.carousel__arrow_btn}
         ></FaArrowAltCircleDown>
