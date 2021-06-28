@@ -1,23 +1,16 @@
 import React from "react";
-import navbar from "./image/navbar.svg";
-import centerRectangle from "./image/centerRectangle.svg";
-import polygon1 from "./image/polygon1.svg";
-import polygon2 from "./image/polygon2.svg";
 import timerIcon from "./image/timer_Icon.svg";
 import runnerIcon from "./image/running_Icon.svg";
 import graphIcon from "./image/graph_Icon.svg";
 import healthIcon from "./image/health_Icon.svg";
-import startWorkout2 from "./image/footerStartWorkout2.svg";
 import styles from "./Tracker.module.scss";
+import TrackerCarousel from "../../components/TrackerCarousel/TrackerCarousel";
+import Bar from "../../components/Graphs/Bar";
 
 function Tracker() {
   return (
     // Navbar
     <div>
-      <nav>
-        <img className={styles.navbar} src={navbar} alt="" />
-      </nav>
-
       {/* Headings */}
       <div className={styles.headings}>
         <h3 className={styles.headings__name}>Tracker</h3>
@@ -25,10 +18,9 @@ function Tracker() {
       </div>
 
       {/* Upper Center */}
-      <div className={styles.center}>
-        <img src={polygon1} className={styles.polygon} alt="" />
-        <img src={centerRectangle} className={styles.centerRectangle} alt="" />
-        <img src={polygon2} className={styles.polygon} alt="" />
+      <div className="bar-chart">
+        <Bar />
+        {/* <Line /> */}
       </div>
 
       {/* Lower Center */}
@@ -59,27 +51,11 @@ function Tracker() {
       </div>
 
       {/* Footer */}
+
+      <h1 className={styles.headings__carousel}>SUGGESTED WORKOUT</h1>
+
       <div>
-        <h4 className={styles.footer_title}>Suggested workouts</h4>
-      </div>
-      <div className={styles.footer_icons}>
-        <img
-          className={styles.footerIcon_StartWorkout__1}
-          src={startWorkout2}
-          alt="smallIcon"
-        />
-
-        <img
-          className={styles.footerIcon_StartWorkout__1}
-          src={startWorkout2}
-          alt="smallIcon"
-        />
-
-        <img
-          className={styles.footerIcon_StartWorkout__1}
-          src={startWorkout2}
-          alt="smallIcon"
-        />
+        <TrackerCarousel />
       </div>
     </div>
   );
