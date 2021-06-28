@@ -62,13 +62,20 @@
 
     &_link {
       position: absolute;
-      top: 80%;
+      top: 90%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: $secondary-color-white;
       background: $primary-color-orange;
       padding: 6px;
       border-radius: 33px;
+      width: 45%;
+      height: 15%;
+      font-size: 1rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
