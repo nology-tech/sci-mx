@@ -1,15 +1,11 @@
 import React from "react";
-
-import centerRectangle from "./image/centerRectangle.svg";
-import polygon1 from "./image/polygon1.svg";
-import polygon2 from "./image/polygon2.svg";
 import timerIcon from "./image/timer_Icon.svg";
 import runnerIcon from "./image/running_Icon.svg";
 import graphIcon from "./image/graph_Icon.svg";
 import healthIcon from "./image/health_Icon.svg";
-
 import styles from "./Tracker.module.scss";
 import TrackerCarousel from "../../components/TrackerCarousel/TrackerCarousel";
+import Bar from "../../components/Graphs/Bar";
 
 function Tracker() {
   return (
@@ -22,10 +18,9 @@ function Tracker() {
       </div>
 
       {/* Upper Center */}
-      <div className={styles.center}>
-        <img src={polygon1} className={styles.polygon} alt="" />
-        <img src={centerRectangle} className={styles.centerRectangle} alt="" />
-        <img src={polygon2} className={styles.polygon} alt="" />
+      <div className="bar-chart">
+        <Bar />
+        {/* <Line /> */}
       </div>
 
       {/* Lower Center */}
