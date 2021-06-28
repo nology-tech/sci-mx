@@ -42,13 +42,13 @@ const Workout = props => {
 
   const { workout } = props;
 
-  const getExerciseJSX = exercise => {
+  const getExerciseJSX = (exercise, index) => {
     const split = exercise.split(" ");
     const letter = split[0];
     split.shift();
 
     return (
-      <li>
+      <li key={index}>
         {letter} <span>{split.join(" ")}</span>
       </li>
     );
