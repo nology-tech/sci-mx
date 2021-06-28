@@ -30,21 +30,15 @@
   }
 }
 
-
 * {
   font-family: $font-family;
 }
 
 .workoutContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 60vh;
-  width: 100vw;
-  overflow: hidden;
+  width: 100%;
+
   &__title {
-    font-size: 2.0rem;
+    font-size: 2rem;
     @include md {
       font-size: 3.5rem;
     }
@@ -58,6 +52,8 @@
   }
 
   &__rounds {
+    width: fit-content;
+    margin: 0 auto;
     font-size: 1.6rem;
     @include md {
       font-size: 2.4rem;
@@ -74,102 +70,63 @@
   }
 
   &__body {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 3fr 1fr;
-    flex-direction: row;
+    position: relative;
     overflow: hidden;
-    align-items: space-around;
-    justify-content: flex-start;
-    width: 100%;
+    box-shadow: inset -10px 5px 20px 0px #ffffff;
 
-    &__exercises {
-      & > ul {
-        margin-left: 5%;
+    ul {
+      margin-left: 5%;
+      width: 100%;
+      min-height: 60vh;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+    }
+    ul > li {
+      font-size: 1.6rem;
+      font-family: $font-family;
+
+      @include md {
+        font-size: 2.4rem;
       }
-      & > ul > li {
+      @include lg {
+        font-size: 2.6rem;
+      }
+
+      & > span {
+        color: $secondary-color-gray;
+        background-color: rgba(255, 255, 255, 0.842);
         font-size: 1.6rem;
-        font-family: $font-family;
-        line-height: 10%;
-        margin: 15% 0;
         @include md {
           font-size: 2.4rem;
-          margin: 12% 0;
         }
         @include lg {
           font-size: 2.6rem;
-          margin: 4%;
         }
-
-        & > span {
-          color: $secondary-color-gray;
-          font-size: 1.6rem;
-          @include md {
-            font-size: 2.4rem;
-          }
-          @include lg {
-            font-size: 2.6rem;
-          }
-          font-family: $font-family;
-          // text-shadow: 1px 1px rgba(231, 229, 229, 0.521);
-          // background-color: rgba(231, 229, 229, 0.3);
-          border-radius: 30px;
-          padding: 0% 3%;
-        }
+        font-family: $font-family;
+        border-radius: 30px;
+        padding: 0% 3%;
       }
     }
-    &__image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+    .workoutpic {
       position: absolute;
-      overflow: hidden;
-      bottom: 0;
+      right: 0;
+      bottom: 50%;
+      transform: translateY(50%);
       z-index: -1;
-      border-radius: 0px;
-      padding-bottom: 2%;
-      @include md {
-        right: 0;
-      }
-      & > .workoutpic {
-        height: auto;
-        width: 100%;
-        margin-bottom: 50%;
-        border-radius: 0;
-        max-width: 100%;
-        opacity: 1;
-        @include md {
-          margin-bottom: 68%;
-        }
-        @include lg {
-          margin-bottom: 70%;
-        }
-        @include rwd(1024){
-          margin-bottom: 60%;
-        }
-        filter: blur(0.5px);
-        
-      }
-      & > .fingers {
-        height: auto;
-        width: 100%;
-        @include md {
-          width: 100%;
-        }
-        transform: rotate(240deg);
-        filter: blur(0px);
-        left: 70%;
-        @include md {
-          left: 60%;
-        }
-        overflow: hidden;
-        top: 15%;
-        opacity: 1;
-        position: absolute;
-        border-radius: 0;
-        max-width: 150%;
-        z-index: -1;
-      }
+      border-radius: none;
+      height: 80%;
+    }
+
+    .fingers {
+      position: absolute;
+      transform: rotate(220deg);
+      filter: blur(0px);
+      right: -40%;
+      bottom: 0;
+      z-index: -2;
+      height: 90%;
     }
   }
 
@@ -187,8 +144,9 @@
     color: white;
     background-color: $primary-color-orange;
     border-radius: 33px;
-    margin-top: 5%;
     padding: 1% 3%;
+    margin: 0 auto;
+    width: fit-content;
   }
 }
 
