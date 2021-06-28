@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Workout.module.scss";
-import fingersBlue from "../../assets/images/Fingers/fingers-blue.png";
-import fingersRed from "../../assets/images/Fingers/fingers-red.png";
-import fingersGreen from "../../assets/images/Fingers/fingers-green.png";
-import fingersYellow from "../../assets/images/Fingers/fingers-yellow.png";
-import fingersOrange from "../../assets/images/Fingers/fingers-orange.png";
-import fingersLightBlue from "../../assets/images/Fingers/fingers-light-blue.png";
+import fingersBlue from "../../assets/images/Fingers/1.svg";
+import fingersRed from "../../assets/images/Fingers/2.svg";
+import fingersGreen from "../../assets/images/Fingers/3.svg";
+import fingersYellow from "../../assets/images/Fingers/4.svg";
+import fingersOrange from "../../assets/images/Fingers/5.svg";
 
 const Workout = props => {
   const getRandomInt = (min, max) => {
@@ -15,7 +14,8 @@ const Workout = props => {
   };
 
   useEffect(() => {
-    const int = getRandomInt(1, 6);
+    const int = getRandomInt(1, 5);
+    console.log(int);
 
     switch (int) {
       case 1:
@@ -32,9 +32,6 @@ const Workout = props => {
         break;
       case 5:
         setFingers(fingersOrange);
-        break;
-      case 6:
-        setFingers(fingersLightBlue);
         break;
       default:
         setFingers(fingersBlue);
