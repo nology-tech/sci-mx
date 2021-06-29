@@ -2,68 +2,66 @@
 
 //? margin-top is for the fixed Navbar: 70px;
 .container {
+  padding: 2rem;
   margin-top: 70px;
-  height: 90vh;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.1fr 0.1fr 0.8fr;
+  height: calc(100vh - 70px);
 }
-.searchBar {
-  // margin-top: 100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  border-radius: 20px;
-  border: none;
-  padding: 10px;
-  font-size: 1.4rem;
-  font-family: $font-family;
-  background-color: $secondary-color-gray;
-  width: 50%;
-}
-
-::placeholder {
-  color: $secondary-color-white;
-  font-family: $font-family;
-}
-.buttoncontainer {
-  // border: 1px solid red;
-  display: flex;
-  justify-content: space-between;
-  // margin-top: 40px;
-}
-.buttoncontainer__button {
-  background-color: none;
-  font-family: $font-family;
-  border-radius: 20px;
-  border: none;
-  font-size: 1.8rem;
-  width: 20%;
-}
-
-.buttoncontainer__button:hover {
-  background-color: $primary-color-orange;
-}
-
-.workoutcontainer {
-  display: grid;
-  height: 100%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-
-.workoutcontainer__image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-// img {
-//   max-width: 80%;
-//   height: auto;
-//   // padding: 20px;
-//   border-radius: 30%;
+//   overflow: hidden;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: 0.1fr 0.1fr 0.8fr;
 // }
-//git push
+// .searchBar {
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   text-align: center;
+//   border-radius: 20px;
+//   border: none;
+//   padding: 10px;
+//   font-size: 1.4rem;
+//   font-family: $font-family;
+//   background-color: $secondary-color-gray;
+//   width: 50%;
+// }
+
+// ::placeholder {
+//   color: $secondary-color-white;
+//   font-family: $font-family;
+// }
+// .buttoncontainer {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .buttoncontainer__button {
+//   background-color: none;
+//   font-family: $font-family;
+//   border-radius: 20px;
+//   border: none;
+//   font-size: 1.8rem;
+//   width: 20%;
+// }
+
+// .buttoncontainer__button:hover {
+//   background-color: $primary-color-orange;
+// }
+
+// .workoutcontainer {
+//   display: grid;
+//   height: 100%;
+//   grid-template-columns: 1fr 1fr;
+//   grid-template-rows: 1fr 1fr 1fr;
+// }
+
+// .workoutcontainer__image {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+.workouts {
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
