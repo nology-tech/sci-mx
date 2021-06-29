@@ -21,12 +21,12 @@ const HeroSection = () => {
         <h1 className={styles.hero__heading}>Hello Will</h1>
         <h4 className={styles.hero__subheading}>Welcome back!</h4>
       </div>
-      <h3 className={styles.workout__title}>Today's Workout</h3>
-      <Link to="/workout">
-        <div className={styles.hero__image_container}>
-          <img className={styles.hero__image} src={randWorkout} alt="workout" />
-        </div>
-      </Link>
+      <div className={styles.hero__image_container}>
+        <img className={styles.hero__image} src={workout2} alt="workout" />
+        <Link to="/workout/1" className={styles.hero__image_link}>
+          NO REST FOR THE WICKED
+        </Link>
+      </div>
 
       <Link to="/tracker" className={styles.hero__activity_btn}>
         My Activity
