@@ -5,8 +5,8 @@ const Timer = () => {
   const [time, setTime] = useState(0);
   const [start, setStart] = useState(false);
   // const [lap, setLap] = useState([]);
-  const timerTracker = [];
-  const lapsContainer = document.querySelector(".lapContainer");
+
+  // const lapsContainer = document.querySelector(".lapContainer");
   useEffect(() => {
     let interval = null;
 
@@ -22,7 +22,13 @@ const Timer = () => {
 
   let minutes = ("0" + Math.floor((time / 60000) % 60)).slice(-2);
   let seconds = ("0" + Math.floor((time / 1000) % 60)).slice(-2);
-
+  const timerTracker = [minutes, seconds];
+  const lapMarkUp = () => {
+    let lapCount = 1;
+    return {
+      __html: `<ul><li>Lap ${lapCount++} ${minutes} : ${seconds} </li></ul>`,
+    };
+  };
   return (
     <section
       className={styles.timer}
@@ -36,10 +42,11 @@ const Timer = () => {
         console.log(timerTracker);
       }}
     >
-      <h1>
-        <span>{minutes}:</span>
-        <span>{seconds}</span>
-      </h1>
+      <div>
+        <div>
+          {minutes}:{seconds}
+        </div>
+      </div>
       <button
         onClick={() => {
           setTime(0);
@@ -48,7 +55,12 @@ const Timer = () => {
       >
         Reset
       </button>
-      <div className="lapContainer"></div>
+      <div className="lapContainer" dangerouslySetInnerHTML={lapMarkUp()} />
+      {/* <div>
+        {timerTracker.map((times) => {
+          return <div dangerouslySetInnerHTML={{ __html: times }} />;
+        })}
+      </div> */}
     </section>
   );
 };
