@@ -15,11 +15,11 @@ const Sidebar = (props) => {
       <ul className={styles.sidebar__list}>
         <li className={styles.sidebar__item}>
           <LinkRoute
-            to="/workout"
+            to="/tracker"
             className={styles.sidebar__link}
             onClick={handleSidebarToggle}
           >
-            Workout
+            Tracker
           </LinkRoute>
         </li>
         <li className={styles.sidebar__item}>

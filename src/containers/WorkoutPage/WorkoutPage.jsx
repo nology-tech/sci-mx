@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import styles from "./WorkoutPage.module.scss";
 import Workout from "../../components/Workout/Workout";
 import workoutimage1 from "../../assets/images/WorkoutCutouts/workout2.png";
@@ -47,9 +48,10 @@ const WorkoutPage = () => {
     },
   ];
 
+  const { workoutID } = useParams();
   return (
     <div className={styles.container}>
-      <Workout workout={workoutArray[1]} />
+      <Workout workout={workoutArray[workoutID]} />
 
       <div className={styles.trackerBlock}>
         <Timer
@@ -58,6 +60,8 @@ const WorkoutPage = () => {
           runningTime={0}
         />
       </div>
+
+      <div className={styles.trackerBlock}></div>
     </div>
   );
 };
