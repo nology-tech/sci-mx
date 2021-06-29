@@ -4,7 +4,7 @@ import styles from "./Timer.module.scss";
 const Timer = () => {
   const [time, setTime] = useState(0);
   const [start, setStart] = useState(false);
-  // const [lap, setLap] = useState([]);
+  const [rounds, setRounds] = useState([]);
 
   // const lapsContainer = document.querySelector(".lapContainer");
   useEffect(() => {
@@ -12,7 +12,7 @@ const Timer = () => {
 
     if (start) {
       interval = setInterval(() => {
-        setTime((prevTime) => prevTime + 10);
+        setTime(prevTime => prevTime + 10);
       }, 10);
     } else {
       clearInterval(interval);
@@ -22,7 +22,7 @@ const Timer = () => {
 
   let minutes = ("0" + Math.floor((time / 60000) % 60)).slice(-2);
   let seconds = ("0" + Math.floor((time / 1000) % 60)).slice(-2);
-  const timerTracker = [minutes, seconds];
+
   const lapMarkUp = () => {
     let lapCount = 1;
     return {
@@ -30,18 +30,7 @@ const Timer = () => {
     };
   };
   return (
-    <section
-      className={styles.timer}
-      onClick={() => {
-        setStart(true);
-      }}
-      onDoubleClick={() => {
-        setStart(false);
-
-        timerTracker.push({ mins: minutes, secs: seconds });
-        console.log(timerTracker);
-      }}
-    >
+    <section className={styles.timer}>
       <div>
         <div>
           {minutes}:{seconds}
@@ -54,6 +43,23 @@ const Timer = () => {
         }}
       >
         Reset
+      </button>
+      <button
+        onClick={() => {
+          setStart(true);
+        }}
+      >
+        START
+      </button>
+      <button
+        onClick={() => {
+          setStart(false);
+          const newState = [...rounds, { mins: minutes, secs: seconds, round: rounds.length + 1 }];
+          setRounds(newState);
+          console.log(rounds);
+        }}
+      >
+        STOP
       </button>
       <div className="lapContainer" dangerouslySetInnerHTML={lapMarkUp()} />
       {/* <div>
