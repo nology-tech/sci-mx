@@ -2,9 +2,11 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./WorkoutPage.module.scss";
 import Workout from "../../components/Workout/Workout";
-import workoutimage1 from "../../assets/images/WorkoutCutouts/workout2.png";
-import workoutimage2 from "../../assets/images/WorkoutCutouts/workout3.png";
-import workoutimage3 from "../../assets/images/WorkoutCutouts/workout6.png";
+import workoutimage2 from "../../assets/images/WorkoutCutouts/workout2.png";
+import workoutimage3 from "../../assets/images/WorkoutCutouts/workout3.png";
+import workoutimage4 from "../../assets/images/WorkoutCutouts/workout4.png";
+import workoutimage5 from "../../assets/images/WorkoutCutouts/workout5.png";
+import workoutimage6 from "../../assets/images/WorkoutCutouts/workout6.png";
 
 const WorkoutPage = () => {
   const workoutArray = [
@@ -20,7 +22,7 @@ const WorkoutPage = () => {
         "30 SITUPS",
       ],
       rests: "NO REST BETWEEN ROUNDS",
-      img: workoutimage1,
+      img: workoutimage2,
     },
     {
       title: "TIME TO GET LEGLESS",
@@ -32,7 +34,21 @@ const WorkoutPage = () => {
         "4 JUMPING LUNGES",
       ],
       rests: "16 REPS COMPLETED EACH MINUTE",
-      img: workoutimage2,
+      img: workoutimage3,
+    },
+    {
+      title: "COUNTDOWN CONUNDRUM",
+      rounds: "FOR TIME 10-9-8-7-6-5-4-3-2-1",
+      exercises: ["PUSH UP", "AIR SQUAT", "BURPEE"],
+      rests: "16 REPS COMPLETED EACH MINUTE",
+      img: workoutimage4,
+    },
+    {
+      title: "20:20 VISION",
+      rounds: "AS MANY ROUNDS AS POSSIBLE IN 20 MINUTES",
+      exercises: ["5 JUMP SQUATS", "10 PUSH-UPS", "5 BURPEES"],
+      rests: "",
+      img: workoutimage5,
     },
     {
       title: "CORE FINISHER",
@@ -43,8 +59,8 @@ const WorkoutPage = () => {
         "10 BICYCLE KICKS",
         "10 LEG RAISES",
       ],
-      rests: "NO RESTS",
-      img: workoutimage3,
+      rests: "",
+      img: workoutimage6,
     },
   ];
 
