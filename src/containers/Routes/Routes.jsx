@@ -18,6 +18,9 @@ const Routes = () => {
       <Route path="/home">
         <LandingPage />
       </Route>
+      <Route path="/tracker">
+        <Tracker />
+      </Route>
       <Route path="/workout/:workoutID">
         <WorkoutPage />
       </Route>
