@@ -5,29 +5,22 @@
 }
 
 .Carousel {
-  &__carouselContainer {
-    width: 300%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   &__container {
+    margin: 0.5rem;
     position: relative;
-    width: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    border-radius: 2.5rem;
   }
   &__image {
     height: 100%;
     width: 100%;
-    // display: block;
   }
 
   &__buttons_container {
-    display: flex;
-
     position: absolute;
-
     bottom: 0.5rem;
   }
   &__button {
@@ -50,8 +43,8 @@
     position: absolute;
     bottom: 0;
     background: $primary-color-blue;
-    width: 82%;
-    opacity: 0.7;
+    width: 100%;
+
     border-radius: 2.5rem;
     opacity: 0.4;
     height: 100%;
