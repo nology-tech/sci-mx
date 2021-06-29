@@ -1,9 +1,12 @@
 @import "../../assets/styles/base.scss";
 
+.productHeader{
+  height: 35px;
+  width: 100%;
+}
+
 .products {
-  padding-top: 70px;
-  margin-top: 70px;
-  height: calc(100vh - 70px);
+  height: calc(100vh);
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;

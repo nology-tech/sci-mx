@@ -1,8 +1,16 @@
 @import "../../assets/styles/base.scss";
+
+.productHeader{
+  height: 35px;
+  width: 100%;
+  @include md {
+    height: 90px;
+  }
+}
+
 .socials {
   // padding-top: 70px;
   height: calc(100vh - 70px);
-  margin-top: 70px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -21,6 +29,9 @@
     justify-content: space-between;
     padding: 4em;
     gap: 10%;
+    @include md {
+      gap: 25%;
+    }
     height: 50%;
   }
   &__icon {

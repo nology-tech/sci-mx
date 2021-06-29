@@ -8,7 +8,8 @@ import productImage from "../../assets/images/workout/workout-2-image.jpg";
 
 const HeroProductSection = () => {
   return (
-    <section id="product" className={styles.products}>
+    <section className={styles.products}>
+      <div id="product" className={styles.productHeader}/>
       <h1 className={styles.products__title}>Fuel your workout</h1>
       <div className={styles.carousel}>
         <BiLeftArrow
