@@ -28,7 +28,7 @@ const HeroSection = () => {
         </div>
       </Link>
 
-      <Link to="/workout" className={styles.hero__activity_btn}>
+      <Link to="/tracker" className={styles.hero__activity_btn}>
         My Activity
         <BiRun className={styles.hero__activity_img}></BiRun>
       </Link>
