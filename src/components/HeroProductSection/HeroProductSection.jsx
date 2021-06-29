@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./HeroProductSection.module.scss";
 
 import { Link as LinkScroll } from "react-scroll";
-import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+// import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
 import productData from "./data";
@@ -10,26 +10,79 @@ import productData from "./data";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 1200, min: 769 },
-    items: 6,
-    slidesToSlide: 3, // optional, default to 1.
+    breakpoint: { max: 3000, min: 1200 },
+    items: 5,
+    slidesToSlide: 1, // optional, default to 1.
   },
   tablet: {
-    breakpoint: { max: 768, min: 574 },
-    items: 5,
-    slidesToSlide: 2, // optional, default to 1.
+    breakpoint: { max: 1200, min: 668 },
+    items: 3,
+    slidesToSlide: 1, // optional, default to 1.
   },
   mobile: {
     breakpoint: { max: 573, min: 0 },
-    items: 3,
+    items: 1,
     slidesToSlide: 1, // optional, default to 1.
   },
 };
 
 const HeroProductSection = () => {
   return (
-    <section id="product" className={styles.products}>
-      {/* <h1 className={styles.products__title}>Fuel your workout</h1>
+    // <section id="product">
+    <section className={styles.products}>
+      <h1 className={styles.header}>Fuel your workout</h1>
+      <Carousel
+        // swipeable={true}
+        // draggable={true}
+        // showDots={true}
+        responsive={responsive}
+        infinite={true}
+        // className="styles.Carousel__carouselContainer"
+        autoPlaySpeed={3000}
+        keyBoardControl={true}
+        customTransition="all .5"
+        transitionDuration={500}
+        // dotListClass="custom-dot-list-style"
+        // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
+        // itemClass="carousel-item-padding-40-px"
+      >
+        {productData
+          .sort((a, b) => 0.5 - Math.random())
+          //sort to shuffle the productss array
+          .map((product) => (
+            <div className={styles.product} key={product.id}>
+              <div className={styles.product__image}>
+                <a href={product.link} target="_blank">
+                  <img
+                    src={product.img_path}
+                    alt={product.id}
+                    className={styles.product__image_image}
+                  />
+                </a>
+              </div>
+              <div className={styles.product__description}>
+                <p className={styles.product__description_name}>
+                  {product.name}
+                </p>
+                <p className={styles.product__description_price}>
+                  {product.price}£
+                </p>
+              </div>
+            </div>
+          ))}
+      </Carousel>
+      <LinkScroll className={styles.hero__arrow_btn} to="#">
+        <FaArrowAltCircleDown
+          className={styles.carousel__arrow_btn}
+        ></FaArrowAltCircleDown>
+      </LinkScroll>
+    </section>
+  );
+};
+
+export default HeroProductSection;
+{
+  /* <h1 className={styles.products__title}>Fuel your workout</h1>
       <div className={styles.carousel}>
         <BiLeftArrow
           className={`${styles.carousel__btn} ${styles.carousel__btn_left}`}
@@ -46,45 +99,5 @@ const HeroProductSection = () => {
           <p className={styles.carousel__title}>Daily Mood</p>
           <p className={styles.carousel__price}>£24.99 RRP</p>
         </div>
-      </div> */}
-      <Carousel
-        swipeable={true}
-        draggable={true}
-        // showDots={true}
-        responsive={responsive}
-        infinite={true}
-        className="styles.Carousel__carouselContainer"
-        autoPlaySpeed={3000}
-        keyBoardControl={true}
-        customTransition="all .5"
-        transitionDuration={500}
-        // dotListClass="custom-dot-list-style"
-        // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-        // itemClass="carousel-item-padding-40-px"
-      >
-        {workoutData.map((workout) => (
-          <div className={styles.Carousel__container} key={workout.id}>
-            <div className={styles.Carousel__overlay}></div>
-            <img
-              className={styles.Carousel__image}
-              src={workout.img_path}
-              alt={workout.id}
-            />
-            <div className={styles.Carousel__buttons_container}>
-              <button className={styles.Carousel__button}>
-                {workout.name}
-              </button>
-            </div>
-          </div>
-        ))}
-      </Carousel>
-      <LinkScroll className={styles.hero__arrow_btn} to="#">
-        <FaArrowAltCircleDown
-          className={styles.carousel__arrow_btn}
-        ></FaArrowAltCircleDown>
-      </LinkScroll>
-    </section>
-  );
-};
-
-export default HeroProductSection;
+      </div> */
+}

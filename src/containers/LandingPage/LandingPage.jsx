@@ -7,9 +7,9 @@ import HeroSocials from "../../components/HeroSocials/HeroSocials";
 const LandingPage = () => {
   return (
     <main className={styles.container}>
-      <HeroSection />
+      {/* <HeroSection /> */}
       <HeroProductSection />
-      <HeroSocials />
+      {/* <HeroSocials /> */}
     </main>
   );
 };
