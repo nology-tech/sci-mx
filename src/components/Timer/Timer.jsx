@@ -12,7 +12,7 @@ const Timer = () => {
 
     if (start) {
       interval = setInterval(() => {
-        setTime(prevTime => prevTime + 10);
+        setTime((prevTime) => prevTime + 10);
       }, 10);
     } else {
       clearInterval(interval);
@@ -23,12 +23,6 @@ const Timer = () => {
   let minutes = ("0" + Math.floor((time / 60000) % 60)).slice(-2);
   let seconds = ("0" + Math.floor((time / 1000) % 60)).slice(-2);
 
-  const lapMarkUp = () => {
-    let lapCount = 1;
-    return {
-      __html: `<ul><li>Lap ${lapCount++} ${minutes} : ${seconds} </li></ul>`,
-    };
-  };
   return (
     <section className={styles.timer}>
       <div>
@@ -54,19 +48,25 @@ const Timer = () => {
       <button
         onClick={() => {
           setStart(false);
-          const newState = [...rounds, { mins: minutes, secs: seconds, round: rounds.length + 1 }];
+          const newState = [
+            ...rounds,
+            { mins: minutes, secs: seconds, round: rounds.length + 1 },
+          ];
           setRounds(newState);
           console.log(rounds);
         }}
       >
         STOP
       </button>
-      <div className="lapContainer" dangerouslySetInnerHTML={lapMarkUp()} />
-      {/* <div>
-        {timerTracker.map((times) => {
-          return <div dangerouslySetInnerHTML={{ __html: times }} />;
-        })}
-      </div> */}
+
+      {rounds.map((round, index) => (
+        <div key={index++}>
+          <p>Round {round.round}: </p>
+          <p>
+            {round.mins}: {round.secs}
+          </p>
+        </div>
+      ))}
     </section>
   );
 };
