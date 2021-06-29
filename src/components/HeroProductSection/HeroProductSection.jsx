@@ -65,7 +65,8 @@ const HeroProductSection = () => {
                   {product.name}
                 </p>
                 <p className={styles.product__description_price}>
-                  {product.price}£
+                  {" "}
+                  from £{product.price}
                 </p>
               </div>
             </div>
