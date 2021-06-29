@@ -18,7 +18,7 @@ const Routes = () => {
       <Route path="/home">
         <LandingPage />
       </Route>
-      <Route path="/workout">
+      <Route path="/workout/:workoutID">
         <WorkoutPage />
       </Route>
       <Route path="/tracker">

@@ -15,7 +15,7 @@ const HeroSection = () => {
       </div>
       <div className={styles.hero__image_container}>
         <img className={styles.hero__image} src={workout2} alt="workout" />
-        <Link to="/workout" className={styles.hero__image_link}>
+        <Link to="/workout/1" className={styles.hero__image_link}>
           NO REST FOR THE WICKED
         </Link>
       </div>
