@@ -11,6 +11,18 @@ const UserProvider = (props) => {
     firebase.auth().signInWithRedirect(provider);
   };
 
+  const signOut = () => {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        // Sign-out successful.
+      })
+      .catch((error) => {
+        // An error happened.
+      });
+  };
+
   const getUser = () => {
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -28,6 +40,7 @@ const UserProvider = (props) => {
   const contextData = {
     user,
     signIn,
+    signOut,
   };
 
   return (

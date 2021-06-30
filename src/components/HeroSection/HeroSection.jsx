@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./HeroSection.module.scss";
 import { Link } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
@@ -10,14 +10,20 @@ import workout6 from "../../assets/images/workout/workout-6-image.jpg";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import { BiRun } from "react-icons/bi";
 
+import { UserContext } from "../../context/UserProvider/UserProvider";
+
 const HeroSection = () => {
   let randNum = Math.round(Math.random() * 4);
   const workoutsArr = [workout2, workout3, workout4, workout5, workout6];
   let randWorkout = workoutsArr[randNum];
 
+  const userContext = useContext(UserContext);
+
   return (
     <section className={styles.hero}>
       <div className={styles.hero__title}>
+        {/* REMOVE THIS BUTTON */}
+        <button onClick={userContext.signOut}>Signout</button>
         <h1 className={styles.hero__heading}>Hello Will</h1>
         <h4 className={styles.hero__subheading}>Welcome back!</h4>
       </div>
