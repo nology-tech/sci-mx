@@ -9,12 +9,15 @@ import UserProvider from "./context/UserProvider/UserProvider";
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const [isLogged, setIsLogged] = useState(false);
+  
+
   const handleSidebarToggle = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
     <UserProvider>
       <Router>
-        <Navbar handleSidebarToggle={handleSidebarToggle} />
+        <Navbar handleSidebarToggle={handleSidebarToggle} logStatus={isLogged}/>
         <Sidebar
           isSidebarOpen={isSidebarOpen}
           handleSidebarToggle={handleSidebarToggle}

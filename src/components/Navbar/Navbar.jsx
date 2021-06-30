@@ -6,9 +6,10 @@ import { CgProfile } from "react-icons/cg";
 import logo from "../../assets/images/logos/sci-mx_brand_logo_blue.png";
 
 const Navbar = (props) => {
-  const { handleSidebarToggle } = props;
+  const { handleSidebarToggle, logStatus } = props;
+
   return (
-    <header className={styles.header}>
+    <header className={logStatus ? styles.header : styles.noheader}>
       <nav className={styles.nav}>
         <div onClick={handleSidebarToggle}>
           <FaBars className={styles.nav__icon}></FaBars>
