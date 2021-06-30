@@ -1,12 +1,11 @@
-import React, {createContext, useEffect, useState} from "react";
-import firebase, {provider} from "../../firebase";
+import React, { createContext, useEffect, useState } from "react";
+import firebase, { provider } from "../../firebase";
 import styles from "./UserProvider.module.scss";
 
 export const UserContext = createContext({});
 
 const UserProvider = (props) => {
-
-  const [ user, setUser ] = useState(null);
+  const [user, setUser] = useState(null);
 
   const signIn = () => {
     firebase.auth().signInWithRedirect(provider);
@@ -14,23 +13,22 @@ const UserProvider = (props) => {
 
   const getUser = () => {
     firebase.auth().onAuthStateChanged((user) => {
-      if (user){
+      if (user) {
         setUser(user);
       } else {
         setUser(null);
       }
-    })
+    });
   };
 
-  userEffect(() => {
+  useEffect(() => {
     getUser();
-  },[]);
+  }, []);
 
-  
   const contextData = {
-    user, 
-    signIn
-  }
+    user,
+    signIn,
+  };
 
   return (
     <UserContext.Provider value={contextData}>
