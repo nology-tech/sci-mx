@@ -9,7 +9,7 @@ const LandingPage = () => {
     <main className={styles.container}>
       <HeroSection />
       <HeroProductSection />
-      {/* <HeroSocials /> */}
+      <HeroSocials />
     </main>
   );
 };

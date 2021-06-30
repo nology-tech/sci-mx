@@ -1,6 +1,5 @@
 @import "../../assets/styles/base.scss";
 .socials {
-  padding-top: 70px;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -9,6 +8,7 @@
 
   &__heading {
     width: 70%;
+    margin-bottom: 5rem;
     font-size: 3.6rem;
     text-align: center;
   }
@@ -16,7 +16,7 @@
   &__list {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 4em;
   }
   &__icon {
@@ -29,7 +29,13 @@
     &_youtube {
       padding: 6px;
       border-radius: 50%;
-      background-color: $secondary-color-gray;
+      color: $secondary-color-white;
+      background-color: black;
+    }
+
+    &_youtube:hover {
+      background-color: $primary-color-orange;
+      color: $secondary-color-white;
     }
   }
 }
