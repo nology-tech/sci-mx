@@ -52,7 +52,7 @@ const HeroProductSection = () => {
           .map((product) => (
             <div className={styles.product} key={product.id}>
               <div className={styles.product__image}>
-                <a href={product.link} target="_blank">
+                <a href={product.link} target="_blank" rel="norefferer">
                   <img
                     src={product.img_path}
                     alt={product.id}
