@@ -1,21 +1,10 @@
 import React, { useState } from "react";
 import styles from "./LibraryPage.module.scss";
 import WorkoutCard from "../../components/WorkoutCard";
-// import workoutimage from "../../assets/images/workout/Group.png";
+import { workoutsCategory } from "../../data/workoutLibraryData";
 
 const LibraryPage = () => {
-  // const [currentCategory, setCurrentCategory] = useState("legs");
-  // switch (currentCategory) {
-  //   case "legs":
-  //     workoutsToRender = "...components";
-  //     break;
-  //   default:
-  //     workoutsToRender = "...components";
-  //     break;
-  // }
-
-  //datafile --> workouts.map(workout => <WorkoutCard workoutName="Jump Squats" /> )
-
+  console.log(workoutsCategory);
   return (
     <div className={styles.container}>
       {/* <input className={styles.searchBar} type="text" placeholder="SEARCH..." />*/}
