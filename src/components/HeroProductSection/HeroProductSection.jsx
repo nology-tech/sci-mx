@@ -32,12 +32,8 @@ const HeroProductSection = () => {
     <section className={styles.products}>
       <h1 className={styles.header}>Fuel your workout</h1>
       <Carousel
-        // swipeable={true}
-        // draggable={true}
-        // showDots={true}
         responsive={responsive}
         infinite={true}
-        // className="styles.Carousel__carouselContainer"
         autoPlaySpeed={3000}
         keyBoardControl={true}
         customTransition="all .5"
@@ -48,11 +44,11 @@ const HeroProductSection = () => {
       >
         {productData
           .sort((a, b) => 0.5 - Math.random())
-          //sort to shuffle the productss array
+
           .map((product) => (
             <div className={styles.product} key={product.id}>
               <div className={styles.product__image}>
-                <a href={product.link} target="_blank" rel="norefferer">
+                <a href={product.link} target="_blank" rel="noreferrer">
                   <img
                     src={product.img_path}
                     alt={product.id}
@@ -82,23 +78,3 @@ const HeroProductSection = () => {
 };
 
 export default HeroProductSection;
-{
-  /* <h1 className={styles.products__title}>Fuel your workout</h1>
-      <div className={styles.carousel}>
-        <BiLeftArrow
-          className={`${styles.carousel__btn} ${styles.carousel__btn_left}`}
-        >
-          <button></button>
-        </BiLeftArrow>
-        <img className={styles.carousel__img} src={productImage} alt="" />
-        <BiRightArrow
-          className={`${styles.carousel__btn} ${styles.carousel__btn_right}`}
-        >
-          <button></button>
-        </BiRightArrow>
-        <div className={styles.carousel__text}>
-          <p className={styles.carousel__title}>Daily Mood</p>
-          <p className={styles.carousel__price}>£24.99 RRP</p>
-        </div>
-      </div> */
-}
