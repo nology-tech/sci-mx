@@ -61,7 +61,7 @@ const WorkoutPage = () => {
         />
       </div>
 
-      <div className={styles.trackerBlock}></div>
+      {/* <div className={styles.trackerBlock}></div> */}
     </div>
   );
 };

@@ -25,48 +25,63 @@ const Timer = () => {
 
   return (
     <section className={styles.timer}>
-      <div>
-        <div>
+      <div className={styles.clockcontainer}>
+        <div className={styles.time}>
           {minutes}:{seconds}
         </div>
-      </div>
-      <button
-        onClick={() => {
-          setTime(0);
-          setStart(true);
-        }}
-      >
-        Reset
-      </button>
-      <button
-        onClick={() => {
-          setStart(true);
-        }}
-      >
-        START
-      </button>
-      <button
-        onClick={() => {
-          setStart(false);
-          const newState = [
-            ...rounds,
-            { mins: minutes, secs: seconds, round: rounds.length + 1 },
-          ];
-          setRounds(newState);
-          console.log(rounds);
-        }}
-      >
-        STOP
-      </button>
 
-      {rounds.map((round, index) => (
-        <div key={index++}>
-          <p>Round {round.round}: </p>
-          <p>
-            {round.mins}: {round.secs}
-          </p>
+        <button
+          onClick={() => {
+            setTime(0);
+            setStart(true);
+          }}
+        >
+          RESET
+        </button>
+        <button
+          onClick={() => {
+            setStart(true);
+          }}
+        >
+          START
+        </button>
+        <button
+          onClick={() => {
+            setStart(false);
+            const newState = [
+              ...rounds,
+              { mins: minutes, secs: seconds, round: rounds.length + 1 },
+            ];
+            setRounds(newState);
+            console.log(rounds);
+          }}
+        >
+          STOP
+        </button>
+
+        <div>
+          <svg
+            viewBox="0 0 300 100"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="black"
+            fill="grey"
+          >
+            <svg viewBox="0 0 10 10" x="200" width="100">
+              <circle cx="5" cy="5" r="4" />
+            </svg>
+          </svg>
         </div>
-      ))}
+      </div>
+      <div className={styles.roundcontainer}>
+        {rounds.map((round, index) => (
+          <div className={styles.laps} key={index++}>
+            <p>Round {round.round}: </p>
+            <p>
+              {round.mins}: {round.secs}
+            </p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
