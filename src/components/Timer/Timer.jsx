@@ -27,7 +27,24 @@ const Timer = () => {
     <section className={styles.timer}>
       <div className={styles.clockcontainer}>
         <div className={styles.time}>
-          {minutes}:{seconds}
+          <div className={styles.basetimer}>
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              {/* <svg viewBox="0 0 10 10" x="200" width="100"> */}
+              <g className={styles.basetimercircle}>
+                <circle
+                  className={styles.basetimerpathelapsed}
+                  cx="50"
+                  cy="50"
+                  r="45"
+                />
+              </g>
+            </svg>
+            <span className={styles.basetimerlabel}>
+              {minutes}:{seconds}
+            </span>
+            {/* </svg> */}
+          </div>
+          {/* {minutes}:{seconds} */}
         </div>
 
         <button
@@ -58,19 +75,6 @@ const Timer = () => {
         >
           STOP
         </button>
-
-        <div>
-          <svg
-            viewBox="0 0 300 100"
-            xmlns="http://www.w3.org/2000/svg"
-            stroke="black"
-            fill="grey"
-          >
-            <svg viewBox="0 0 10 10" x="200" width="100">
-              <circle cx="5" cy="5" r="4" />
-            </svg>
-          </svg>
-        </div>
       </div>
       <div className={styles.roundcontainer}>
         {rounds.map((round, index) => (

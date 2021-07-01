@@ -14,7 +14,7 @@
   align-items: center;
   gap: 10%;
   color: white;
-  background-color: aqua;
+
   height: 100%;
 }
 button {
@@ -40,4 +40,31 @@ button {
 
   height: 100%;
   width: 50%;
+}
+.basetimer {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+.basetimercircle {
+  fill: none;
+  stroke: none;
+}
+.basetimerpathelapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+.basetimerlabel {
+  position: absolute;
+  /* Size should match the parent container */
+  width: 300px;
+  height: 300px;
+  /* Keep the label aligned to the top */
+  top: 0;
+  /* Create a flexible box that centers content vertically and horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Sort of an arbitrary number; adjust to your liking */
+  font-size: 48px;
 }
