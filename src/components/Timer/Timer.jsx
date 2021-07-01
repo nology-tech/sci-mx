@@ -88,7 +88,8 @@ const Timer = () => {
           </div>
           {/* {minutes}:{seconds} */}
         </div>
-
+      </div>
+      <div className={styles.buttoncontainer}>
         <button
           onClick={() => {
             setTime(0);
