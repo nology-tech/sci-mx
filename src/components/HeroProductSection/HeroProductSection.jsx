@@ -1,34 +1,30 @@
 import React from "react";
 import styles from "./HeroProductSection.module.scss";
-
 import { Link as LinkScroll } from "react-scroll";
-// import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
-import productData from "./data";
-// import productImage from "../../assets/images/workout/workout-2-image.jpg";
+import productData from "../../Data/productData/data.js";
 
 const responsive = {
   desktop: {
     breakpoint: { max: 3000, min: 1200 },
     items: 5,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1,
   },
   tablet: {
     breakpoint: { max: 1200, min: 668 },
     items: 3,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1,
   },
   mobile: {
     breakpoint: { max: 573, min: 0 },
     items: 1,
-    slidesToSlide: 1, // optional, default to 1.
+    slidesToSlide: 1,
   },
 };
 
 const HeroProductSection = () => {
   return (
-    // <section id="product">
     <section className={styles.products}>
       <h1 className={styles.header}>Fuel your workout</h1>
       <Carousel
@@ -38,9 +34,6 @@ const HeroProductSection = () => {
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
-        // dotListClass="custom-dot-list-style"
-        // removeArrowOnDeviceType={["tablet", "mobile", "desktop"]}
-        // itemClass="carousel-item-padding-40-px"
       >
         {productData
           .sort((a, b) => 0.5 - Math.random())
