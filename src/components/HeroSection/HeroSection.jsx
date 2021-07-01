@@ -28,6 +28,10 @@ const HeroSection = () => {
         <h1 className={styles.hero__heading}>Hello Will</h1>
         <h4 className={styles.hero__subheading}>Welcome back!</h4>
       </div>
+      <Link to="/workout" className={styles.hero__activity_btn}>
+        My Activity
+        <BiRun className={styles.hero__activity_img}></BiRun>
+      </Link>
       <div className={styles.hero__image_container}>
         <img className={styles.hero__image} src={randWorkout} alt="workout" />
         <Link to={`/workout/${randNum}`} className={styles.hero__image_link}>
@@ -35,12 +39,7 @@ const HeroSection = () => {
         </Link>
       </div>
 
-      <Link to="/tracker" className={styles.hero__activity_btn}>
-        My Activity
-        <BiRun className={styles.hero__activity_img}></BiRun>
-      </Link>
-
-      <LinkScroll to="product" smooth={true}>
+      <LinkScroll to="#product">
         <FaArrowAltCircleDown
           className={styles.hero__arrow_btn}
         ></FaArrowAltCircleDown>

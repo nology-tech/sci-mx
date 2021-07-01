@@ -10,7 +10,7 @@ import Bar from "../../components/Graphs/Bar";
 function Tracker() {
   return (
     // Navbar
-    <div>
+    <div className={styles.trackerPage}>
       {/* Headings */}
       <div className={styles.headings}>
         <h3 className={styles.headings__name}>Tracker</h3>
@@ -25,38 +25,20 @@ function Tracker() {
 
       {/* Lower Center */}
       <div className={styles.lower_center}>
-        <img
-          className={styles.lower_center__icon}
-          src={timerIcon}
-          alt="smallIcon"
-        />
+        <img className={styles.lower_center__icon} src={timerIcon} alt="smallIcon" />
 
-        <img
-          className={styles.lower_center__icon}
-          src={runnerIcon}
-          alt="smallIcon"
-        />
+        <img className={styles.lower_center__icon} src={runnerIcon} alt="smallIcon" />
 
-        <img
-          className={styles.lower_center__icon}
-          src={graphIcon}
-          alt="smallIcon"
-        />
+        <img className={styles.lower_center__icon} src={graphIcon} alt="smallIcon" />
 
-        <img
-          className={styles.lower_center__icon}
-          src={healthIcon}
-          alt="smallIcon"
-        />
+        <img className={styles.lower_center__icon} src={healthIcon} alt="smallIcon" />
       </div>
 
       {/* Footer */}
 
       <h1 className={styles.headings__carousel}>SUGGESTED WORKOUT</h1>
 
-      <div>
-        <TrackerCarousel />
-      </div>
+      <TrackerCarousel />
     </div>
   );
 }
