@@ -18,10 +18,11 @@ function Tracker() {
       </div>
 
       {/* Upper Center */}
-
-      <div className={styles.barchart}>
-        <Bar />
-        {/* <Line /> */}
+      <div className={styles.center}>
+        <div class="bar-chart" className={styles.bar_chart}>
+          <Bar />
+          {/* <Line /> */}
+        </div>
       </div>
 
       {/* Lower Center */}

@@ -1,14 +1,7 @@
 @import "../../assets/styles/base.scss";
-
 .trackerPage {
   margin-top: 70px;
   min-height: calc(100vh - 70px);
-}
-
-.barchart {
-  min-height: 100%;
-  max-width: 80%;
-  margin: 3rem auto;
 }
 
 //heading part
@@ -29,57 +22,53 @@
     margin-bottom: 1.5rem;
   }
 }
-
 //Upper Cental
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
+// .center {
+//   height: 20rem;
+//   width: 90%;
+//   border: 2px solid red;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   margin: 1rem auto;
+// }
 
-  .centerRectangle {
-    width: 22rem;
-    height: 22rem;
-    cursor: pointer;
-  }
-
-  .polygon {
-    height: 3.2rem;
-    overflow: visible;
-    width: 100%;
-    cursor: pointer;
-  }
+.bar_chart {
+  border: 2px solid blue;
+  margin: 3rem auto;
+  width: 95%;
 }
+
 // Lower Center
 .lower_center {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
 }
-
 .lower_center__icon {
   width: 6rem;
   height: 6rem;
   cursor: pointer;
 }
-
 .footer_icons {
   display: flex;
   justify-content: space-between;
-
   cursor: pointer;
   overflow: hidden;
 }
-
 // Footer
-
 .footer_title {
   font-size: 1.8rem;
   margin: 3rem 0rem 1rem 0rem;
 }
-
 .footerIcon_StartWorkout__1 {
   width: 10rem;
   height: 10rem;
   margin-left: 1.2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .bar_chart {
+    width: 75%;
+  }
 }
