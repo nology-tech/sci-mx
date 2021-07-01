@@ -18,20 +18,37 @@ function Tracker() {
       </div>
 
       {/* Upper Center */}
-      <div className="bar-chart">
+
+      <div className={styles.barchart}>
         <Bar />
         {/* <Line /> */}
       </div>
 
       {/* Lower Center */}
       <div className={styles.lower_center}>
-        <img className={styles.lower_center__icon} src={timerIcon} alt="smallIcon" />
+        <img
+          className={styles.lower_center__icon}
+          src={timerIcon}
+          alt="smallIcon"
+        />
 
-        <img className={styles.lower_center__icon} src={runnerIcon} alt="smallIcon" />
+        <img
+          className={styles.lower_center__icon}
+          src={runnerIcon}
+          alt="smallIcon"
+        />
 
-        <img className={styles.lower_center__icon} src={graphIcon} alt="smallIcon" />
+        <img
+          className={styles.lower_center__icon}
+          src={graphIcon}
+          alt="smallIcon"
+        />
 
-        <img className={styles.lower_center__icon} src={healthIcon} alt="smallIcon" />
+        <img
+          className={styles.lower_center__icon}
+          src={healthIcon}
+          alt="smallIcon"
+        />
       </div>
 
       {/* Footer */}

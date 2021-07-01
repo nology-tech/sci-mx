@@ -2,6 +2,13 @@
 
 .trackerPage {
   margin-top: 70px;
+  min-height: calc(100vh - 70px);
+}
+
+.barchart {
+  min-height: 100%;
+  max-width: 80%;
+  margin: 3rem auto;
 }
 
 //heading part
