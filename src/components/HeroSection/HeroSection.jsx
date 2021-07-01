@@ -22,9 +22,9 @@ const HeroSection = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.hero__title}>
-        {/* REMOVE THIS BUTTON */}
-        <button onClick={userContext.signOut}>Signout</button>
-        <h1 className={styles.hero__heading}>Hello Will</h1>
+        <h1 className={styles.hero__heading}>
+          Hello, {userContext.user ? userContext.user.displayName : ""}
+        </h1>
         <h4 className={styles.hero__subheading}>Welcome back!</h4>
       </div>
       <h3 className={styles.workout__title}>Today's Workout</h3>
