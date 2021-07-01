@@ -28,11 +28,11 @@ const HeroSection = () => {
         <h4 className={styles.hero__subheading}>Welcome back!</h4>
       </div>
       <h3 className={styles.workout__title}>Today's Workout</h3>
-      <Link to="/workout">
-        <div className={styles.hero__image_container}>
+      <div className={styles.hero__image_container}>
+        <Link to="/workout">
           <img className={styles.hero__image} src={randWorkout} alt="workout" />
-        </div>
-      </Link>
+        </Link>
+      </div>
 
       <Link to="/tracker" className={styles.hero__activity_btn}>
         My Activity
