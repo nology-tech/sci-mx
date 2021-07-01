@@ -2,15 +2,17 @@
 
 .hero {
   padding: 2em;
-  width: 100vw;
-  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
+
   display: flex;
-  flex-flow: column wrap;
+
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 3em;
 
   &__heading {
+    margin-top: 1rem;
     font-family: $font-family;
     font-weight: 700;
     font-size: 3.6rem;
@@ -31,14 +33,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 5rem;
 
     &::after {
       position: absolute;
       z-index: -99;
       transform: rotate(3.89deg);
       content: "";
-      width: 80%;
-      height: 100%;
+
+      width: 20rem;
+      height: 20rem;
       border-radius: 54px;
       background-color: $primary-color-blue;
     }
@@ -48,8 +52,9 @@
       z-index: -99;
       transform: rotate(-12.34deg);
       content: "";
-      width: 80%;
-      height: 100%;
+
+      width: 20rem;
+      height: 20rem;
       border-radius: 54px;
       background-color: $primary-color-orange;
     }
@@ -57,9 +62,10 @@
 
   &__image {
     position: relative;
-    max-width: 70%;
-    //max-width: 440px;
+
     border-radius: 48px;
+    width: 20rem;
+    height: 20rem;
 
     &_link {
       position: absolute;
@@ -70,8 +76,7 @@
       background: $primary-color-orange;
       padding: 6px;
       border-radius: 33px;
-      width: 45%;
-      height: 15%;
+      width: 15rem;
       font-size: 1rem;
       font-weight: 700;
       display: flex;
@@ -83,6 +88,7 @@
   &__activity_btn {
     font-size: 2rem;
     padding: 5px 25px;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,4 +111,56 @@
 
 .workout__title {
   font-size: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .hero {
+    &__image_container {
+      &::after {
+        width: 35rem;
+        height: 35rem;
+      }
+
+      &::before {
+        width: 35rem;
+        height: 35rem;
+      }
+    }
+
+    &__image {
+      width: 35rem;
+      height: 35rem;
+
+      &_link {
+        width: 25rem;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 882px) {
+  .hero {
+    &__image_container {
+      &::after {
+        width: 45rem;
+        height: 45rem;
+      }
+
+      &::before {
+        width: 45rem;
+        height: 45rem;
+      }
+    }
+
+    &__image {
+      width: 45rem;
+      height: 45rem;
+
+      &_link {
+        width: 30rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
 }
