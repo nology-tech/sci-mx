@@ -39,6 +39,44 @@ export const workoutsCategory = [
         rests: "NO RESTS",
         // img: workoutimage3,
       },
+
+      {
+        title: "CORE FINISHER",
+        rounds: "AS MANY ROUNDS IN 5 MINS",
+        exercises: [
+          "15 Jump Squats",
+          "15 Side Lunges",
+          "15 Yoga Squats",
+          "15 Curtsy Lunge",
+        ],
+        rests: "NO RESTS",
+        // img: workoutimage3,
+      },
+      {
+        title: "CORE FINISHER",
+        rounds: "AS MANY ROUNDS IN 5 MINS",
+        exercises: [
+          "20 Pause Squats",
+          "20 High Knees",
+          "20 Reverse Lunges",
+          "20 Skater Lunges",
+        ],
+        rests: "NO RESTS",
+        // img: workoutimage3,
+      },
+
+      {
+        title: "CORE FINISHER",
+        rounds: "AS MANY ROUNDS IN 5 MINS",
+        exercises: [
+          "20 Reverse Lunge",
+          "20 Split Squats (L)",
+          "20 Split Squats (R)",
+          "20 Seal Jacks",
+        ],
+        rests: "NO RESTS",
+        // img: workoutimage3,
+      },
     ],
   },
 ];
