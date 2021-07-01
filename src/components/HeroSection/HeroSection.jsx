@@ -3,10 +3,10 @@ import styles from "./HeroSection.module.scss";
 import { Link } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 import workout2 from "../../assets/images/workout/workout-2-image.jpg";
-import workout3 from "../../assets/images/workout/workout-3-image.jpg";
-import workout4 from "../../assets/images/workout/workout-4-image.jpg";
-import workout5 from "../../assets/images/workout/workout-5-image.jpg";
-import workout6 from "../../assets/images/workout/workout-6-image.jpg";
+// import workout3 from "../../assets/images/workout/workout-3-image.jpg";
+// import workout4 from "../../assets/images/workout/workout-4-image.jpg";
+// import workout5 from "../../assets/images/workout/workout-5-image.jpg";
+// import workout6 from "../../assets/images/workout/workout-6-image.jpg";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import { BiRun } from "react-icons/bi";
 
