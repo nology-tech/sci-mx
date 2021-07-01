@@ -1,0 +1,12 @@
+@import "../../assets//styles/base.scss";
+.categories {
+  &__link {
+    font-size: 1.8rem;
+    border-radius: 1.8rem;
+    padding: 0.6rem;
+    cursor: pointer;
+  }
+  &__link_active {
+    background-color: $primary-color-orange;
+  }
+}

@@ -6,7 +6,12 @@ import fingersGreen from "../../assets/images/Fingers/3.svg";
 import fingersYellow from "../../assets/images/Fingers/4.svg";
 import fingersOrange from "../../assets/images/Fingers/5.svg";
 
-const Workout = props => {
+const Workout = (props) => {
+  const { workout } = props;
+  const [fingers, setFingers] = useState(fingersBlue);
+
+  console.log(workout);
+
   const getRandomInt = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -15,7 +20,6 @@ const Workout = props => {
 
   useEffect(() => {
     const int = getRandomInt(1, 5);
-    console.log(int);
 
     switch (int) {
       case 1:
@@ -38,14 +42,9 @@ const Workout = props => {
     }
   }, []);
 
-  const [fingers, setFingers] = useState(fingersBlue);
-
-  const { workout } = props;
-
   const getExerciseJSX = (exercise, index) => {
     const split = exercise.split(" ");
-    const letter = split[0];
-    split.shift();
+    const letter = split.shift();
 
     return (
       <li key={index}>
@@ -61,7 +60,11 @@ const Workout = props => {
         <div className={styles.workoutContainer__rounds}>{workout.rounds}</div>
         <div className={styles.workoutContainer__body}>
           <ul>{workout.exercises.map(getExerciseJSX)}</ul>
-          <img src={workout.img} alt="workout" className={styles.workoutpic}></img>
+          <img
+            src={workout.img}
+            alt="workout"
+            className={styles.workoutpic}
+          ></img>
           <img src={fingers} alt="fingers" className={styles.fingers}></img>
         </div>
         <div className={styles.workoutContainer__rests}>{workout.rests}</div>

@@ -1,39 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./LibraryPage.module.scss";
 import WorkoutCard from "../../components/WorkoutCard";
-import { workoutsCategory } from "../../data/workoutLibraryData";
+import WorkoutCategories from "../../components/WorkoutCategories";
+import { workoutsCategoryData } from "../../data/workoutLibraryData";
 
 const LibraryPage = () => {
-  console.log(workoutsCategory);
+  const [currentCategory, setCurrentCategory] = useState("legs");
+  // const [workouts, setWorkouts] = useState([]);
+
+  const handleCategory = (e) => {
+    console.log(e.target.textContent);
+    setCurrentCategory(e.target.textContent);
+  };
+
+  const renderCategories = () => {
+    return workoutsCategoryData[currentCategory].map((workout, i) => (
+      <WorkoutCard key={i} workout={workout} />
+    ));
+  };
+
   return (
     <div className={styles.container}>
-      {/* <input className={styles.searchBar} type="text" placeholder="SEARCH..." />*/}
-
       <div className={styles.categories}>
         <ul className={styles.categories__lists}>
-          <li className={styles.categories__items}>
-            <button className={`${styles.categories__link}`}>Legs</button>
-          </li>
-          <li className={styles.categories__items}>
-            <button className={styles.categories__link}>Arms</button>
-          </li>
-          <li className={styles.categories__items}>
-            <button className={styles.categories__link}>Chest</button>
-          </li>
-          <li className={styles.categories__items}>
-            <button className={styles.categories__link}>Back</button>
-          </li>
+          {Object.keys(workoutsCategoryData).map((category) => (
+            <WorkoutCategories
+              key={category}
+              handleCategory={handleCategory}
+              category={category}
+            />
+          ))}
         </ul>
       </div>
 
-      <div className={styles.workouts}>
-        <WorkoutCard workoutName="Jump Squats" />
-        <WorkoutCard workoutName="Split Squats" />
-        <WorkoutCard workoutName="Pistol Squats" />
-        <WorkoutCard workoutName="Single Leg Squats" />
-        <WorkoutCard workoutName="Up-down Squats" />
-        <WorkoutCard workoutName="W Superman" />
-      </div>
+      <div className={styles.workouts}>{renderCategories()}</div>
     </div>
   );
 };
