@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
 import firebase, { provider } from "../../firebase";
-import styles from "./UserProvider.module.scss";
 
 export const UserContext = createContext({});
 
@@ -44,7 +43,7 @@ const UserProvider = (props) => {
     user,
     signIn,
     signOut,
-    logStatus : isLogged,
+    logStatus: isLogged,
   };
 
   return (

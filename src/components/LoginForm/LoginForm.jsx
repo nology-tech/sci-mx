@@ -13,6 +13,7 @@ const LoginForm = () => {
       history.push("/home");
     }
   }, [userContext]);
+
   return (
     <div className={styles.container}>
       <button onClick={userContext.signIn} className={styles.logInButton}>
