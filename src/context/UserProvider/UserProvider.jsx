@@ -7,8 +7,11 @@ export const UserContext = createContext({});
 const UserProvider = (props) => {
   const [user, setUser] = useState(null);
 
+  const [isLogged, setIsLogged] = useState(false);
+
   const signIn = () => {
     firebase.auth().signInWithRedirect(provider);
+    setIsLogged(true);
   };
 
   const signOut = () => {
@@ -16,7 +19,7 @@ const UserProvider = (props) => {
       .auth()
       .signOut()
       .then(() => {
-        // Sign-out successful.
+        setIsLogged(false);
       })
       .catch((error) => {
         // An error happened.
@@ -41,6 +44,7 @@ const UserProvider = (props) => {
     user,
     signIn,
     signOut,
+    logStatus : isLogged,
   };
 
   return (
