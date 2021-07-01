@@ -12,7 +12,7 @@ const LoginForm = () => {
     if (userContext.user) {
       history.push("/home");
     }
-  }, [userContext]);
+  }, [history, userContext]);
 
   return (
     <div className={styles.container}>

@@ -13,7 +13,7 @@ import { BiRun } from "react-icons/bi";
 import { UserContext } from "../../context/UserProvider/UserProvider";
 
 const HeroSection = () => {
-  let randNum = Math.round(Math.random() * 4);
+  let randNum = Math.round(Math.random() * 1);
   const workoutsArr = [workout2, workout3, workout4, workout5, workout6];
   let randWorkout = workoutsArr[randNum];
 
@@ -29,8 +29,8 @@ const HeroSection = () => {
       </div>
       <h3 className={styles.workout__title}>Today's Workout</h3>
       <div className={styles.hero__image_container}>
-        <Link to="/workout">
-          <img className={styles.hero__image} src={randWorkout} alt="workout" />
+        <Link to="/workout/0">
+          <img className={styles.hero__image} src={workout2} alt="workout" />
         </Link>
       </div>
 
