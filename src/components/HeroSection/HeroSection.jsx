@@ -13,9 +13,9 @@ import { BiRun } from "react-icons/bi";
 import { UserContext } from "../../context/UserProvider/UserProvider";
 
 const HeroSection = () => {
-  let randNum = Math.round(Math.random() * 1);
-  const workoutsArr = [workout2, workout3, workout4, workout5, workout6];
-  let randWorkout = workoutsArr[randNum];
+  // let randNum = Math.round(Math.random() * 1);
+  // const workoutsArr = [workout2, workout3, workout4, workout5, workout6];
+  // let randWorkout = workoutsArr[randNum];
 
   const userContext = useContext(UserContext);
 
