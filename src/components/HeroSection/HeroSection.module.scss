@@ -2,13 +2,12 @@
 
 .hero {
   padding: 2em;
-  width: 99vw;
   min-height: calc(100vh - 70px);
 
   display: flex;
 
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding-bottom: 3em;
 
@@ -16,24 +15,31 @@
     margin-top: 1rem;
     font-family: $font-family;
     font-weight: 700;
-    font-size: 3.6rem;
+    font-size: 2.4rem;
   }
 
   &__subheading {
     font-family: $font-family;
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+    text-align: center;
     color: $secondary-color-gray;
     opacity: 0.7;
+  }
+
+  .workout__title {
+    font-size: 1.8rem;
+    margin-top: 2rem;
   }
 
   &__image_container {
     position: relative;
     width: 100%;
+    max-width: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5rem;
+    margin: 3rem;
 
     &::after {
       position: absolute;
@@ -61,7 +67,7 @@
   }
 
   &__image {
-    position: relative;
+    // position: relative;
 
     border-radius: 48px;
     width: 20rem;
@@ -88,7 +94,7 @@
   &__activity_btn {
     font-size: 2rem;
     padding: 5px 25px;
-    margin-top: 1rem;
+    margin-bottom: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
