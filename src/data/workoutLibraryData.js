@@ -2,7 +2,7 @@ export const workoutsCategoryData = {
   legs: [
     {
       id: "l-0",
-      title: "PAIN TO GAIN",
+      title: "WINNERS START",
       rounds: "3 ROUNDS FOR TIME",
       exercises: [
         "15 BURPEES",
@@ -16,7 +16,7 @@ export const workoutsCategoryData = {
     },
     {
       id: "l-1",
-      title: "WIN BY FINISHING",
+      title: "LEG'S GO",
       rounds: "EMOM FOR 15 MINS",
       exercises: [
         "4 AIR SQUATS",
@@ -28,7 +28,7 @@ export const workoutsCategoryData = {
     },
     {
       id: "l-2",
-      title: "LEG'S GO",
+      title: "LEG MAKER",
       rounds: "AS MANY ROUNDS IN 5 MINS",
       exercises: [
         "10 RUSSIAN TWISTS",
@@ -41,7 +41,7 @@ export const workoutsCategoryData = {
 
     {
       id: "l-3",
-      title: "WINNERS START",
+      title: "PAIN TO GAIN",
       rounds: "AS MANY ROUNDS IN 5 MINS",
       exercises: [
         "15 Jump Squats",
@@ -66,7 +66,7 @@ export const workoutsCategoryData = {
 
     {
       id: "l-5",
-      title: "LEG MAKER",
+      title: "WIN BY FINISHING",
       rounds: "AS MANY ROUNDS IN 5 MINS",
       exercises: [
         "20 Reverse Lunge",
@@ -80,7 +80,7 @@ export const workoutsCategoryData = {
   arms: [
     {
       id: "a-0",
-      title: "LEFT MAN",
+      title: "Winners Start",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
         "10 Arm circles",
@@ -94,7 +94,7 @@ export const workoutsCategoryData = {
     },
     {
       id: "a-1",
-      title: "RIGHT MAN",
+      title: "See The Goal",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
         "10 Push-up",
@@ -108,7 +108,7 @@ export const workoutsCategoryData = {
     },
     {
       id: "a-2",
-      title: "PAIN TO GAIN",
+      title: "Success By Trying",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
         "10 Push-up",
@@ -136,7 +136,7 @@ export const workoutsCategoryData = {
     },
     {
       id: "a-4",
-      title: "PAIN TO GAIN",
+      title: "Arm Maker",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
         "10 Tricep dips",
@@ -150,7 +150,7 @@ export const workoutsCategoryData = {
     },
     {
       id: "a-5",
-      title: "PAIN TO GAIN",
+      title: "WIN BY FINISHING",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
         "10 Incline Push-up",
@@ -166,12 +166,12 @@ export const workoutsCategoryData = {
   chest: [
     {
       id: "c-0",
-      title: "PAIN TO GAIN",
+      title: "Winners Start",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
+        "10 Incline Push-Ups",
         "30 Plank sidewalk",
-        "15 Kickboxing punches",
+        "15 Incline chest press",
         "30 Rolling pushups",
         "15 Plank Tap",
         "30 Superman",
@@ -183,65 +183,65 @@ export const workoutsCategoryData = {
       title: "PAIN TO GAIN",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
+        "10 WIDE PUSH-UPS",
         "30 Plank sidewalk",
-        "15 Kickboxing punches",
+        "15 Chest Press",
         "30 Rolling pushups",
         "15 Plank Tap",
-        "30 Superman",
+        "30 Dynamic Press-Up",
       ],
       rests: "NO REST BETWEEN ROUNDS",
     },
     {
       id: "c-2",
-      title: "PAIN TO GAIN",
+      title: "Feel The Goal",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
-        "30 Plank sidewalk",
+        "10 Incline Chest Press",
+        "30 Decline Chest Press",
         "15 Kickboxing punches",
         "30 Rolling pushups",
-        "15 Plank Tap",
+        "15 Spiderman Press-Up",
         "30 Superman",
       ],
       rests: "NO REST BETWEEN ROUNDS",
     },
     {
       id: "c-3",
-      title: "PAIN TO GAIN",
+      title: "Saver The Burn",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
+        "10 DIAMOND PUSH-UPS",
         "30 Plank sidewalk",
-        "15 Kickboxing punches",
+        "15 Puch Ups",
         "30 Rolling pushups",
         "15 Plank Tap",
-        "30 Superman",
+        "30 DIAMOND PUSH-UPS",
       ],
       rests: "NO REST BETWEEN ROUNDS",
     },
     {
       id: "c-4",
-      title: "PAIN TO GAIN",
+      title: "Be Your Best",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
+        "10 Chest Press",
         "30 Plank sidewalk",
         "15 Kickboxing punches",
         "30 Rolling pushups",
-        "15 Plank Tap",
+        "15 Decline Push-Ups",
         "30 Superman",
       ],
       rests: "NO REST BETWEEN ROUNDS",
     },
     {
       id: "c-5",
-      title: "PAIN TO GAIN",
+      title: "WIN BY FINISHING",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
+        "10 Push Up Hold",
         "30 Plank sidewalk",
-        "15 Kickboxing punches",
+        "15 Spiderman Press-up",
         "30 Rolling pushups",
         "15 Plank Tap",
         "30 Superman",
@@ -252,13 +252,13 @@ export const workoutsCategoryData = {
   back: [
     {
       id: "b-0",
-      title: "PAIN TO GAIN",
+      title: "Winners Start",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
+        "40 Wall Walk",
         "30 Plank sidewalk",
-        "15 Kickboxing punches",
-        "30 Rolling pushups",
+        "15 Push Ups",
+        "30 Downward Dog",
         "15 Plank Tap",
         "30 Superman",
       ],
@@ -266,14 +266,14 @@ export const workoutsCategoryData = {
     },
     {
       id: "b-1",
-      title: "PAIN TO GAIN",
+      title: "You Are The Goal",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
+        "40 Wall Walk",
         "30 Plank sidewalk",
-        "15 Kickboxing punches",
+        "15 Dolphin Kicks",
         "30 Rolling pushups",
-        "15 Plank Tap",
+        "15 Wide Grip Pushup",
         "30 Superman",
       ],
       rests: "NO REST BETWEEN ROUNDS",
@@ -283,23 +283,23 @@ export const workoutsCategoryData = {
       title: "PAIN TO GAIN",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
-        "30 Plank sidewalk",
+        "30 Downward Dog",
+        "10 Wide Grip Pushup",
         "15 Kickboxing punches",
         "30 Rolling pushups",
-        "15 Plank Tap",
+        "15 T Pushup",
         "30 Superman",
       ],
       rests: "NO REST BETWEEN ROUNDS",
     },
     {
       id: "b-3",
-      title: "PAIN TO GAIN",
+      title: "Push Again",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
+        "40 Push Ups",
         "30 Plank sidewalk",
-        "15 Kickboxing punches",
+        "15 Wide Grip Pushup",
         "30 Rolling pushups",
         "15 Plank Tap",
         "30 Superman",
@@ -308,12 +308,12 @@ export const workoutsCategoryData = {
     },
     {
       id: "b-4",
-      title: "PAIN TO GAIN",
+      title: "See Your Goals",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
+        "40 Downward Dog ",
         "30 Plank sidewalk",
-        "15 Kickboxing punches",
+        "15 Kneeling Extension",
         "30 Rolling pushups",
         "15 Plank Tap",
         "30 Superman",
@@ -322,15 +322,15 @@ export const workoutsCategoryData = {
     },
     {
       id: "b-5",
-      title: "PAIN TO GAIN",
+      title: "WIN BY FINISHING",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
-        "10 Tricep dips",
-        "30 Plank sidewalk",
-        "15 Kickboxing punches",
-        "30 Rolling pushups",
+        "40 Wall Walk",
+        "30 Push Ups",
+        "15 Kneeling Extension",
+        "30 Dolphin Kicks",
         "15 Plank Tap",
-        "30 Superman",
+        "30 T Pushup",
       ],
       rests: "NO REST BETWEEN ROUNDS",
     },
