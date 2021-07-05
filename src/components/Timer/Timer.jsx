@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Timer.module.scss";
+import { wait } from "@testing-library/react";
 
 const Timer = () => {
   const [time, setTime] = useState(0);
@@ -11,7 +12,7 @@ const Timer = () => {
 
     if (start) {
       interval = setInterval(() => {
-        setTime(prevTime => prevTime + 10);
+        setTime((prevTime) => prevTime + 10);
       }, 10);
     } else {
       clearInterval(interval);
@@ -31,7 +32,14 @@ const Timer = () => {
   const handleTimerStop = () => {
     if (start) {
       setStart(false);
-      const newState = [...rounds, { mins: minutes, secs: seconds, round: rounds.length + 1 }];
+      const newState = [
+        ...rounds,
+        { mins: minutes, secs: seconds, round: rounds.length + 1 },
+      ];
+
+      if (rounds.length >= 3) {
+        alert("Well done! You Have Completed The Workout ");
+      }
       setRounds(newState);
       setTime(0);
     }
@@ -41,17 +49,48 @@ const Timer = () => {
     setTime(0);
     setStart(true);
   };
-
+  let waitingClick = null;
+  let lastClick = 0;
   return (
     <section className={styles.timer}>
-      <div className={styles.clockcontainer}>
-        <div className={styles.time}>
+      <div
+        onClick={(e) => {
+          if (lastClick && e.timeStamp - lastClick < 250 && waitingClick) {
+            lastClick = 0;
+            clearTimeout(waitingClick);
+            console.log("Do the steps to respond double click");
+            handleTimerStart();
+          } else {
+            lastClick = e.timeStamp;
+            waitingClick = setTimeout(() => {
+              waitingClick = null;
+              console.log("Do the steps to respond single click");
+              handleTimerStop();
+            }, 251);
+          }
+        }}
+        className={styles.clockcontainer}
+      >
+        <div
+          className={styles.time}
+          usedoubletap={() => {
+            handleTimerStop();
+          }}
+        >
           <div className={styles.basetimer}>
             <svg class="styles.clockface" height="110" width="110">
-              <circle stroke="#ffffff" strokeWidth="10" r="50" cx="55" cy="55" />
+              <circle
+                stroke="#ffffff"
+                strokeWidth="10"
+                r="50"
+                cx="55"
+                cy="55"
+              />
               <circle
                 stroke="#00263e"
-                strokeDashoffset={-((seconds / 60) * 50 * 2 * Math.PI) + 50 * 2 * Math.PI}
+                strokeDashoffset={
+                  -((seconds / 60) * 50 * 2 * Math.PI) + 50 * 2 * Math.PI
+                }
                 strokeDasharray={50 * 2 * Math.PI}
                 strokeWidth="5"
                 fill="#f05224"
@@ -69,8 +108,8 @@ const Timer = () => {
       </div>
       <div className={styles.buttoncontainer}>
         <button onClick={handleTimerReset}>RESET</button>
-        <button onClick={handleTimerStart}>START</button>
-        <button onClick={handleTimerStop}>STOP</button>
+        {/* <button onClick={handleTimerStart}>START</button> */}
+        {/* <button onClick={handleTimerStop}>STOP</button> */}
       </div>
       <div className={styles.roundcontainer}>
         {rounds.map((round, index) => (
