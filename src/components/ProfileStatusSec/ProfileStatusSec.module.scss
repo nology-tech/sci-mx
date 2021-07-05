@@ -49,7 +49,7 @@
 }
 
 .preferences {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,26 +60,18 @@
     margin-top: 4rem;
   }
 }
+
 .feedback {
   text-align: center;
   margin-top: 1rem;
   padding-bottom: 2rem;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .feedback__heading {
   font-size: 1.8rem;
-}
-.feedback__body {
-  display: flex;
-  align-items: space-between;
-  justify-content: space-between;
-  width: 100%;
-}
-.feedback__desc {
-  margin-top: 1rem;
-  font-size: 1.3rem;
-}
-
-.mailIcon {
-
+  margin-bottom: 1.2rem;
 }
