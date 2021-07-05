@@ -17,7 +17,7 @@ const LibraryPage = () => {
     setSearchTerm(e.target.value);
   };
 
-  const renderByCategories = () => {
+  const renderWorkoutByCategories = () => {
     return workoutsCategoryData[currentCategory].map((workout) => (
       <WorkoutCard key={workout.id} workout={workout} />
     ));
@@ -74,6 +74,7 @@ const LibraryPage = () => {
               key={category}
               handleCategory={handleCategory}
               category={category}
+              currentCategory={currentCategory}
             />
           ))}
         </ul>
@@ -82,7 +83,7 @@ const LibraryPage = () => {
       <div className={styles.workouts}>
         {searchTerm.trim().length > 0
           ? renderWorkoutsBySearchTerm()
-          : renderByCategories()}
+          : renderWorkoutByCategories()}
       </div>
     </div>
   );
