@@ -8,66 +8,52 @@ const LibraryPage = () => {
   const [currentCategory, setCurrentCategory] = useState("legs");
   const [searchWorkout, setSearchWorkout] = useState("");
 
-  const handleCategory = (e) => {
+  const handleCategory = e => {
     console.log(e.target.textContent);
     setCurrentCategory(e.target.textContent);
   };
 
   const renderByCategories = () => {
-    return workoutsCategoryData[currentCategory].map((workout, i) => (
-      <WorkoutCard key={i} workout={workout} />
-    ));
+    return workoutsCategoryData[currentCategory].map((workout, i) => <WorkoutCard key={i} workout={workout} />);
   };
 
-  const renderCategoriesBySearch = (searchTerm) => {
-    return workoutsCategoryData[currentCategory].map((workout, i) => (
-      <WorkoutCard key={i} workout={workout} />
-    ));
+  const renderCategoriesBySearch = workouts => {
+    return workouts.map((workout, i) => <WorkoutCard key={i} workout={workout} />);
   };
 
-  const handleSearchQuery = (e) => {
+  const handleSearchQuery = e => {
     setSearchWorkout(e.target.value);
 
+    let array = []
     for (const key in workoutsCategoryData) {
-      // console.log(workoutsCategoryData[key]);
-      const filteredWorkouts = workoutsCategoryData[key].filter((workout) => {
-        // console.log(workout["exercises"].includes(searchWorkout));
-        // console.log(workout["exercises"]);
-        const bool = workout["exercises"].includes(searchWorkout.toUpperCase());
-        // console.log(`logging this:\n${workout["exercises"]}`);
-        console.log(
-          workout["exercises"].filter((ele) => ele.includes(searchWorkout))
-        );
+      const filteredWorkouts = workoutsCategoryData[key].filter(workout => {
+        const bool = workout["exercises"].some(exercise => {
+          return exercise.includes(e.target.value);
+        });
         return bool;
       });
-      console.log(filteredWorkouts);
+
+      if(filteredWorkouts.length > 0){
+        array = [...array, ...filteredWorkouts];
+      }
     }
+    return renderCategoriesBySearch(array);
   };
 
   return (
     <div className={styles.container}>
-      <input
-        type="text"
-        placeholder="search workout"
-        onChange={handleSearchQuery}
-      />
+      <input type="text" placeholder="search workout" onChange={handleSearchQuery} />
 
       <div className={styles.categories}>
         <ul className={styles.categories__lists}>
-          {Object.keys(workoutsCategoryData).map((category) => (
-            <WorkoutCategories
-              key={category}
-              handleCategory={handleCategory}
-              category={category}
-            />
+          {Object.keys(workoutsCategoryData).map(category => (
+            <WorkoutCategories key={category} handleCategory={handleCategory} category={category} />
           ))}
         </ul>
       </div>
 
       <div className={styles.workouts}>
-        {searchWorkout.trim().length > 0
-          ? renderCategoriesBySearch()
-          : renderByCategories()}
+        {searchWorkout.trim().length > 0 ? handleSearchQuery() : renderByCategories()}
       </div>
     </div>
   );
