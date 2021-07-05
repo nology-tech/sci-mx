@@ -9,6 +9,10 @@ const ProductPref = (props) => {
     setIsOpen(!isOpen);
   };
 
+  const getCategoryJSX = (category) => {
+    return <p className={styles.preferences__subheading}>{category}</p>
+  }
+
   const applyExpand = isOpen && styles.preferences__content_active;
   const isIconDown = isOpen && styles.preferences__img_btn_active;
   return (
@@ -24,10 +28,7 @@ const ProductPref = (props) => {
         </button>
       </div>
       <div className={`${styles.preferences__content} ${applyExpand}`}>
-        <p className={styles.preferences__subheading}>All Products</p>
-        <p className={styles.preferences__link}>Protein powder</p>
-        <p className={styles.preferences__link}>Food & snack</p>
-        <p className={styles.preferences__link}>Amino acids</p>
+        {props.categoryArray.map(getCategoryJSX)}
       </div>
     </div>
   );
