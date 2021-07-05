@@ -27,6 +27,7 @@ const HeroProductSection = () => {
   return (
     <section id="product" className={styles.products}>
       <h1 className={styles.header}>Fuel your workout</h1>
+      <hr className={styles.line} />
       <Carousel
         responsive={responsive}
         infinite={true}

@@ -20,6 +20,21 @@
   width: 80%;
   text-align: center;
   margin: 10rem auto 0rem auto;
+  font-weight: 500;
+  color: $primary-color-blue;
+  // border-bottom: 2px solid $primary-color-blue;
+  // padding-bottom: 15px;
+}
+
+.line {
+  background: $primary-color-blue;
+  color: $primary-color-blue;
+  border: none;
+  width: 60%;
+  height: 2px;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .product {
   display: flex;
@@ -37,6 +52,8 @@
 
   &__description {
     text-align: center;
+    color: $primary-color-blue;
+    font-weight: 600;
 
     &_name {
       font-size: 1.5rem;
@@ -44,6 +61,7 @@
     }
     &_price {
       font-size: 1.3rem;
+      color: $primary-color-orange;
     }
   }
 }
