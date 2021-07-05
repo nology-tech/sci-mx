@@ -27,6 +27,7 @@ const HeroSection = () => {
         </h1>
         <h4 className={styles.hero__subheading}>Welcome back!</h4>
       </div>
+      <hr className={styles.line} />
       <h3 className={styles.workout__title}>Today's Workout</h3>
       <div className={styles.hero__image_container}>
         <Link to="/workout/0">
