@@ -25,21 +25,27 @@
 }
 
 .categories {
+  width: 100%;
+  max-width: 420px;
   display: flex;
   justify-content: center;
-  width: 100%;
+  align-items: center;
+  text-align: center;
+  margin: auto;
   margin-bottom: 3rem;
 
   &__lists {
+    width: 100%;
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    width: 100%;
   }
 }
 
 .workouts {
   width: 100%;
+  max-width: 670px;
+  margin: auto;
   display: grid;
   grid-template-columns: 1fr;
   justify-content: center;
