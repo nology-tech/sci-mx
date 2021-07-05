@@ -32,6 +32,7 @@ const HeroProductSection = () => {
         responsive={responsive}
         infinite={true}
         autoPlaySpeed={3000}
+        partialVisbile={false}
         keyBoardControl={true}
         customTransition="all .5"
         transitionDuration={500}
@@ -41,12 +42,12 @@ const HeroProductSection = () => {
 
           .map((product) => (
             <div className={styles.product} key={product.id}>
-              <div className={styles.product__image}>
+              <div className={styles.image__container}>
                 <a href={product.link} target="_blank" rel="noreferrer">
                   <img
                     src={product.img_path}
                     alt={product.id}
-                    className={styles.product__image_image}
+                    className={styles.product__image}
                   />
                 </a>
               </div>
@@ -55,7 +56,6 @@ const HeroProductSection = () => {
                   {product.name}
                 </p>
                 <p className={styles.product__description_price}>
-                  {" "}
                   from £{product.price}
                 </p>
               </div>
