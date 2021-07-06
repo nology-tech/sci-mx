@@ -183,7 +183,7 @@
     background: $primary-color-blue;
     color: $primary-color-blue;
     border: none;
-    width: 55%;
+    width: 40%;
     height: 2px;
     margin: auto;
     margin-top: 20px;
@@ -199,24 +199,28 @@
   .hero {
     &__image_container {
       &::after {
-        width: 45rem;
-        height: 45rem;
+        width: 30rem;
+        height: 30rem;
       }
 
       &::before {
-        width: 45rem;
-        height: 45rem;
+        width: 30rem;
+        height: 30rem;
       }
     }
 
     &__image {
-      width: 45rem;
-      height: 45rem;
+      width: 30rem;
+      height: 30rem;
 
       &_link {
         width: 30rem;
         font-size: 1.8rem;
       }
     }
+  }
+
+  .line {
+    width: 33%;
   }
 }
