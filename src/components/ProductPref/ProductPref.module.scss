@@ -16,7 +16,7 @@ button {
 
 .preferences {
   margin: 0.3rem 0rem;
-  padding: 2rem 2rem;
+  padding: 2rem 0rem;
   width: 100%;
   max-width: 400px;
   background-color: $secondary-color-white;
@@ -51,19 +51,14 @@ button {
     overflow: hidden;
     width: 100%;
     flex-direction: column;
-    transform: 0.3s ease-in-out;
+    transform: 4s ease-in-out;
     background-color: $primary-color-orange;
-    border-top-left-radius: 10px;
+    border-radius: 10px;
 
     &_active {
-      height: 100%;
+      height: auto;
       margin-top: 0;
     }
-  }
-
-  &__subheading {
-    padding: 1rem;
-    font-size: 1.3rem;
   }
 
   &__link {
