@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./WorkoutPage.module.scss";
 import Workout from "../../components/Workout/Workout";
-import { workoutsCategoryData } from "../../Data/workoutLibraryData";
+import { workoutsCategoryData } from "../../Data/workoutLibraryData.js";
 
 const WorkoutPage = () => {
   const { workoutID } = useParams();
