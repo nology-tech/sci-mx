@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./LibraryPage.module.scss";
 import WorkoutCard from "../../components/WorkoutCard";
 import WorkoutCategories from "../../components/WorkoutCategories";
-import { workoutsCategoryData } from "../../Data/workoutLibraryData";
+import workoutsCategoryData from "../../Data/workoutsCategoryData";
 
 const LibraryPage = () => {
   const [currentCategory, setCurrentCategory] = useState("legs");

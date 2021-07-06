@@ -1,4 +1,4 @@
-export const workoutsCategoryData = {
+const workoutsCategoryData = {
   legs: [
     {
       id: "l-0",
@@ -336,3 +336,5 @@ export const workoutsCategoryData = {
     },
   ],
 };
+
+export default workoutsCategoryData;
