@@ -12,15 +12,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 2rem 0;
+  margin-bottom: 3rem;
 
   &__search_input {
+    text-align: center;
     max-width: 250px;
     font-size: 1.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0;
+    background-color: $secondary-color-gray;
+    color: $secondary-color-white;
+    border-radius: 15px;
     padding: 0.4rem 1rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+    }
   }
 }
 

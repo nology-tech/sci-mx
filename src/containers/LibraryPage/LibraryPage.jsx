@@ -30,7 +30,9 @@ const LibraryPage = () => {
       ));
     } else {
       return (
-        <p className={styles.workouts__not_found}>Cannot find that work...</p>
+        <p className={styles.workouts__not_found}>
+          Cannot find that workout...
+        </p>
       );
     }
   };
