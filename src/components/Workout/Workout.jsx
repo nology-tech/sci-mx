@@ -5,10 +5,14 @@ import fingersRed from "../../assets/images/Fingers/2.svg";
 import fingersGreen from "../../assets/images/Fingers/3.svg";
 import fingersYellow from "../../assets/images/Fingers/4.svg";
 import fingersOrange from "../../assets/images/Fingers/5.svg";
+import workoutimage1 from "../../assets/images/WorkoutCutouts/workout2.png";
+import workoutimage2 from "../../assets/images/WorkoutCutouts/workout3.png";
+import workoutimage3 from "../../assets/images/WorkoutCutouts/workout6.png";
 
 const Workout = (props) => {
   const { workout } = props;
   const [fingers, setFingers] = useState(fingersBlue);
+  const [workoutImage, setworkoutImage] = useState(workoutimage1);
 
   console.log(workout);
 
@@ -18,7 +22,7 @@ const Workout = (props) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  useEffect(() => {
+  const getRandomFingers = () => {
     const int = getRandomInt(1, 5);
 
     switch (int) {
@@ -40,6 +44,29 @@ const Workout = (props) => {
       default:
         setFingers(fingersBlue);
     }
+  };
+
+  const getRandomWorkoutImage = () => {
+    const int = getRandomInt(0, 2);
+
+    switch (int) {
+      case 0:
+        setworkoutImage(workoutimage1);
+        break;
+      case 1:
+        setworkoutImage(workoutimage2);
+        break;
+      case 2:
+        setworkoutImage(workoutimage3);
+        break;
+      default:
+        setworkoutImage(workoutimage1);
+    }
+  };
+
+  useEffect(() => {
+    getRandomFingers();
+    getRandomWorkoutImage();
   }, []);
 
   const getExerciseJSX = (exercise, index) => {
@@ -61,7 +88,7 @@ const Workout = (props) => {
         <div className={styles.workoutContainer__body}>
           <ul>{workout.exercises.map(getExerciseJSX)}</ul>
           <img
-            src={workout.img}
+            src={workoutImage}
             alt="workout"
             className={styles.workoutpic}
           ></img>

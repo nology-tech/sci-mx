@@ -3,10 +3,6 @@ import { useParams } from "react-router-dom";
 import styles from "./WorkoutPage.module.scss";
 import Workout from "../../components/Workout/Workout";
 import { workoutsCategoryData } from "../../Data/workoutLibraryData";
-// import workoutimage1 from "../../assets/images/WorkoutCutouts/workout2.png";
-// import workoutimage2 from "../../assets/images/WorkoutCutouts/workout3.png";
-// import workoutimage3 from "../../assets/images/WorkoutCutouts/workout6.png";
-// import { current } from "immer";
 
 const WorkoutPage = () => {
   const { workoutID } = useParams();

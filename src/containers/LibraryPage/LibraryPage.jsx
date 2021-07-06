@@ -62,7 +62,7 @@ const LibraryPage = () => {
       <div className={styles.search_container}>
         <input
           type="text"
-          placeholder="search for a workout..."
+          placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchQuery}
           className={styles.search_container__search_input}

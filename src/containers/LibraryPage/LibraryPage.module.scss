@@ -17,16 +17,24 @@
 
   &__search_input {
     text-align: center;
+    width: 100%;
     max-width: 250px;
+    height: 4rem;
     font-size: 1.6rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $secondary-color-gray;
-    color: $secondary-color-white;
-    border-radius: 15px;
-    padding: 0.4rem 1rem;
 
+    background-color: $secondary-color-gray;
+    color: white;
+    color: $secondary-color-white, white;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    border-style: none;
+    &::placeholder {
+      color: white;
+      color: $secondary-color-white, white;
+    }
     @media screen and (min-width: 768px) {
       font-size: 2rem;
     }
