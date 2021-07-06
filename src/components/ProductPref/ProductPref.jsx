@@ -8,11 +8,11 @@ const ProductPref = (props) => {
   const handleToggler = () => {
     setIsOpen(!isOpen);
   };
-
+  
   const getCategoryJSX = (category) => {
     return (
-      <p className={styles.preferences__subheading} key={category.id}>
-        {category}
+      <p className={styles.preferences__link} key={category.id}>
+        {category.name}
       </p>
     );
   };
