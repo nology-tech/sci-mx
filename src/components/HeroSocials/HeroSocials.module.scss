@@ -10,8 +10,7 @@
 
   &__heading {
     width: 100%;
-    margin-bottom: 1rem;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     text-align: center;
     font-weight: 400;
     color: $primary-color-blue;
@@ -44,5 +43,47 @@
       background-color: $primary-color-orange;
       color: $secondary-color-white;
     }
+  }
+}
+
+.headerContainer {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.line {
+  background: $primary-color-blue;
+  color: $primary-color-blue;
+  border: none;
+  width: 100%;
+  height: 2px;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .socials__heading {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: $screen-xl-min) {
+  .socials__heading {
+    font-size: 4rem;
+  }
+
+  .socials__list {
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+  }
+
+  .socials__icon {
+    font-size: 8rem;
   }
 }

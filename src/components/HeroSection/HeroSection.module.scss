@@ -11,9 +11,10 @@
 
   &__title {
     width: 80%;
-    // border-bottom: 2px solid $primary-color-blue;
-    text-align: center;
-    // padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   &__heading {
     margin-top: 1rem;
@@ -29,6 +30,15 @@
     font-size: 1.8rem;
     text-align: center;
     color: $primary-color-blue;
+  }
+
+  &__line {
+    background: $primary-color-blue;
+    color: $primary-color-blue;
+    border: none;
+    width: 80%;
+    height: 2px;
+    margin-top: 15px;
   }
 
   &__image_container {
@@ -66,8 +76,6 @@
   }
 
   &__image {
-    // position: relative;
-
     border-radius: 48px;
     width: 20rem;
     height: 20rem;
@@ -113,25 +121,15 @@
     color: $primary-color-orange;
   }
 }
-.line {
-  background: $primary-color-blue;
-  color: $primary-color-blue;
-  border: none;
-  width: 60%;
-  height: 2px;
-  margin: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+
 .workout__title {
   font-size: 2rem;
   padding-top: 15px;
   font-weight: 500;
   color: $primary-color-blue;
-  // border-bottom: 2px solid $primary-color-orange;
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: $screen-sm-min) {
   .hero {
     &__image_container {
       &::after {
@@ -157,8 +155,6 @@
 
     &__title {
       width: 80%;
-
-      text-align: center;
     }
 
     &__heading {
@@ -167,6 +163,16 @@
 
     &__subheading {
       font-size: 2rem;
+    }
+
+    &__line {
+      background: $primary-color-blue;
+      color: $primary-color-blue;
+      border: none;
+      width: 60%;
+      height: 2px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
 
     &__activity_btn {
@@ -179,23 +185,13 @@
       font-size: 2.5rem;
     }
   }
-  .line {
-    background: $primary-color-blue;
-    color: $primary-color-blue;
-    border: none;
-    width: 40%;
-    height: 2px;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
 
   .workout__title {
     padding: 0;
   }
 }
 
-@media screen and (min-width: 882px) {
+@media screen and (min-width: $screen-lg-min) {
   .hero {
     &__image_container {
       &::after {
@@ -222,5 +218,14 @@
 
   .line {
     width: 33%;
+  }
+}
+@media screen and (min-width: $screen-xl-min) {
+  .hero__heading {
+    font-size: 4rem;
+  }
+
+  .hero__subheading {
+    font-size: 3rem;
   }
 }

@@ -26,8 +26,10 @@ const responsive = {
 const HeroProductSection = () => {
   return (
     <section id="product" className={styles.products}>
-      <h1 className={styles.header}>Fuel your workout</h1>
-      <hr className={styles.line} />
+      <div className={styles.headerContainer}>
+        <h1 className={styles.heading}>Fuel your workout</h1>
+        <hr className={styles.line} />
+      </div>
       <Carousel
         responsive={responsive}
         infinite={true}

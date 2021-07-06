@@ -5,18 +5,22 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
-.header {
+.headerContainer {
+  height: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+}
+
+.heading {
   font-size: 2.4rem;
   width: 80%;
   text-align: center;
-  margin: 10rem auto 0rem auto;
   font-weight: 500;
   color: $primary-color-blue;
 }
@@ -25,11 +29,9 @@
   background: $primary-color-blue;
   color: $primary-color-blue;
   border: none;
-  width: 60%;
+  width: 50%;
   height: 2px;
-  margin: auto;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 15px;
 }
 .product {
   display: flex;
@@ -39,7 +41,6 @@
   margin: auto;
 
   &__image {
-    // margin: auto;
     height: 23rem;
   }
 
@@ -75,19 +76,29 @@
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: $screen-sm-min) {
   .line {
     width: 33%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .line {
+    width: 40%;
   }
 
-  .header {
+  .heading {
+    font-size: 3.5rem;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: $screen-xl-min) {
+  .line {
+    width: 30%;
+  }
+
+  .heading {
     font-size: 4rem;
   }
-
-  .products {
-  }
-
-  //come back to fix carousel
 }
