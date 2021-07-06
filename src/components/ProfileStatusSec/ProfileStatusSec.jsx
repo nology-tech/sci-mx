@@ -1,13 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import ProductPref from "../ProductPref";
 import styles from "./ProfileStatusSec.module.scss";
 import avatar from "../../assets/images/workout/workout-5-image.jpg";
+import { UserContext } from "../../context/UserProvider/UserProvider";
 
 const ProfileStatusSec = () => {
+  const userContext = useContext(UserContext);
+
   return (
     <div className={styles.profile}>
-      <img src={avatar} alt="sci-mx-logo.jpg" className={styles.profile__img} />
-      <h2 className={styles.profile__heading}>Will Irving</h2>
+      <img
+        src={userContext.user ? userContext.user.photoURL : avatar}
+        alt="sci-mx-logo.jpg"
+        className={styles.profile__img}
+      />
+      <h2 className={styles.profile__heading}>
+        {userContext.user ? userContext.user.displayName : ""}
+      </h2>
       <div className={styles.profile__status}>
         <div className={styles.profile__stat}>
           <h6 className={styles.profile__stat__heading}>50</h6>

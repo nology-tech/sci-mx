@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link as LinkRoute } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import styles from "./Sidebar.module.scss";
+import { UserContext } from "../../context/UserProvider/UserProvider";
 
 const Sidebar = (props) => {
+  const userContext = useContext(UserContext);
   const { isSidebarOpen, handleSidebarToggle } = props;
   return (
     <div
@@ -31,6 +33,7 @@ const Sidebar = (props) => {
             Library
           </LinkRoute>
         </li>
+
         <li className={styles.sidebar__item}>
           <a
             href="https://sci-mx.co.uk/"
@@ -41,6 +44,14 @@ const Sidebar = (props) => {
           >
             Shop
           </a>
+        </li>
+        <li className={styles.sidebar__item}>
+          <button
+            onClick={userContext.signOut}
+            className={styles.sidebar__signOut}
+          >
+            Sign Out
+          </button>
         </li>
       </ul>
     </div>

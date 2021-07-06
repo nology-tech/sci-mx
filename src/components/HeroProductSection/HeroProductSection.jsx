@@ -25,7 +25,7 @@ const responsive = {
 
 const HeroProductSection = () => {
   return (
-    <section className={styles.products}>
+    <section id="product" className={styles.products}>
       <h1 className={styles.header}>Fuel your workout</h1>
       <Carousel
         responsive={responsive}
@@ -61,7 +61,7 @@ const HeroProductSection = () => {
             </div>
           ))}
       </Carousel>
-      <LinkScroll className={styles.hero__arrow_btn} to="#">
+      <LinkScroll className={styles.hero__arrow_btn} to="socials" smooth={true}>
         <FaArrowAltCircleDown
           className={styles.carousel__arrow_btn}
         ></FaArrowAltCircleDown>
