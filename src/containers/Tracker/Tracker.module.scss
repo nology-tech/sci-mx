@@ -1,7 +1,8 @@
 @import "../../assets/styles/base.scss";
 .trackerPage {
-  margin-top: 70px;
+  margin: 7rem auto 0;
   min-height: calc(100vh - 70px);
+  width: 95%;
 }
 
 //heading part
@@ -23,26 +24,17 @@
   }
 }
 //Upper Cental
-// .center {
-//   height: 20rem;
-//   width: 90%;
-//   border: 2px solid red;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 1rem auto;
-// }
-
 .bar_chart {
-  border: 2px solid blue;
   margin: 3rem auto;
-  width: 95%;
+  width: 100%;
 }
 
 // Lower Center
 .lower_center {
+  margin: auto;
+  width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 1rem;
 }
 .lower_center__icon {
@@ -56,19 +48,28 @@
   cursor: pointer;
   overflow: hidden;
 }
-// Footer
-.footer_title {
-  font-size: 1.8rem;
-  margin: 3rem 0rem 1rem 0rem;
-}
-.footerIcon_StartWorkout__1 {
-  width: 10rem;
-  height: 10rem;
-  margin-left: 1.2rem;
-}
 
-@media screen and (min-width: 576px) {
-  .bar_chart {
+@media screen and (min-width: $screen-sm-min) {
+  .bar_chart,
+  .lower_center {
+    width: 90%;
+  }
+}
+@media screen and (min-width: $screen-md-min) {
+  .bar_chart,
+  .lower_center {
+    width: 80%;
+  }
+}
+@media screen and (min-width: $screen-lg-min) {
+  .bar_chart,
+  .lower_center {
     width: 75%;
+  }
+}
+@media screen and (min-width: $screen-xl-min) {
+  .bar_chart,
+  .lower_center {
+    width: 65%;
   }
 }
