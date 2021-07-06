@@ -30,9 +30,7 @@ const Timer = () => {
         ...rounds,
         { mins: minutes, secs: seconds, round: rounds.length + 1 },
       ];
-      // if (rounds.length >= 3) {
-      //   alert("Well done! You Have Completed The Workout ");
-      // }
+
       setRounds(newState);
       setTime(0);
     }
@@ -65,14 +63,9 @@ const Timer = () => {
           }}
           className={styles.clockcontainer}
         >
-          <div
-            className={styles.time}
-            usedoubletap={() => {
-              handleTimerStop();
-            }}
-          >
+          <div className={styles.time}>
             <div className={styles.basetimer}>
-              <svg class="styles.clockface" height="110" width="110">
+              <svg className={styles.clockface} height="110" width="110">
                 <circle
                   stroke="#FFFFFF"
                   strokeWidth="10"
