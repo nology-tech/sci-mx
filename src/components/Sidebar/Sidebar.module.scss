@@ -1,3 +1,5 @@
+@import "../../assets/styles/base.scss";
+
 *,
 *::before,
 *::after {
@@ -12,7 +14,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 .sidebar {
@@ -22,7 +23,7 @@ a {
   left: -500px;
   width: 320px;
   height: 100%;
-  background: lightgoldenrodyellow;
+  background: $primary-color-orange;
   display: grid;
   align-items: center;
   transition: all 0.4s ease-out;
@@ -40,13 +41,14 @@ a {
 
   &__icon {
     position: absolute;
-    top: 30px;
+    top: 20px;
     right: 40px;
     background: transparent;
     border: transparent;
     outline: none;
     cursor: pointer;
     font-size: 40px;
+    color: $secondary-color-white;
   }
 
   &__list {
@@ -62,7 +64,6 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-color: red;
   }
   &__link {
     height: 100%;
@@ -76,14 +77,22 @@ a {
     list-style: none;
     cursor: pointer;
     transition: 0.2s ease-in-out;
-    color: #000;
+    color: $secondary-color-white;
 
     &:hover {
-      background-color: lightcyan;
+      background-color: $primary-color-blue;
     }
   }
   &__signOut {
-    border: 2px solid black;
+    border: 2px solid $secondary-color-white;
+    margin-top: 3rem;
     font-size: 1rem;
+    padding: 1rem;
+    border-radius: 15px;
+    color: $secondary-color-white;
+
+    &:hover {
+      background-color: $primary-color-blue;
+    }
   }
 }
