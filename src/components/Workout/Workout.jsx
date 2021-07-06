@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import styles from "./Workout.module.scss";
 import fingersBlue from "../../assets/images/Fingers/1.svg";
 import fingersRed from "../../assets/images/Fingers/2.svg";
@@ -20,7 +20,7 @@ const Workout = (props) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  const getRandomFingers = () => {
+  const getRandomFingers = useCallback(() => {
     const int = getRandomInt(1, 5);
 
     switch (int) {
@@ -42,9 +42,9 @@ const Workout = (props) => {
       default:
         setFingers(fingersBlue);
     }
-  };
+  }, []);
 
-  const getRandomWorkoutImage = () => {
+  const getRandomWorkoutImage = useCallback(() => {
     const int = getRandomInt(0, 2);
 
     switch (int) {
@@ -60,12 +60,12 @@ const Workout = (props) => {
       default:
         setWorkoutImage(workoutimage1);
     }
-  };
+  }, []);
 
   useEffect(() => {
     getRandomFingers();
     getRandomWorkoutImage();
-  }, []);
+  }, [getRandomFingers, getRandomWorkoutImage]);
 
   const getExerciseJSX = (exercise, index) => {
     const split = exercise.split(" ");
@@ -79,22 +79,20 @@ const Workout = (props) => {
   };
 
   return (
-    <>
-      <div className={styles.workoutContainer}>
-        <div className={styles.workoutContainer__title}>{workout.title}</div>
-        <div className={styles.workoutContainer__rounds}>{workout.rounds}</div>
-        <div className={styles.workoutContainer__body}>
-          <ul>{workout.exercises.map(getExerciseJSX)}</ul>
-          <img
-            src={workoutImage}
-            alt="workout"
-            className={styles.workoutpic}
-          ></img>
-          <img src={fingers} alt="fingers" className={styles.fingers}></img>
-        </div>
-        <div className={styles.workoutContainer__rests}>{workout.rests}</div>
+    <div className={styles.workoutContainer}>
+      <div className={styles.workoutContainer__title}>{workout.title}</div>
+      <div className={styles.workoutContainer__rounds}>{workout.rounds}</div>
+      <div className={styles.workoutContainer__body}>
+        <ul>{workout.exercises.map(getExerciseJSX)}</ul>
+        <img
+          src={workoutImage}
+          alt="workout"
+          className={styles.workoutpic}
+        ></img>
+        <img src={fingers} alt="fingers" className={styles.fingers}></img>
       </div>
-    </>
+      <div className={styles.workoutContainer__rests}>{workout.rests}</div>
+    </div>
   );
 };
 

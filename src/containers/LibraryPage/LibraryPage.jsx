@@ -37,7 +37,7 @@ const LibraryPage = () => {
     }
   };
 
-  const getWorkoutsBySearchTerm = () => {
+  useEffect(() => {
     let workouts = [];
     for (const key in workoutsCategoryData) {
       workoutsCategoryData[key].forEach((workout) => {
@@ -51,10 +51,6 @@ const LibraryPage = () => {
     }
 
     setWorkoutsBySearch([...workouts]);
-  };
-
-  useEffect(() => {
-    getWorkoutsBySearchTerm();
   }, [searchTerm]);
 
   return (
