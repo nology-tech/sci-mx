@@ -10,15 +10,24 @@ const ProfileStatusSec = () => {
 
   const categories = [
     [
-      "Protein Powder",
-      "Pre, Intra & Post-Workout",
-      "Food & Snacks",
-      "Amino Acids",
-      "Creatine",
-      "Weight Management",
+      { id: 0, name: "Protein Powder" },
+      { id: 1, name: "Pre, Intra & Post-Workout" },
+      { id: 2, name: "Food & Snacks" },
+      { id: 3, name: "Amino Acids" },
+      { id: 4, name: "Creatine" },
+      { id: 5, name: "Weight Management" },
     ],
-    ["Wellbeing", "Growth & Repair", "Hormone Support", "Recovery"],
-    ["Men's Clothing", "Women's Clothing", "Accessories"],
+    [
+      { id: 0, name: "Wellbeing" },
+      { id: 1, name: "Growth & Repair" },
+      { id: 2, name: "Hormone Support" },
+      { id: 3, name: "Recovery" },
+    ],
+    [
+      { id: 0, name: "Men's Clothing" },
+      { id: 1, name: "Women's Clothing" },
+      { id: 2, name: "Accessories" },
+    ],
   ];
 
   return (
