@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Timer.module.scss";
-import { wait } from "@testing-library/react";
+
 const Timer = () => {
   const [time, setTime] = useState(0);
   const [start, setStart] = useState(false);
@@ -30,9 +30,9 @@ const Timer = () => {
         ...rounds,
         { mins: minutes, secs: seconds, round: rounds.length + 1 },
       ];
-      if (rounds.length >= 3) {
-        alert("Well done! You Have Completed The Workout ");
-      }
+      // if (rounds.length >= 3) {
+      //   alert("Well done! You Have Completed The Workout ");
+      // }
       setRounds(newState);
       setTime(0);
     }
@@ -48,7 +48,7 @@ const Timer = () => {
       <div className={styles.parentcontainer}>
         <div
           onClick={(e) => {
-            if (lastClick && e.timeStamp - lastClick < 250 && waitingClick) {
+            if (lastClick && e.timeStamp < 250 && waitingClick) {
               lastClick = 0;
               clearTimeout(waitingClick);
               console.log("Do the steps to respond double click");
@@ -58,6 +58,7 @@ const Timer = () => {
               waitingClick = setTimeout(() => {
                 waitingClick = null;
                 console.log("Do the steps to respond single click");
+                handleTimerStart();
                 handleTimerStop();
               }, 251);
             }
@@ -100,8 +101,6 @@ const Timer = () => {
         </div>
         <div className={styles.buttoncontainer}>
           <button onClick={handleTimerReset}>RESET</button>
-          {/* <button onClick={handleTimerStart}>START</button> */}
-          {/* <button onClick={handleTimerStop}>STOP</button> */}
         </div>
       </div>
       <div className={styles.roundcontainer}>
