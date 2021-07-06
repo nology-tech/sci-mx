@@ -12,9 +12,7 @@ import workoutimage3 from "../../assets/images/WorkoutCutouts/workout6.png";
 const Workout = (props) => {
   const { workout } = props;
   const [fingers, setFingers] = useState(fingersBlue);
-  const [workoutImage, setworkoutImage] = useState(workoutimage1);
-
-  console.log(workout);
+  const [workoutImage, setWorkoutImage] = useState(workoutimage1);
 
   const getRandomInt = (min, max) => {
     min = Math.ceil(min);
@@ -51,16 +49,16 @@ const Workout = (props) => {
 
     switch (int) {
       case 0:
-        setworkoutImage(workoutimage1);
+        setWorkoutImage(workoutimage1);
         break;
       case 1:
-        setworkoutImage(workoutimage2);
+        setWorkoutImage(workoutimage2);
         break;
       case 2:
-        setworkoutImage(workoutimage3);
+        setWorkoutImage(workoutimage3);
         break;
       default:
-        setworkoutImage(workoutimage1);
+        setWorkoutImage(workoutimage1);
     }
   };
 

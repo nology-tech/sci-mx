@@ -49,7 +49,7 @@ const LibraryPage = () => {
         }
       });
     }
-    console.log(workouts);
+
     setWorkoutsBySearch([...workouts]);
   };
 

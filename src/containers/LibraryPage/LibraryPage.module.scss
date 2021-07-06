@@ -35,7 +35,8 @@
       color: white;
       color: $secondary-color-white, white;
     }
-    @media screen and (min-width: 768px) {
+
+    @include md {
       font-size: 2rem;
     }
   }

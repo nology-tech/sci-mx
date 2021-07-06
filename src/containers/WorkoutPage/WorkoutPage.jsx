@@ -17,19 +17,14 @@ const WorkoutPage = () => {
     const category = workoutID.split("-")[0];
     switch (category) {
       case "l":
-        console.log("legs");
         return getWorkoutByCategory("legs");
       case "a":
-        console.log("arms");
         return getWorkoutByCategory("arms");
       case "c":
-        console.log("chest");
         return getWorkoutByCategory("chest");
       case "b":
-        console.log("back");
         return getWorkoutByCategory("back");
       default:
-        console.log("legs");
         return getWorkoutByCategory("legs");
     }
   };
