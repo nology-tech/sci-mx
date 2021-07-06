@@ -22,10 +22,10 @@
 .trackerBlock {
   margin: 5% 5%;
   height: 200px;
-
   background-color: orangered;
   border-radius: 50px;
-  display: flex;
+  grid-column-start: 1;
+  max-width: 50rem;
 }
 .timerContainer {
   cursor: pointer;
