@@ -5,7 +5,9 @@ import graphIcon from "./image/graph_Icon.svg";
 import healthIcon from "./image/health_Icon.svg";
 import styles from "./Tracker.module.scss";
 import TrackerCarousel from "../../components/TrackerCarousel/TrackerCarousel";
+import Line from "../../components/Graphs/Line";
 import Bar from "../../components/Graphs/Bar";
+import PolarArea from "../../components/Graphs/Polar";
 import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 import DoughnutChart from "../../components/Graphs/Doughnut";
 
@@ -25,10 +27,11 @@ function Tracker() {
 
       {/* Upper Center */}
       <div className={styles.center}>
-        <div class="bar-chart" className={styles.bar_chart}>
+        <div className={styles.chart}>
           {/* <Bar /> */}
-          <DoughnutChart />
+          {/* <DoughnutChart /> */}
           {/* <Line /> */}
+          <PolarArea />
         </div>
       </div>
 

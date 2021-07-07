@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { Line } from "react-chartjs-2";
+import { PolarArea } from "react-chartjs-2";
 import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 
-const LineChart = () => {
+const Polar = () => {
   const workoutContext = useContext(WorkoutContext);
 
   const data = {
@@ -53,9 +53,9 @@ const LineChart = () => {
   };
   return (
     <>
-      <Line data={data} options={options} />
+      <PolarArea data={data} options={options} />
     </>
   );
 };
 
-export default LineChart;
+export default Polar;
