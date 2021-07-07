@@ -4,9 +4,11 @@ import styles from "./ProfileStatusSec.module.scss";
 import avatar from "../../assets/images/workout/workout-5-image.jpg";
 import mail from "../../assets/images/logos/mail.png";
 import { UserContext } from "../../context/UserProvider/UserProvider";
-
+import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 const ProfileStatusSec = () => {
   const userContext = useContext(UserContext);
+  const workoutContext = useContext(WorkoutContext);
+
 
   const categories = [
     [
@@ -42,15 +44,15 @@ const ProfileStatusSec = () => {
       </h2>
       <div className={styles.profile__status}>
         <div className={styles.profile__stat}>
-          <h6 className={styles.profile__stat__heading}>50</h6>
+          <h6 className={styles.profile__stat__heading}>{workoutContext.workoutData.totalDays}</h6>
           <p className={styles.profile__stat__desc}>Workout days</p>
         </div>
         <div className={styles.profile__stat}>
-          <h6 className={styles.profile__stat__heading}>2K</h6>
+          <h6 className={styles.profile__stat__heading}>{workoutContext.workoutData.workoutMinutes}</h6>
           <p className={styles.profile__stat__desc}>Workout Minutes</p>
         </div>
         <div className={styles.profile__stat}>
-          <h6 className={styles.profile__stat__heading}>287</h6>
+          <h6 className={styles.profile__stat__heading}>{workoutContext.workoutData.totalWorkouts}</h6>
           <p className={styles.profile__stat__desc}>Total sessions</p>
         </div>
       </div>

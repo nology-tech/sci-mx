@@ -3,7 +3,7 @@ import styles from "./HeroProductSection.module.scss";
 import { Link as LinkScroll } from "react-scroll";
 import { FaArrowAltCircleDown } from "react-icons/fa";
 import Carousel from "react-multi-carousel";
-import productData from "../../Data/productData/data.js";
+import productData from "../../Data/productData/data";
 
 const responsive = {
   desktop: {
