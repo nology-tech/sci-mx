@@ -23,7 +23,7 @@ const WorkoutProvider = props => {
           setWorkoutData(emptyWorkout);
         }
       });
-  }, [user]);
+  }, []);
 
   useEffect(() => {
     if (user) {
