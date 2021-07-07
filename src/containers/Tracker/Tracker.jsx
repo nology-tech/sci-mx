@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import timerIcon from "./image/timer_Icon.svg";
 import runnerIcon from "./image/running_Icon.svg";
 import graphIcon from "./image/graph_Icon.svg";
@@ -6,15 +6,20 @@ import healthIcon from "./image/health_Icon.svg";
 import styles from "./Tracker.module.scss";
 import TrackerCarousel from "../../components/TrackerCarousel/TrackerCarousel";
 import Bar from "../../components/Graphs/Bar";
+import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 
 function Tracker() {
+  const workoutContext = useContext(WorkoutContext);
   return (
     // Navbar
     <div className={styles.trackerPage}>
       {/* Headings */}
       <div className={styles.headings}>
         <h3 className={styles.headings__name}>Tracker</h3>
-        <h4 className={styles.workOutDays}>You worked out 5 times this week</h4>
+        <h4 className={styles.workOutDays}>
+          You worked out {workoutContext.workoutData.totalWorkouts} times this
+          week
+        </h4>
       </div>
 
       {/* Upper Center */}
