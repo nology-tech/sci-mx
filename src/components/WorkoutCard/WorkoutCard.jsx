@@ -7,7 +7,6 @@ const WorkoutCard = (props) => {
 
   return (
     <div className={styles.workout}>
-      {/* <div className={styles.workout__overlay}></div> */}
       <Link to={`/workout/${workout.id}`} className={styles.workout__link}>
         <p className={styles.workout__heading}>{workout.title}</p>
       </Link>

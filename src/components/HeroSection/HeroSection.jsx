@@ -29,7 +29,7 @@ const HeroSection = () => {
       </div>
       <h3 className={styles.workout__title}>Today's Workout</h3>
       <div className={styles.hero__image_container}>
-        <Link to="/workout/0">
+        <Link to="/workout/l-0">
           <img className={styles.hero__image} src={workout2} alt="workout" />
         </Link>
       </div>

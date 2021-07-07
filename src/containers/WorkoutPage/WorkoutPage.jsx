@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./WorkoutPage.module.scss";
 import Workout from "../../components/Workout/Workout";
+import Timer from "../../components/Timer";
 import workoutsCategoryData from "../../Data/workoutsCategoryData.js";
 
 const WorkoutPage = () => {
@@ -15,16 +16,22 @@ const WorkoutPage = () => {
 
   const getWorkout = () => {
     const category = workoutID.split("-")[0];
+    console.log(category);
     switch (category) {
       case "l":
+        console.log("legs");
         return getWorkoutByCategory("legs");
       case "a":
+        console.log("legs");
         return getWorkoutByCategory("arms");
       case "c":
+        console.log("legs");
         return getWorkoutByCategory("chest");
       case "b":
+        console.log("legs");
         return getWorkoutByCategory("back");
       default:
+        console.log("legs");
         return getWorkoutByCategory("legs");
     }
   };
@@ -32,7 +39,13 @@ const WorkoutPage = () => {
   return (
     <div className={styles.container}>
       <Workout workout={getWorkout()} />
-      <div className={styles.trackerBlock}></div>
+      <div className={styles.trackerBlock}>
+        <Timer
+          className={styles.timerContainer}
+          status={false}
+          runningTime={0}
+        />
+      </div>
     </div>
   );
 };

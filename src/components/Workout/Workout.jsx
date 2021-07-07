@@ -5,14 +5,15 @@ import fingersRed from "../../assets/images/Fingers/2.svg";
 import fingersGreen from "../../assets/images/Fingers/3.svg";
 import fingersYellow from "../../assets/images/Fingers/4.svg";
 import fingersOrange from "../../assets/images/Fingers/5.svg";
-import workoutimage1 from "../../assets/images/WorkoutCutouts/workout2.png";
-import workoutimage2 from "../../assets/images/WorkoutCutouts/workout3.png";
-import workoutimage3 from "../../assets/images/WorkoutCutouts/workout6.png";
+import workoutImage1 from "../../assets/images/WorkoutCutouts/workout2.png";
+import workoutImage2 from "../../assets/images/WorkoutCutouts/workout3.png";
+import workoutImage3 from "../../assets/images/WorkoutCutouts/workout6.png";
 
 const Workout = (props) => {
+  console.log(props.workout);
   const { workout } = props;
   const [fingers, setFingers] = useState(fingersBlue);
-  const [workoutImage, setWorkoutImage] = useState(workoutimage1);
+  const [workoutImage, setWorkoutImage] = useState(workoutImage1);
 
   const getRandomInt = (min, max) => {
     min = Math.ceil(min);
@@ -49,16 +50,16 @@ const Workout = (props) => {
 
     switch (int) {
       case 0:
-        setWorkoutImage(workoutimage1);
+        setWorkoutImage(workoutImage1);
         break;
       case 1:
-        setWorkoutImage(workoutimage2);
+        setWorkoutImage(workoutImage2);
         break;
       case 2:
-        setWorkoutImage(workoutimage3);
+        setWorkoutImage(workoutImage3);
         break;
       default:
-        setWorkoutImage(workoutimage1);
+        setWorkoutImage(workoutImage1);
     }
   }, []);
 

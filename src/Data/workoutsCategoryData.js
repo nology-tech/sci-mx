@@ -2,7 +2,7 @@ const workoutsCategoryData = {
   legs: [
     {
       id: "l-0",
-      title: "WINNERS START",
+      title: "NO REST FOR THE WICKED",
       rounds: "3 ROUNDS FOR TIME",
       exercises: [
         "15 BURPEES",
