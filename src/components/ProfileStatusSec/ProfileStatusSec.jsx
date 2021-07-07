@@ -52,7 +52,7 @@ const ProfileStatusSec = () => {
           <p className={styles.profile__stat__desc}>Workout Minutes</p>
         </div>
         <div className={styles.profile__stat}>
-          <h6 className={styles.profile__stat__heading}>{workoutContext.workoutData.workoutMinutes}</h6>
+          <h6 className={styles.profile__stat__heading}>{workoutContext.workoutData.totalWorkouts}</h6>
           <p className={styles.profile__stat__desc}>Total sessions</p>
         </div>
       </div>
