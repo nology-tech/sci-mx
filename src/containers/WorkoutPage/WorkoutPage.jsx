@@ -5,7 +5,7 @@ import Workout from "../../components/Workout/Workout";
 import workoutimage1 from "../../assets/images/WorkoutCutouts/workout2.png";
 import workoutimage2 from "../../assets/images/WorkoutCutouts/workout3.png";
 import workoutimage3 from "../../assets/images/WorkoutCutouts/workout6.png";
-
+import Timer from "../../components/Timer";
 const WorkoutPage = () => {
   const workoutArray = [
     {
@@ -52,7 +52,16 @@ const WorkoutPage = () => {
   return (
     <div className={styles.container}>
       <Workout workout={workoutArray[workoutID]} />
-      <div className={styles.trackerBlock}></div>
+
+      <div className={styles.trackerBlock}>
+        <Timer
+          className={styles.timerContainer}
+          status={false}
+          runningTime={0}
+        />
+      </div>
+
+      {/* <div className={styles.trackerBlock}></div> */}
     </div>
   );
 };

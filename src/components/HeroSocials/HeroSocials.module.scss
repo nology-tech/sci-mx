@@ -1,42 +1,31 @@
 @import "../../assets/styles/base.scss";
 
-.productHeader {
-  height: 35px;
-  width: 100%;
-  @include md {
-    height: 90px;
-  }
-}
-
 .socials {
-  // padding-top: 70px;
   height: calc(100vh - 70px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
 
   &__heading {
-    width: 70%;
-    margin-bottom: 5rem;
+    width: 100%;
     font-size: 2.4rem;
     text-align: center;
-    margin-bottom: 15%;
+    font-weight: 400;
+    color: $primary-color-blue;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 4em;
+    padding: 2rem;
     gap: 10%;
-    @include md {
-      gap: 25%;
-    }
-    height: 50%;
+    height: 75%;
   }
   &__icon {
     font-size: 4.8rem;
+    color: $primary-color-blue;
 
     &:hover {
       color: $primary-color-orange;
@@ -46,12 +35,53 @@
       padding: 6px;
       border-radius: 50%;
       color: $secondary-color-white;
-      background-color: black;
+      background-color: $primary-color-blue;
     }
 
     &_youtube:hover {
       background-color: $primary-color-orange;
       color: $secondary-color-white;
     }
+  }
+}
+
+.headerContainer {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  background: $primary-color-blue;
+  color: $primary-color-blue;
+  border: none;
+  width: 100%;
+  height: 2px;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .socials__heading {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: $screen-xl-min) {
+  .socials__heading {
+    font-size: 4rem;
+  }
+
+  .socials__list {
+    flex-direction: row;
+    width: 80%;
+    align-items: center;
+  }
+
+  .socials__icon {
+    font-size: 8rem;
   }
 }
