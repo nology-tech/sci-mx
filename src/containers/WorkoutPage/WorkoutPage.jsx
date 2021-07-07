@@ -60,8 +60,6 @@ const WorkoutPage = () => {
           runningTime={0}
         />
       </div>
-
-      {/* <div className={styles.trackerBlock}></div> */}
     </div>
   );
 };

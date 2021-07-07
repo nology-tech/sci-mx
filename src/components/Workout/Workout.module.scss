@@ -89,6 +89,9 @@
       z-index: -1;
       border-radius: none;
       height: 80%;
+      @include lg {
+        right: 0;
+      }
     }
 
     .fingers {
@@ -99,6 +102,17 @@
       bottom: 0;
       z-index: -2;
       height: 90%;
+
+      @include sm {
+        right: -20%;
+      }
+
+      @include md {
+      }
+
+      @include lg {
+        right: -18%;
+      }
     }
   }
 
@@ -123,4 +137,3 @@
     width: fit-content;
   }
 }
-
