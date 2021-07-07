@@ -7,6 +7,7 @@ import styles from "./Tracker.module.scss";
 import TrackerCarousel from "../../components/TrackerCarousel/TrackerCarousel";
 import Bar from "../../components/Graphs/Bar";
 import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
+import DoughnutChart from "../../components/Graphs/Doughnut";
 
 function Tracker() {
   const workoutContext = useContext(WorkoutContext);
@@ -25,7 +26,8 @@ function Tracker() {
       {/* Upper Center */}
       <div className={styles.center}>
         <div class="bar-chart" className={styles.bar_chart}>
-          <Bar />
+          {/* <Bar /> */}
+          <DoughnutChart />
           {/* <Line /> */}
         </div>
       </div>
