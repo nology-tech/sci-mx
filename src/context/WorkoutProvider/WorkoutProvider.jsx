@@ -13,7 +13,7 @@ const WorkoutProvider = props => {
   const getWorkoutData = useCallback(() => {
     firestore
       .collection(workCollection)
-      .doc(user.uid)
+      .doc("WsybJoJaePYD3ld8sFaxEkZR3Rq1")
       .get()
       .then(querySnapshot => {
         if (querySnapshot.exists) {
