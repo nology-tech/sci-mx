@@ -1,21 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import styles from "./Workout.module.scss";
 import fingersBlue from "../../assets/images/Fingers/1.svg";
 import fingersRed from "../../assets/images/Fingers/2.svg";
 import fingersGreen from "../../assets/images/Fingers/3.svg";
 import fingersYellow from "../../assets/images/Fingers/4.svg";
 import fingersOrange from "../../assets/images/Fingers/5.svg";
+import workoutImage1 from "../../assets/images/WorkoutCutouts/workout2.png";
+import workoutImage2 from "../../assets/images/WorkoutCutouts/workout3.png";
+import workoutImage3 from "../../assets/images/WorkoutCutouts/workout6.png";
 
-const Workout = props => {
+const Workout = (props) => {
+  console.log(props.workout);
+  const { workout } = props;
+  const [fingers, setFingers] = useState(fingersBlue);
+  const [workoutImage, setWorkoutImage] = useState(workoutImage1);
+
   const getRandomInt = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  useEffect(() => {
+  const getRandomFingers = useCallback(() => {
     const int = getRandomInt(1, 5);
-    console.log(int);
 
     switch (int) {
       case 1:
@@ -38,14 +45,32 @@ const Workout = props => {
     }
   }, []);
 
-  const [fingers, setFingers] = useState(fingersBlue);
+  const getRandomWorkoutImage = useCallback(() => {
+    const int = getRandomInt(0, 2);
 
-  const { workout } = props;
+    switch (int) {
+      case 0:
+        setWorkoutImage(workoutImage1);
+        break;
+      case 1:
+        setWorkoutImage(workoutImage2);
+        break;
+      case 2:
+        setWorkoutImage(workoutImage3);
+        break;
+      default:
+        setWorkoutImage(workoutImage1);
+    }
+  }, []);
+
+  useEffect(() => {
+    getRandomFingers();
+    getRandomWorkoutImage();
+  }, [getRandomFingers, getRandomWorkoutImage]);
 
   const getExerciseJSX = (exercise, index) => {
     const split = exercise.split(" ");
-    const letter = split[0];
-    split.shift();
+    const letter = split.shift();
 
     return (
       <li key={index}>
@@ -55,18 +80,20 @@ const Workout = props => {
   };
 
   return (
-    <>
-      <div className={styles.workoutContainer}>
-        <div className={styles.workoutContainer__title}>{workout.title}</div>
-        <div className={styles.workoutContainer__rounds}>{workout.rounds}</div>
-        <div className={styles.workoutContainer__body}>
-          <ul>{workout.exercises.map(getExerciseJSX)}</ul>
-          <img src={workout.img} alt="workout" className={styles.workoutpic}></img>
-          <img src={fingers} alt="fingers" className={styles.fingers}></img>
-        </div>
-        <div className={styles.workoutContainer__rests}>{workout.rests}</div>
+    <div className={styles.workoutContainer}>
+      <div className={styles.workoutContainer__title}>{workout.title}</div>
+      <div className={styles.workoutContainer__rounds}>{workout.rounds}</div>
+      <div className={styles.workoutContainer__body}>
+        <ul>{workout.exercises.map(getExerciseJSX)}</ul>
+        <img
+          src={workoutImage}
+          alt="workout"
+          className={styles.workoutpic}
+        ></img>
+        <img src={fingers} alt="fingers" className={styles.fingers}></img>
       </div>
-    </>
+      <div className={styles.workoutContainer__rests}>{workout.rests}</div>
+    </div>
   );
 };
 
