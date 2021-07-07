@@ -1,4 +1,4 @@
-const workoutData = {
+const emptyWorkout = {
   totalDays: 0,
   workoutArray: []
   ,
@@ -7,4 +7,4 @@ const workoutData = {
   totalWorkouts: 0,
 };
 
-export default workoutData;
+export default emptyWorkout;
