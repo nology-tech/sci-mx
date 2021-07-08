@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Bar } from "react-chartjs-2";
-import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
+//import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 
 const rand = () => Math.floor(Math.random() * 255);
 
@@ -72,7 +72,7 @@ const ClickEvents = () => {
 
     setClickedElements(elements.length);
   };
-  const workoutContext = useContext(WorkoutContext);
+  // const workoutContext = useContext(WorkoutContext);
 
   return (
     <>
