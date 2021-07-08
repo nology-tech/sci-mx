@@ -2,7 +2,7 @@ const workoutsCategoryData = {
   legs: [
     {
       id: "l-0",
-      title: "NO REST FOR THE WICKED",
+      title: "NO REST",
       rounds: "3 ROUNDS FOR TIME",
       exercises: [
         "15 BURPEES",
@@ -108,7 +108,7 @@ const workoutsCategoryData = {
     },
     {
       id: "a-2",
-      title: "Success By Trying",
+      title: "BE YOUR BEST",
       rounds: "4 ROUNDS FOR TIME",
       exercises: [
         "10 Push-up",
