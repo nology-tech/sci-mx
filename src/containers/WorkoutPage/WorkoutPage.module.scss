@@ -21,15 +21,12 @@
 
 .trackerBlock {
   border: 1px solid black;
-  // margin-left: 10%;
   margin: 0;
   padding: 0;
   height: 200px;
   background-color: orangered;
   border-radius: 50px;
-  // grid-column-start: 1;
   max-width: 35rem;
-  //   margin-left: 20%;
   place-items: center;
   place-content: center;
 
@@ -37,11 +34,6 @@
   }
 
   @include md {
-    // place-items: center;
-    // place-content: center;
-    // display: flex;
-    // justify-content: center;
-
     max-width: 55rem;
   }
   @include lg {
@@ -53,6 +45,10 @@
     @media screen and (min-width: 400px) and (max-width: 414px) {
       padding: 7.5rem;
     }
+
+    @include sm {
+      padding-left: 15rem;
+    }
     @include md {
       padding-left: 10%;
     }
@@ -61,7 +57,7 @@
     }
     @include xl {
       padding-top: 10%;
-      padding-left: 27%;
+      padding-left: 35%;
     }
   }
 }
