@@ -53,12 +53,14 @@ const WorkoutPage = () => {
     <div className={styles.container}>
       <Workout workout={workoutArray[workoutID]} />
 
-      <div className={styles.trackerBlock}>
-        <Timer
-          className={styles.timerContainer}
-          status={false}
-          runningTime={0}
-        />
+      <div className={styles.trackerBlock__container}>
+        <div className={styles.trackerBlock}>
+          <Timer
+            className={styles.timerContainer}
+            status={false}
+            runningTime={0}
+          />
+        </div>
       </div>
     </div>
   );
