@@ -4,27 +4,11 @@ import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 const DoughnutChart = () => {
   const workoutContext = useContext(WorkoutContext);
   const data = {
-    labels: [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ],
+    labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     datasets: [
       {
         label: "Your weekly number of Workouts",
-        data: [
-          workoutContext.workoutData.workoutArray[0].workoutsCompleted,
-          workoutContext.workoutData.workoutArray[1].workoutsCompleted,
-          workoutContext.workoutData.workoutArray[2].workoutsCompleted,
-          workoutContext.workoutData.workoutArray[3].workoutsCompleted,
-          workoutContext.workoutData.workoutArray[4].workoutsCompleted,
-          workoutContext.workoutData.workoutArray[5].workoutsCompleted,
-          workoutContext.workoutData.workoutArray[6].workoutsCompleted,
-        ],
+        data: workoutContext.weeksGraphData,
         borderColor: [
           "rgba(240, 82, 36, 0.2)",
           "rgba(0, 38, 62, 0.2)",
