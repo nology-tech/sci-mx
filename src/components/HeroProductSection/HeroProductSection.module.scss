@@ -10,33 +10,49 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
-.header {
+.headerContainer {
+  height: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: 3.6rem;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.heading {
+  font-size: 2.4rem;
   width: 80%;
   text-align: center;
-  margin: 5rem auto 0rem auto;
+  font-weight: 500;
+  color: $primary-color-blue;
+}
+
+.line {
+  background: $primary-color-blue;
+  color: $primary-color-blue;
+  border: none;
+  width: 50%;
+  height: 2px;
+  margin-top: 15px;
 }
 .product {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: auto;
 
   &__image {
-    margin: auto;
-
-    &_image {
-      height: 23rem;
-    }
+    height: 23rem;
   }
 
   &__description {
     text-align: center;
+    color: $primary-color-blue;
+    font-weight: 600;
 
     &_name {
       font-size: 1.5rem;
@@ -44,16 +60,49 @@
     }
     &_price {
       font-size: 1.3rem;
+      color: $primary-color-orange;
     }
   }
 }
 
-//arrow
+.image__container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .carousel {
   &__arrow_btn {
     width: 100%;
     margin: 4rem auto 2rem auto;
     font-size: 4rem;
     color: $primary-color-orange;
+  }
+}
+
+@media screen and (min-width: $screen-sm-min) {
+  .line {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: $screen-md-min) {
+  .line {
+    width: 40%;
+  }
+
+  .heading {
+    font-size: 3.5rem;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: $screen-xl-min) {
+  .line {
+    width: 30%;
+  }
+
+  .heading {
+    font-size: 4rem;
   }
 }

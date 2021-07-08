@@ -5,9 +5,11 @@ import styles from "./HeroSocials.module.scss";
 
 const HeroSocials = () => {
   return (
-    <section className={styles.socials}>
-      <div id="socials" className={styles.productHeader}/>
-      <h1 className={styles.socials__heading}>Share your progress</h1>
+    <section id="socials" className={styles.socials}>
+      <div className={styles.headerContainer}>
+        <h1 className={styles.socials__heading}>Share your progress</h1>
+        <hr className={styles.line} />
+      </div>
       <ul className={styles.socials__list}>
         <li className={styles.socials__item}>
           <a
