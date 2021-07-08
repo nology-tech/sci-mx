@@ -32,8 +32,8 @@ function Tracker() {
       {/* Upper Center */}
       <div className={styles.center}>
         <div className={styles.chart}>
-          {graph === "bar" && <Bar />}
           {graph === "line" && <Line />}
+          {graph === "bar" && <Bar />}
           {graph === "doughnut" && <DoughnutChart />}
           {graph === "multi" && <MultiData />}
         </div>
