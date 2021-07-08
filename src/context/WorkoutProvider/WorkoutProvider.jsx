@@ -5,7 +5,6 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import firebase from "firebase/app";
 import { firestore } from "../../firebase";
 import { UserContext } from "../UserProvider/UserProvider";
 import emptyWorkout from "../../Data/emptyWorkout/emptyWorkout";
