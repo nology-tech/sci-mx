@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 //import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 
