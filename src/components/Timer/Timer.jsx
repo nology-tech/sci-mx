@@ -1,13 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 import styles from "./Timer.module.scss";
 
 const Timer = () => {
   const [time, setTime] = useState(0);
-  const [start, setStart] = useState(false);
+  const [hasTimerStarted, setHasTimerStarted] = useState(false);
   const [rounds, setRounds] = useState([]);
+  const { workoutData, updateLastWorkout } = useContext(WorkoutContext);
+
+  let minutes = ("0" + Math.floor((time / 60000) % 60)).slice(-2);
+  let seconds = ("0" + Math.floor((time / 1000) % 60)).slice(-2);
+  let waitingClick = null;
+  let lastClick = 0;
+
+  const checkDatesAreOnSameDay = (dbDate, currDate) =>
+    dbDate.getFullYear() === currDate.getFullYear() &&
+    dbDate.getMonth() === currDate.getMonth() &&
+    dbDate.getDate() === currDate.getDate();
+
   useEffect(() => {
     let interval = null;
-    if (start) {
+    if (hasTimerStarted) {
       interval = setInterval(() => {
         setTime((prevTime) => prevTime + 10);
       }, 10);
@@ -15,32 +28,41 @@ const Timer = () => {
       clearInterval(interval);
     }
     return () => clearInterval(interval);
-  }, [start]);
-  let minutes = ("0" + Math.floor((time / 60000) % 60)).slice(-2);
-  let seconds = ("0" + Math.floor((time / 1000) % 60)).slice(-2);
+  }, [hasTimerStarted]);
+
   const handleTimerStart = () => {
-    if (!start) {
-      setStart(true);
+    if (!hasTimerStarted) {
+      setHasTimerStarted(true);
     }
   };
   const handleTimerStop = () => {
-    if (start) {
-      setStart(false);
+    if (hasTimerStarted) {
+      const dbDate = new Date(workoutData.lastWorkout.seconds);
+      const isSameDate = checkDatesAreOnSameDay(dbDate, new Date());
+
+      if (!isSameDate) {
+        console.log("updating db with new date...");
+        updateLastWorkout(new Date(), null);
+      }
+
+      setHasTimerStarted(false);
+
       const newState = [
         ...rounds,
         { mins: minutes, secs: seconds, round: rounds.length + 1 },
       ];
 
-      setRounds(newState);
       setTime(0);
+      setRounds(newState);
+      console.log(rounds);
     }
   };
+
   const handleTimerReset = () => {
     setTime(0);
-    setStart(true);
+    setHasTimerStarted(true);
   };
-  let waitingClick = null;
-  let lastClick = 0;
+
   return (
     <section className={styles.timer}>
       <div className={styles.parentcontainer}>
