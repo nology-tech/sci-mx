@@ -50,6 +50,7 @@ const BarChart = () => {
         },
       ],
     },
+    maintainAspectRatio: false,
   };
   return (
     <>

@@ -27,29 +27,14 @@ const LineChart = () => {
           workoutContext.workoutData.workoutArray[5].workoutsCompleted,
           workoutContext.workoutData.workoutArray[6].workoutsCompleted,
         ],
-        backgroundColor: [
-          "rgb(240, 82, 36)",
-          "rgb(0, 38, 62)",
-          "rgb(167, 169, 172)",
-          "rgb(240, 82, 36)",
-          "rgb(0, 38, 62)",
-          "rgb(167, 169, 172",
-          "rgb(240, 82, 36",
-        ],
+        backgroundColor: "rgb(0, 38, 62)",
+        borderColor: "rgb(240, 82, 36)",
       },
     ],
   };
 
   const options = {
-    scales: {
-      yAxes: [
-        {
-          ticks: {
-            beginAtZero: true,
-          },
-        },
-      ],
-    },
+    maintainAspectRatio: false,
   };
   return (
     <>

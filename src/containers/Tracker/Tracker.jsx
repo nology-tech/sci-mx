@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import timerIcon from "./image/timer_Icon.svg";
 import runnerIcon from "./image/running_Icon.svg";
 import graphIcon from "./image/graph_Icon.svg";
@@ -8,11 +8,15 @@ import TrackerCarousel from "../../components/TrackerCarousel/TrackerCarousel";
 import Line from "../../components/Graphs/Line";
 import Bar from "../../components/Graphs/Bar";
 import PolarArea from "../../components/Graphs/Polar";
+import MultiData from "../../components/Graphs/Multi-data";
 import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 import DoughnutChart from "../../components/Graphs/Doughnut";
 
 function Tracker() {
   const workoutContext = useContext(WorkoutContext);
+
+  const [graph, setGraph] = useState("bar");
+
   return (
     // Navbar
     <div className={styles.trackerPage}>
@@ -28,34 +32,46 @@ function Tracker() {
       {/* Upper Center */}
       <div className={styles.center}>
         <div className={styles.chart}>
-          {/* <Bar /> */}
-          {/* <DoughnutChart /> */}
-          {/* <Line /> */}
-          <PolarArea />
+          {graph === "bar" && <Bar />}
+          {graph === "line" && <Line />}
+          {graph === "doughnut" && <DoughnutChart />}
+          {graph === "multi" && <MultiData />}
         </div>
       </div>
 
       {/* Lower Center */}
       <div className={styles.lower_center}>
         <img
+          onClick={() => {
+            setGraph("bar");
+          }}
           className={styles.lower_center__icon}
           src={timerIcon}
           alt="smallIcon"
         />
 
         <img
+          onClick={() => {
+            setGraph("line");
+          }}
           className={styles.lower_center__icon}
           src={runnerIcon}
           alt="smallIcon"
         />
 
         <img
+          onClick={() => {
+            setGraph("doughnut");
+          }}
           className={styles.lower_center__icon}
           src={graphIcon}
           alt="smallIcon"
         />
 
         <img
+          onClick={() => {
+            setGraph("multi");
+          }}
           className={styles.lower_center__icon}
           src={healthIcon}
           alt="smallIcon"

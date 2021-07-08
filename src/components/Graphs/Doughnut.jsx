@@ -41,16 +41,27 @@ const DoughnutChart = () => {
           "rgb(240, 82, 36)",
           "rgb(0, 38, 62)",
           "rgb(167, 169, 172",
-          "rgb(240, 82, 36",
+          "rgb(0, 38, 62)",
         ],
         borderWidth: 1,
       },
     ],
   };
 
+  const options = {
+    title: { display: false },
+    legend: { display: false },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    maintainAspectRatio: false,
+  };
+
   return (
     <>
-      <Doughnut data={data} />
+      <Doughnut data={data} options={options} />
     </>
   );
 };
