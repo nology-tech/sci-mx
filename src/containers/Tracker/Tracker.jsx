@@ -23,10 +23,7 @@ function Tracker() {
       {/* Headings */}
       <div className={styles.headings}>
         <h3 className={styles.headings__name}>Tracker</h3>
-        <h4 className={styles.workOutDays}>
-          You worked out {workoutContext.workoutData.totalWorkouts} times this
-          week
-        </h4>
+        <h4 className={styles.workOutDays}>You worked out {workoutContext.weeksWorkoutsTotal} times this week</h4>
       </div>
 
       {/* Upper Center */}
