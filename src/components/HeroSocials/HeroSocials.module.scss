@@ -1,20 +1,7 @@
 @import "../../assets/styles/base.scss";
 
-<<<<<<< HEAD
-.productHeader {
-  height: 35px;
-  width: 100%;
-  @include md {
-    height: 90px;
-  }
-}
-
-.socials {
-  height: 50vh;
-=======
 .socials {
   height: calc(100vh - 70px);
->>>>>>> 54c4477c87a3bbd33a36c7feb36b26f1c4d7f604
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -30,14 +17,9 @@
 
   &__list {
     display: flex;
-<<<<<<< HEAD
-    justify-content: space-evenly;
-    padding: 4em;
-=======
     flex-direction: column;
     justify-content: space-between;
     padding: 2rem;
->>>>>>> 54c4477c87a3bbd33a36c7feb36b26f1c4d7f604
     gap: 10%;
     height: 75%;
   }
