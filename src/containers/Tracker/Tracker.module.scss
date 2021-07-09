@@ -11,11 +11,13 @@
     font-size: 2.4rem;
     text-align: center;
     padding-top: 0.9rem;
+    color: $primary-color-blue;
   }
   .workOutDays {
     font-size: 1.8rem;
-    color: #a7a9ac;
+    color: $primary-color-blue;
     text-align: center;
+    font-weight: 400;
   }
   &__carousel {
     font-size: 1.6rem !important;
@@ -24,9 +26,10 @@
   }
 }
 //Upper Cental
-.bar_chart {
+.chart {
   margin: 3rem auto;
   width: 100%;
+  height: 50vh;
 }
 
 // Lower Center
@@ -50,25 +53,30 @@
 }
 
 @media screen and (min-width: $screen-sm-min) {
-  .bar_chart,
+  .chart,
   .lower_center {
     width: 90%;
   }
 }
 @media screen and (min-width: $screen-md-min) {
-  .bar_chart,
+  .chart,
   .lower_center {
     width: 80%;
   }
 }
 @media screen and (min-width: $screen-lg-min) {
-  .bar_chart,
+  .chart,
   .lower_center {
     width: 75%;
   }
+
+  .lower_center {
+    margin-bottom: 50px;
+    justify-content: space-around;
+  }
 }
 @media screen and (min-width: $screen-xl-min) {
-  .bar_chart,
+  .chart,
   .lower_center {
     width: 65%;
   }

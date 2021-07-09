@@ -1,54 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Line } from "react-chartjs-2";
+import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 
-const data = {
-  labels: [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ],
-  datasets: [
-    {
-      label: "Your weekly number of Workouts",
-      data: [22, 19, 3, 5, 2, 3, 6],
-      fill: false,
-      backgroundColor: "#f05224",
-      borderColor: "#00263e",
-    },
-  ],
-};
+const LineChart = () => {
+  const workoutContext = useContext(WorkoutContext);
 
-const options = {
-  scales: {
-    yAxes: [
+  const data = {
+    labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    datasets: [
       {
-        ticks: {
-          beginAtZero: true,
-        },
+        label: "Your weekly number of Workouts",
+        data: workoutContext.weeksGraphData,
+
+        backgroundColor: "rgb(0, 38, 62)",
+        borderColor: "rgb(240, 82, 36)",
       },
     ],
-  },
-};
+  };
 
-const LineChart = () => (
-  <>
-    <div className="header">
-      <h1 className="title">Line Chart</h1>
-      <div className="links">
-        <a
-          className="btn btn-gh"
-          href="https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/charts/Line.js"
-        >
-          Github Source
-        </a>
-      </div>
-    </div>
-    <Line data={data} options={options} />
-  </>
-);
+  const options = {
+    maintainAspectRatio: false,
+  };
+  return (
+    <>
+      <Line data={data} options={options} />
+    </>
+  );
+};
 
 export default LineChart;

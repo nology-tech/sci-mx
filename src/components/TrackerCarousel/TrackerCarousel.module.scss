@@ -53,12 +53,22 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $screen-md-min) {
   .Carousel {
     &__button {
       width: 7rem;
       height: 2.7rem;
       font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .Carousel {
+    &__button {
+      width: 10rem;
+      height: 4rem;
+      font-size: 1.2rem;
     }
   }
 }

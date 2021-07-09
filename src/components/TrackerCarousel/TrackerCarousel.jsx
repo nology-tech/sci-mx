@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./TrackerCarousel.module.scss";
-import workoutData from "../../containers/Tracker/workoutData";
+import workoutData from "../../Data/workoutsCategoryData";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Link } from "react-router-dom";
+import Image1 from "../../assets/images/suggestedWorkout/suggestedWorkout1.png";
 
 const responsive = {
   desktop2: {
     breakpoint: { max: 10000, min: 1201 },
-    items: 10,
+    items: 6,
     slidesToSlide: 3,
   },
   desktop1: {
@@ -40,18 +42,20 @@ const TrackerCarousel = () => {
         customTransition="all .5"
         transitionDuration={500}
       >
-        {workoutData.map((workout) => (
+        {workoutData.legs.map((workout) => (
           <div className={styles.Carousel__container} key={workout.id}>
             <div className={styles.Carousel__overlay}></div>
             <img
               className={styles.Carousel__image}
-              src={workout.img_path}
+              src={Image1}
               alt={workout.id}
             />
             <div className={styles.Carousel__buttons_container}>
-              <button className={styles.Carousel__button}>
-                {workout.name}
-              </button>
+              <Link to={`/workout/${workout.id}`}>
+                <button className={styles.Carousel__button}>
+                  {workout.title}
+                </button>
+              </Link>
             </div>
           </div>
         ))}
