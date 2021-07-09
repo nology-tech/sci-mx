@@ -7,7 +7,7 @@ import styles from "./Tracker.module.scss";
 import TrackerCarousel from "../../components/TrackerCarousel/TrackerCarousel";
 import Line from "../../components/Graphs/Line";
 import Bar from "../../components/Graphs/Bar";
-//import PolarArea from "../../components/Graphs/Polar";
+
 import MultiData from "../../components/Graphs/Multi-data";
 import { WorkoutContext } from "../../context/WorkoutProvider/WorkoutProvider";
 import DoughnutChart from "../../components/Graphs/Doughnut";
