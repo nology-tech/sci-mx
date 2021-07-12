@@ -20,13 +20,47 @@
 }
 
 .trackerBlock {
-  margin: 5% 5%;
+  margin: 0;
+  padding: 0;
   height: 200px;
   background-color: $primary-color-orange;
   border-radius: 50px;
-  grid-column-start: 1;
-  max-width: 50rem;
+  max-width: 35rem;
+  place-items: center;
+  place-content: center;
+
+  @include sm {
+  }
+
+  @include md {
+    max-width: 55rem;
+  }
+  @include lg {
+  }
+  &__container {
+    position: relative;
+
+    padding: 6.2rem;
+    @media screen and (min-width: 400px) and (max-width: 414px) {
+      padding: 7.5rem;
+    }
+
+    @include sm {
+      padding-left: 15rem;
+    }
+    @include md {
+      padding-left: 10%;
+    }
+    @include lg {
+      padding-left: 25%;
+    }
+    @include xl {
+      padding-top: 10%;
+      padding-left: 35%;
+    }
+  }
 }
 .timerContainer {
+  position: absolute;
   cursor: pointer;
 }

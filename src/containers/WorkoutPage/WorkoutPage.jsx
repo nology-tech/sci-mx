@@ -19,19 +19,14 @@ const WorkoutPage = () => {
     console.log(category);
     switch (category) {
       case "l":
-        console.log("legs");
         return getWorkoutByCategory("legs");
       case "a":
-        console.log("legs");
         return getWorkoutByCategory("arms");
       case "c":
-        console.log("legs");
         return getWorkoutByCategory("chest");
       case "b":
-        console.log("legs");
         return getWorkoutByCategory("back");
       default:
-        console.log("legs");
         return getWorkoutByCategory("legs");
     }
   };
@@ -39,12 +34,14 @@ const WorkoutPage = () => {
   return (
     <div className={styles.container}>
       <Workout workout={getWorkout()} />
-      <div className={styles.trackerBlock}>
-        <Timer
-          className={styles.timerContainer}
-          status={false}
-          runningTime={0}
-        />
+      <div className={styles.trackerBlock__container}>
+        <div className={styles.trackerBlock}>
+          <Timer
+            className={styles.timerContainer}
+            status={false}
+            runningTime={0}
+          />
+        </div>
       </div>
     </div>
   );

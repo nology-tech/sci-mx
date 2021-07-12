@@ -2,10 +2,14 @@
 
 * {
   font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .workoutContainer {
-  width: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
 
   &__title {
     font-size: 2rem;
@@ -27,6 +31,7 @@
     width: fit-content;
     margin: 0 auto;
     font-size: 1.6rem;
+    text-align: center;
     @include md {
       font-size: 2.4rem;
     }
@@ -38,14 +43,19 @@
     color: white;
     background-color: $primary-color-orange;
     border-radius: 33px;
-    padding: 1% 3%;
+    padding: 1% 2%;
   }
 
   &__body {
     position: relative;
     overflow: hidden;
     box-shadow: inset -10px 5px 20px 0px #ffffff;
-
+    width: 95vw;
+    margin: 0;
+    padding: 0;
+    @include lg {
+      width: 100vw;
+    }
     ul {
       margin-left: 5%;
       width: 100%;
@@ -83,12 +93,15 @@
 
     .workoutpic {
       position: absolute;
-      right: 0;
+      right: -10%;
       bottom: 50%;
       transform: translateY(50%);
       z-index: -1;
       border-radius: none;
       height: 80%;
+      @include lg {
+        right: 0;
+      }
     }
 
     .fingers {
@@ -99,6 +112,18 @@
       bottom: 0;
       z-index: -2;
       height: 90%;
+
+      @include md {
+        right: -25%;
+      }
+
+      @include lg {
+        right: -25%;
+      }
+
+      @include xl {
+        right: -10%;
+      }
     }
   }
 
@@ -117,10 +142,11 @@
     color: white;
     background-color: $primary-color-orange;
     border-radius: 33px;
-    padding: 1% 3%;
+    padding: 1% 2%;
     margin: 0 auto;
     width: 100%;
     max-width: 200px;
     width: fit-content;
+    text-align: center;
   }
 }
