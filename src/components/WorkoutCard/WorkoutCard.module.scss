@@ -1,0 +1,34 @@
+@import "../../assets/styles/base.scss";
+
+.workout {
+  margin: 0.5rem 0rem;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  height: 142px;
+  border-radius: 4rem;
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url("../../assets/images/workout/workoutExample.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 4rem;
+    cursor: pointer;
+  }
+  &__heading {
+    text-align: center;
+    font-size: 1.6rem;
+    border-radius: 10px;
+    background-color: $primary-color-orange;
+    color: $secondary-color-white;
+    margin-bottom: 2rem;
+    padding: 0.6rem 1.4rem;
+  }
+}

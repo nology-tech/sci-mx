@@ -2,7 +2,7 @@
 
 .container {
   margin-top: 70px;
-  min-height: 85vh;
+  min-height: calc(100vh-70px);
 
   @include md {
     width: 80%;
@@ -20,11 +20,10 @@
 }
 
 .trackerBlock {
-  border: 1px solid black;
   margin: 0;
   padding: 0;
   height: 200px;
-  background-color: orangered;
+  background-color: $primary-color-orange;
   border-radius: 50px;
   max-width: 35rem;
   place-items: center;
@@ -40,7 +39,7 @@
   }
   &__container {
     position: relative;
-    border: 1px solid black;
+
     padding: 6.2rem;
     @media screen and (min-width: 400px) and (max-width: 414px) {
       padding: 7.5rem;
