@@ -40,6 +40,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: $secondary-color-white;
+}
+
 ul {
   list-style: none;
 }
